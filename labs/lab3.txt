@@ -1,0 +1,408 @@
+﻿Kathryn Nichols & Matthew Benak
+Lab 3
+
+
+1 & 2)
+
+PRELIMINARY
+
+This week we made a couple of changes from last week that were not mentioned in the lab as being specifically tied to this week.  The first is that we split the transitive suffix off the stem and added a position class and lexical rule to put it on any transitive verbs.  The second was making the subject person marker a proper suffix.  This, too, was done by creating a position class and lexical rule to add it to all verbs (including the 0 morpheme for a 3rd person subject).  Neither of these are new analyses, just finishing the form of things we worked on last week, so there aren't any specific examples to address them, but they are present in every sentence with a transitive verb for the former and every sentence for the latter.
+
+
+NEGATION
+
+I'll start with the tough one for us, negation, since it influenced how we treated the rest of auxiliary system. In Halkomelem, to negate a main predicate, the predicate must be placed in a subordinate clause, then the negative particle is placed in front of it.  In our analysis of Halkomelem, we decided to make the negative particle an auxiliary that selects for a sentence complement.  This works well, but over-generates, since we don't yet have a method to insure that the complement selected is a subordinate clause, and not a main clause.  The other problem with our analysis is that the negative auxiliary must also take a person marking suffix that agrees with the person marking suffix on the subordinate clause.  We dealt with this by allowing our auxiliary verbs to go through a person marking lexical rule like the one we used for main predicates, though in this rule, unlike the person marking rule for main predicates, the person marking doesn't agree with the subject since the auxiliary verb has no subject, only a sentence complement.
+
+Here is a grammatical example where the predicate to be negated is in a subordinate clause, and the negative particle has gone through the person marking lexical rule:
+
+Source: a:118
+Vetted: s
+Judgment: g
+Phenomena: {neg}
+ʔəwə cən nemʔen
+ʔəwə-cən nemʔ-en
+NEG-1SUBJ go-1SUBSUBJ
+I do/will not go.
+
+Here is a grammatical example with another auxiliary. Note that the other auxiliary follows the negative auxiliary and behaves as it should according to the other auxiliary rules (which I will get to), predicate rules, and is in a subordinate clause:
+
+Source: a:120
+Vetted: s
+Judgment: g
+Phenomena: {neg}
+ʔəwə niʔəs kᵂ!əcnamxəs
+ʔəwə niʔ-əs kᵂ!əc-ət-amx-əs
+NEG there-3SUBSUBJ see-TR-1OBJ-3TR
+He didn't see me.
+
+
+The following ungrammatical example will parse, illustrating the over-generation of our grammar.  The main predicate should be in a subordinate clause, but since we don't have a way to select for this yet, the grammar will accept negation with a predicate that is in a main clause. Also we currently have no way to enforce agreement between the person marker on the main predicate and the person marker on the negative auxiliary. Both of these are illustrated below:
+
+Source: author
+Vetted: s
+Judgment: u
+Phenomena: {neg}
+ʔəwə ep nemʔ cep 
+ʔəwə-ep nemʔ-cep 
+NEG-2PSUBSUBJ go-2PSUBJ
+You folks do/will not go.
+
+This last example demonstrates how negation is handled when the predicate is nominalized, we currently do not have a way to deal with this and aren't sure of an approach:
+
+
+Source: a:120
+Vetted: s
+Judgment: g
+Phenomena: {neg}
+ʔəwə kᵂs kᵂ!əcnəxᵂs
+ʔəwə kᵂθə s-kᵂ!əc-nəxᵂ-s
+NEG DET(MN) NOM-see-TR-3POSS
+He doesn't see him.
+
+
+
+OTHER AUXILIARIES
+
+The rest of the auxiliaries seem to behave more like auxiliaries that select for VP complements with subject raising, but since we only could choose one treatment for our auxiliaries with the customization system, we chose to analyze them in the way required for negation and to make temporary adjustments for everything that didn't work so that it was over-generating.  
+
+When an auxiliary verb other than the negative-aux is present, the person marker suffix attaches to the auxiliary, rather than the main predicate. This is unlike negation, where the main predicate keeps its person marker and forces agreement with the person marker on the negative auxiliary.  We were able to allow the person marker to attach to the auxiliary verb by allowing auxiliary verbs to go through the lexical rule that we set up for the negative auxiliaries that adds person markers.  To recap, for this week, we created a new lexical rule that applies only to auxiliary verbs to give them the person markers that would be marked on their subjects, if they had access to them. Since they don't, there are no features marked on the subject in the lexical rule (unlike the person marking lex rule that the main predicates go through).  In the coming weeks, we will differentiate between auxiliary verbs that take a VP and raise the subject with the negation auxiliary that takes a saturated complement and forces agreement between its personal marker and the one on the predicate in the subordinate clause.
+
+The following is an example that is grammatical and will parse based on our choices in the customization system, but not in exactly the right way we want it to.  The personal marker is added to the auxiliary verb by the new rule, though it does not mark its subject. The subject is dropped by the main predicate.  Eventually we want the subject not to be dropped by the main predicate, but rather passed to the auxiliary:  
+
+Source: c:52
+Vetted: s
+Judgment: g
+Phenomena: {wo}
+ni cən ʔəɬtən
+niʔ-cən ʔəɬtən
+there-1SUBJ eat
+I ate.
+
+The following ungrammatical example will parse.  The aux has the ø morpheme for its person marker, indicating that it is marked for 3rd person.  But the main predicate also takes a personal marker because we don't yet force it to pass it's subject to the auxiliary. They do not agree either.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+ni ʔəɬtən cən
+niʔ ʔəɬtən-cən
+there eat-1SUBJ
+I ate.
+
+
+
+TENSE
+
+We added a treatment of the past and future tenses this week. For the past, after adding the past tense option, we only had to add a new position class and lexical rule.  The position class comes directly before the personal marker suffix, and like the personal marker suffix, follows the aux verb when it is present with a main predicate - usually (however, it can also stay on the main predicate or appear on both). Thus the following will parse correctly:
+
+Source: a:369
+Vetted: s
+Judgment: g
+Phenomena: {tam}
+c!ewətəɬ cən
+c!ew-ət-əɬ-cən
+help-TR-PAST-1SUBJ
+I was going to help him.
+
+The following have the wrong order of suffixes and will not parse:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+c!ewət cənəɬ 
+c!ew-ət-cən-əɬ 
+help-TR-1SUBJ-PAST
+I was going to help him.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+c!ewəɬət cən 
+c!ew-əɬ-ət-cən 
+help-PAST-TR-1SUBJ
+I was going to help him.
+
+The following will parse correctly, illustrating the movement of the past marker to the aux:
+
+Source: a:369
+Vetted: s
+Judgment: g
+Phenomena: {tam}
+niɬ cən c!ewət
+ni-əɬ-cən c!ew-ət
+there-PAST-1SUBJ help-TR
+I helped him.
+
+These two past marker grammatical examples with auxiliary verbs, though uncommon, will also parse, since we haven't restricted the placement of the past marker in any way (including how many times it appears):
+
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+niɬ cən c!ewətəɬ
+ni-əɬ-cən c!ew-ət-əɬ
+there-PAST-1SUBJ help-TR-PAST
+I helped him.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+ni cən c!ewətəɬ
+ni-cən c!ew-ət-əɬ
+there-1SUBJ help-TR-PAST
+I helped him.
+
+In all cases, the future marker is much more free than the past marker. However, in most cases, the future behaves in much the same way as the past, except the future marker follows the personal marker. So we created future tense and added a position class and lexical rule just like we did for the past:
+
+Source: a:375
+Vetted: s
+Judgment: g
+Phenomena: {tam}
+kᵂ!aqᵂ tʃxᵂ ceʔ 
+kᵂ!aqᵂ-tʃxᵂ-ceʔ 
+get.hit-2SUBJ-FUT
+You'll get hit.
+
+The following illustrates ungrammatical placement of the future marker:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+kᵂ!aqᵂ ceʔ tʃxᵂ 
+kᵂ!aqᵂ-ceʔ-tʃxᵂ 
+get.hit-FUT-2SUBJ
+You'll get hit.
+
+
+It doesn't say so explicitly, but it shouldn't be logically possible to have both past and future markers on a predicate.  This assumption is corroborated by the fact that we have yet to find a single example that contradicts it.  Therefore, we made a forbids restriction on the occurrence of both the past and future markers so that the following otherwise grammatical sentence will not parse:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+kᵂ!aqᵂəɬ tʃxᵂ ceʔ 
+kᵂ!aqᵂ-əɬ-tʃxᵂ-ceʔ  
+get.hit-PAST-2SUBJ-FUT
+?You'll got hit.
+
+
+AGREEMENT
+
+Halkomelem exhibits agreement between transitive verbs and their subjects.  On transitive verbs this is realized as -əs for 3rd person subjects and a ø morpheme in all other cases. This suffix follows the object marking suffix on transitive verbs. We implemented this in our grammar by created a new position class following the object marker that is obligatory for transitive predicates. The following is an example of a non-3rd subject receiving the ø morpheme (the object suffix is the ø morpheme in this case since the object is 3rd):
+
+Source: a:323
+Vetted: s
+Judgment: g
+Phenomena: {agr}
+c!ewət cən ceʔ
+c!ew-ət-cən-ceʔ
+help-TR-1SUBJ-FUT
+I will help him/her.
+
+And here we see a sentence with the 3rd transitive agreement suffix:
+
+Source: a:323
+Vetted: s
+Judgment: g
+Phenomena: {agr}
+c!ewətəs cən ceʔ
+c!ew-ət-əs-ceʔ
+help-TR-3TR-FUT
+He/she will help him/her.
+
+And finally, an example illustrating that the transitive agreement suffix stays on the transitive verb when an auxiliary is present:
+
+
+Source: a:323
+Vetted: s
+Judgment: g
+Phenomena: {agr}
+ni cən c!ewətəs
+niʔ c!ew-ət-əs
+there help-TR-3TR
+He/she helped him/her.
+
+In keeping with our treatment of auxiliaries, the following will parse even though the transitive agreement marker doesn't agree with the person marker because the main predicate and auxiliary don't currently share any information about the subject:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+ni cən c!ewətəs 
+niʔ-cən c!ew-ət-əs 
+there-1SUBJ help-TR-3TR
+I helped him/her.
+
+These two examples show that the transitive agreement marker occurs after the object marker:
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr}
+kᵂ!əcnamxəs ceʔ
+kᵂ!əc-ət-amx-əs-ceʔ
+see-TR-1OBJ-3TR-FUT
+He/she will see me.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+kᵂ!əcnəsamx ceʔ
+kᵂ!əc-ət-əs-amx-ceʔ
+see-TR-3TR-1OBJ-FUT
+He/she will see me.
+
+
+
+ARGUMENT OPTIONALITY
+
+Since all of our verbs mark both the subject and object as suffixes (including a ø morpheme that still distinguishes), we decided to make both subjects and objects optional in all contexts. The following two grammatical examples that parse illustrate dropping of the subject with no object:
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pro-d}
+kᵂən kᵂθə sʔəɬtən
+kᵂən kᵂθə sʔəɬtən
+take DET(MN) food
+The food gets taken.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pro-d}
+kᵂən
+kᵂən
+take
+He/she/it gets taken.
+
+These next two illustrate subject dropping with overt complement. The second one currently does not parse and we know why, but not what to do to fix it.  The problem seems to be that the predicate will only take a subject and drop a complement, not the other way around.  When we tried to force unification, we found that both our head complement opt rule and our head subj opt rule require that the daughter has an empty subj or comps, respectively.  However, the subject in a sentence with only a complement never seems to get dropped, and thus the predicate still has a non-empty subj and comps, so it can go through neither rule:
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pro-d}
+kᵂənətəs kᵂθə sqəmeyʔ kᵂθə sʔəɬtən
+kᵂən-ət-əs kᵂθə sqəmeyʔ kᵂθə sʔəɬtən
+take-TR-3TR DET(MN) dog DET(MN) food
+The dog takes the food.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pro-d}
+kᵂənətəs kᵂθə sʔəɬtən
+kᵂən-ət-əs kᵂθə sʔəɬtən
+take-TR-3TR DET(MN) food
+He/she/it takes the food. # * The food takes him/her/it.
+
+However, when both are dropped, it has no trouble parsing correctly, as in the following:
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pro-d}
+kᵂənətəs
+kᵂən-ət-əs
+take-TR-3TR
+He/she/it takes him/her/it.
+
+
+DEMONSTRATIVES
+
+In Halkomelem, demonstratives used as determiners correspond exactly to the articles (both are distinguished by gender and proximity and occur in the same contexts) with the exception that the demonstratives are always definite, whereas the articles are sometimes definite and sometimes not.  For the most part, the only work this week on demonstratives was creating new lexical entries and putting them in the same places as the articles from last week. However, there were also compound demonstratives that were closer to the English “this” and “that” than the simple demonstratives, so I've included an example of one of them:
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: {det}
+nemʔ cən kᵂ!i spəɬχən
+nemʔ-cən kᵂ!i spəɬχən
+go-1SUBJ DET(MR) pasture
+I'm going to the pasture.
+
+And like the articles, word order is fixed and the noun must have a determiner, like so:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+nemʔ cən spəɬχən
+nemʔ-cən spəɬχən
+go-1SUBJ pasture
+I'm going to the pasture.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+nemʔ cən spəɬχən  kᵂ!i
+nemʔ-cən spəɬχən  kᵂ!i
+go-1SUBJ pasture  DET(MR)
+I'm going to the pasture.
+
+
+
+ASPECT
+
+There are several prefixes that one source says “may be aspectual,” so we haven chosen to analyze the one that creates the simplest utterances while still being common. We dealt with this by again created a prefix position class and a lexical rule.  The aspect means “still” or “soon”:
+
+Source: author # adapted from c:174
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+xᵂənqᵂel cən
+xᵂən-qᵂel-cən
+still-speak-1SUBJ
+I'll speak soon.
+
+There are two other very common aspect markers, one for the durative aspect and one for the progressive, but these involve reduplication, so none of these currently parse:
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+qᵂaqᵂəlʔ  cən
+qᵂa-qᵂəl-cən
+PROG-speak-1SUBJ
+I am speaking.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+qᵂəqᵂel cən
+qᵂə-qᵂel-cən
+DUR-speak-1SUBJ
+I give a speech.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+qᵂiqᵂelʔ cən
+PROG-DUR-qᵂelʔ-cən
+PROG-DUR-speak-1SUBJ
+I am giving a speech.
+
+
+3)
+
+As far as I can tell, the only parses/not-parses we have that aren't what we expected are those dealing with the dropping of the subject when there is an overt object.
+
+There's expected over-generation with person marking on the auxiliaries and the failure to differentiate between subordinate and main clauses.
+
+There's expected under-generation with regards to the reduplication that is a part of the durative and progressive aspects.
+
+We are currently at 75% coverage.
+
+
+4)
+
+The customization can't currently handle our treatment of auxiliaries since the negative auxiliary and the rest seem to have different treatments.   Thankfully, wee knew that from the beginning about it because there is a note cautioning about just that in the order section. We didn't know that this meant that we couldn't place features on a subject when the auxiliary went through a lexical rule and though we found a temporary solution, it over-generates and is not ideal. It also can't handle reduplication, which again we knew.  We still don't know if it can fully handle our argument optionality.

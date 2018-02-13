@@ -1,0 +1,140 @@
+Language: Halkomelem
+Language code: hur
+Lines: translit translit-seg gloss translat
+Author: Matthew Benak, Kathryn Nichols
+Date: May 16, 2013
+Source a: Wayne Suttles. 2004. Musqueam Reference Grammar. UBC Press.
+
+# 'The Deer Drive' #
+
+#1
+Source: a:524
+Vetted: s
+Judgment: g
+Phenomena: {}
+nemʔ ct xᵂaʔaθ nemʔ ʔə ƛ! Halfway
+nemʔ c-t xᵂaʔaθ nemʔ ʔə ƛ! Halfway
+go AUX-1PSUBJ deer.drive go OBL ART Halfway
+We are going on a deer drive at Halfway.
+
+#2
+Source: a:524
+Vetted: s
+Judgment: g
+Phenomena: {}
+ʔəpelə ct ceʔ wənit hayeʔ 
+ʔəpənelə c-t ceʔ wə-niʔ-t hayeʔ
+ten.people AUX-1PSUBJ FUT when-be.there-1PLSUBJ leave.
+There will be ten of us when we leave.  
+
+#3
+Source: a:524
+Vetted: s
+Judgment: g
+Phenomena: {}
+nemʔ ct wekənaɬ 
+nemʔ c-t wekən-aɬ 
+go AUX-1PSUBJ wagon-by
+We'll go by wagon.
+
+#4 OK
+Source: a:524
+Vetted: s
+Judgment: g
+Phenomena: {}
+sq!əlim ct ceʔ 
+sq!əlim c-t ceʔ 
+camped.out AUX-1PSUBJ FUT
+We'll be camped out.
+
+#5
+Source: a:525
+Vetted: s
+Judgment: g
+Phenomena: {}
+χəθilə ceʔ kᵂθə sqᵂ!aqᵂ!əɬ 
+χəʔaθənelə ceʔ kᵂθə sqᵂ!aqᵂ!əɬ
+four.persons FUT DET(MN) lying.in.wait
+Four will be lying in wait. 
+
+#6
+Source: a:525
+Vetted: s
+Judgment: g
+Phenomena: {}
+ƛ!a ceʔ kᵂələxt kᵂθə sməyəθ wəmʔis ceʔ wəɬcɬaqᵂθət
+ƛ!a ceʔ kᵂələx-ət kᵂθə sməyəθ wə-mʔi-əs ceʔ wəɬ-cɬaqᵂ-θət
+BE3P FUT shoot-TR DET(MN) deer when-come-3SUBSUBJ FUT already-pass.through-REFL
+They will be the ones who will shoot the deer when they start coming through.
+
+#7
+Source: a:525
+Vetted: s
+Judgment: g
+Phenomena: {}
+i ƛ!a ceʔ kᵂə tə səwʔawləsalɬ nemʔ nəsq!aʔ kᵂ!əns nemʔ xᵂaʔaθ yəq!ewʔəm ceʔ ʔeɬtən steʔe ʔə kᵂ! stəqeye 
+ʔəyʔ ƛ!a ceʔ tə səwʔawləsalɬ nemʔ nə-sq!aʔ kᵂ!ə nə-s-nemʔ xᵂaʔaθ yə-q!ewʔəm ceʔ ʔeɬtən steʔe ʔə kᵂ!ə stəqeye 
+and BE3P FUT DET(MN) youths go 1POSS-company DET(MR) 1NOMSUBJ-NOM-go deer.drive along-howl FUT 3PL like OBL DET(MR) wolf
+And then it will be the boys who go with me when I got to drive the deer, howling like wolves as they go along.
+
+#8
+Source: a:525
+Vetted: s
+Judgment: g
+Phenomena: {}
+ƛ!a ceʔ səw yətatəsəts kᵂə sment ʔeɬtən wəmʔis wəɬweɬətəs kᵂθə sməyəθ 
+ƛ!a ceʔ s-wə-yə-PROG-təs-ət-s kᵂə sment ʔeɬtən wə-mʔi-əs PROG-weɬ-ət-əs kᵂθə sməyəθ
+BE3P FUT NOM-EMPH-along-PROG-hit.together-TR-3NOMSUBJ DET(MN) stone 3PL when-come-3SUBSUBJ PROG-chase-TR-3SUBSUBJ DET(MN) deer
+They'll be the ones striking stones together when they come chasing the deer.
+
+#9 
+Source: a:525
+Vetted: s
+Judgment: g
+Phenomena: {}
+stqᵂ!iqən tə sment i ƛ!ew stətiqᵂ! tə stalʔəw
+stqᵂ!iqən tə sment ʔəyʔ ƛ!ə wə-stətiqᵂ! tə stalʔəw
+steep DET(MP) mountain and too EMPH-sheer DET(MP) river.
+The mountainside is steep and also the river bank is sheer.
+
+
+#10
+Source: a:525
+Vetted: s
+Judgment: g
+Phenomena: {}
+skᵂ!ey kᵂə snemʔs hilθət
+skᵂ!ey kᵂə s-nemʔ-s hilθət
+impossible DET(MR) NOM-go-3NOMSUBJ roll
+They can't let themselves go.
+
+#11
+Source: a:525
+Vetted: s
+Judgment: g
+Phenomena: {}
+wənʔan wəƛ!əp wənʔan wəcicəɬ   
+wə-nʔan wə-ƛ!əp wə-nʔan wə-cicəɬ   
+EMPH-too EMPH-deep EMPH-too EMPH-high
+It is too far down and too far up.
+
+#12
+Source: a:525
+Vetted: s
+Judgment: g
+Phenomena: {}
+ʔəwəteʔ kᵂə ʃxᵂnemʔs təwƛ!a sməyəθ 
+ʔəwəteʔ kᵂə ʃxᵂ-nemʔ-s təwƛ!a sməyəθ 
+none DET(MR) OBLNOM-go-3NOMSUBJ that deer
+The deer have no place to go.
+
+#13 
+Source: a:526
+Vetted: s
+Judgment: g
+Phenomena: {}
+nəw nemʔ ʔalʔ χᵂənxenəm təwƛ!a sməyəθ 
+niʔ wə-nemʔ ʔalʔ χᵂənxenəm təwƛ!a sməyəθ 
+be.there EMPH-go just run that deer
+The deer can only run.
+

@@ -1,0 +1,765 @@
+Language: Halkomelem
+Language code: hur
+Lines: translit translit-seg gloss translat
+Author: Kathryn Nichols, Matthew Benak
+Date: April 9, 2013
+Source a: Wayne Suttles. 2004. Musqueam Reference Grammar. UBC Press.
+Source b: http://web.uvic.ca/hrd/hulq
+Source c: Donna Gerdts. 1982. Object and Absolutive in Halkomelem Salish. Dissertation Abstracts International, 43, no. 3.
+
+# For all c, individual words and phonemes may have been adapted to the Downriver dialect. No structural changes were performed.
+
+################
+## Word Order ##
+################
+
+# Minimally a predicate. Phrases typically contain auxiliaries, which
+# can express time, motion and location, among other things.
+# Objects are overtly stated after the predicate and subject, although
+# transitivity is expressed through suffixation (TR).
+
+# (tentative) There are no ditransitive verbs: transference is indicated
+# through oblique objects marked with the preposition ʔə 
+
+
+# Bare intransitive verbs
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo}
+ʔiməx 
+ʔiməx-∅3SUBJ   
+walk-3SUBJ
+He/She/It walks.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo}
+ʔiməx ɬə sɬenəyʔ 
+ʔiməx-∅3SUBJ ɬə sɬenəyʔ 
+walk-3SUBJ DET(FN) woman
+The woman walks.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+ɬə sɬenəyʔ ʔiməx
+ɬə sɬenəyʔ ʔiməx-∅3SUBJ
+DET(FN) woman walk-3SUBJ
+The woman walks 
+
+
+# Intransitive verbs with auxiliaries
+
+Source: c:38
+Vetted: s
+Judgment: g
+Phenomena: {wo}
+niʔ ʔiməx ɬə sɬenəyʔ 
+niʔ-∅3SUBJ ʔiməx ɬə sɬenəyʔ 
+there-3SUBJ walk DET(FN) woman
+The woman walked.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+ʔiməx niʔ ɬə sɬenəyʔ 
+ʔiməx niʔ-∅3SUBJ ɬə sɬenəyʔ 
+walk there-3SUBJ DET(FN) woman
+The woman walked.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+ʔiməx ɬə sɬenəyʔ niʔ
+ʔiməx ɬə sɬenəyʔ niʔ-∅3SUBJ
+walk DET(FN) woman there-3SUBJ
+The woman walked
+
+
+# Bare transitive verbs
+
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo}
+qᵂ!ələtəs θə sɬenəyʔ tə scəɬtən
+qᵂ!əl-ət-∅3OBJ-əs-∅3SUBJ θə sɬenəyʔ tə scəɬtən
+bake-TR-3OBJ-3TR-3SUBJ DET(FP) woman DET(MP) salmon
+The woman bakes the salmon.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo}
+qᵂ!ələtəs tə scəɬtən θə sɬenəyʔ
+qᵂ!əl-ət-∅3OBJ-əs-∅3SUBJ tə scəɬtən θə sɬenəyʔ 
+bake-TR-3OBJ-3TR-3SUBJ DET(MP) salmon DET(FP) woman 
+The salmon bakes the woman.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+θə sɬenəyʔ qᵂ!ələtəs tə scəɬtən
+θə sɬenəyʔ qᵂ!əl-ət-∅3OBJ-əs-∅3SUBJ tə scəɬtən
+DET(FP) woman bake-TR-3OBJ-3TR-3SUBJ DET(MP) salmon
+The woman bakes the salmon.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+tə scəɬtən qᵂ!ələtəs θə sɬenəyʔ 
+tə scəɬtən qᵂ!əl-ət-∅3OBJ-əs-∅SUBJ θə sɬenəyʔ
+DET(MP) salmon bake-TR-3OBJ-3TR-3SUBJ DET(FP) woman
+The salmon bakes the woman.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+θə sɬenəyʔ tə scəɬtən qᵂ!ələtəs
+θə sɬenəyʔ tə scəɬtən qᵂ!əl-ət-∅3OBJ-əs-∅SUBJ 
+DET(FP) woman DET(MP) salmon bake-3OBJ-TR-3TR-3SUBJ 
+The woman bakes the salmon.
+
+Source: author
+Vetted: f
+Judgment:u
+Phenomena: {wo}
+tə scəɬtən θə sɬenəyʔ qᵂ!ələtəs 
+tə scəɬtən θə sɬenəyʔ qᵂ!əl-ət-∅3OBJ-əs-∅3SUBJ  
+DET(MP) salmon DET(FP) woman bake-3OBJ-TR-3TR-3SUBJ  
+The salmon bakes the woman.
+
+# Transitive verbs with auxiliaries
+
+
+
+Source: c:38
+Vetted: s
+Judgment: g
+Phenomena: {wo}
+niʔ qᵂ!ələtəs θə sɬenəyʔ tə scəɬtən
+niʔ-∅3SUBJ qᵂ!əl-ət-∅3OBJ-əs θə sɬenəyʔ tə scəɬtən
+there-3SUBJ bake-TR-3OBJ-3TR DET(FP) woman DET(MP) salmon
+The woman baked the salmon.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo}
+niʔ qᵂ!ələtəs tə scəɬtən θə sɬenəyʔ
+niʔ-∅3SUBJ qᵂ!əl-ət-∅3OBJ-əs tə scəɬtən θə sɬenəyʔ
+there-3SUBJ bake-TR-3OBJ-3TR DET(MP) salmon DET(FP) woman
+The salmon baked the woman.
+
+Source: author
+Vetted:f
+Judgment: u
+Phenomena: {wo}
+niʔ θə sɬenəyʔ qᵂ!ələtəs tə scəɬtən
+niʔ-∅3SUBJ θə sɬenəyʔ qᵂ!əl-ət-∅3OBJ-əs tə scəɬtən
+there-3SUBJ DET(FP) woman bake-TR-3OBJ-3TR DET(MP) salmon
+The woman baked the salmon.
+
+Source: author
+Vetted:f
+Judgment: u
+Phenomena: {wo}
+niʔ θə sɬenəyʔ tə scəɬtən qᵂ!ələtəs
+niʔ-∅3SUBJ θə sɬenəyʔ tə scəɬtən qᵂ!əl-ət-∅3OBJ-əs
+there-3SUBJ DET(FP) woman DET(MP) salmon bake-TR-3OBJ-3TR
+The woman baked the salmon.
+
+Source: author
+Vetted:f
+Judgment: u
+Phenomena: {wo}
+niʔ tə scəɬtən θə sɬenəyʔ qᵂ!ələtəs
+niʔ-∅3SUBJ tə scəɬtən θə sɬenəyʔ qᵂ!əl-ət-∅3OBJ-əs
+there-3SUBJ DET(MP) salmon DET(FP) woman bake-TR-3OBJ-3TR
+The salmon baked the woman.
+
+Source: author
+Vetted:f
+Judgment: u
+Phenomena: {wo}
+niʔ tə scəɬtən qᵂ!ələtəs θə sɬenəyʔ
+niʔ-∅3SUBJ tə scəɬtən qᵂ!əl-ət-∅3OBJ-əs θə sɬenəyʔ
+there-3SUBJ DET(MP) salmon bake-TR-3OBJ-3TR DET(FP) woman
+The salmon baked the woman.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+qᵂ!ələtəs niʔ θə sɬenəyʔ tə scəɬtən
+qᵂ!əl-ət-∅3OBJ-əs niʔ-∅3SUBJ θə sɬenəyʔ tə scəɬtən
+bake-TR-3OBJ-3TR there-3SUBJ DET(FP) woman DET(MP) salmon
+The woman baked the salmon.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+qᵂ!ələtəs niʔ tə scəɬtən θə sɬenəyʔ
+qᵂ!əl-ət-∅3OBJ-əs niʔ-∅3SUBJ tə scəɬtən θə sɬenəyʔ
+bake-TR-3OBJ-3TR there-3SUBJ DET(MP) salmon DET(FP) woman
+The salmon baked the woman.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+qᵂ!ələtəs θə sɬenəyʔ niʔ tə scəɬtən
+qᵂ!əl-ət-∅3OBJ-əs θə sɬenəyʔ niʔ-∅3SUBJ tə scəɬtən
+bake-TR-3OBJ-3TR DET(FP) woman there-3SUBJ DET(MP) salmon
+The woman baked the salmon.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+qᵂ!ələtəs θə sɬenəyʔ tə scəɬtən niʔ
+qᵂ!əl-ət-∅3OBJ-əs θə sɬenəyʔ tə scəɬtən niʔ-∅SUBJ
+bake-TR-3OBJ-3TR DET(FP) woman DET(MP) salmon there-3SUBJ
+The woman baked the salmon.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+qᵂ!ələtəs tə scəɬtən θə sɬenəyʔ niʔ
+qᵂ!əl-ət-∅3OBJ-əs tə scəɬtən θə sɬenəyʔ niʔ-∅3SUBJ
+bake-TR-3OBJ-3TR DET(MP) salmon DET(FP) woman there-3SUBJ
+The salmon baked the woman.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+qᵂ!ələtəs tə scəɬtən niʔ θə sɬenəyʔ
+qᵂ!əl-ət-∅3OBJ-əs tə scəɬtən niʔ-∅3SUBJ θə sɬenəyʔ
+bake-TR-3OBJ-3TR DET(MP) salmon there-3SUBJ DET(FP) woman
+The salmon baked the woman.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+θə sɬenəyʔ qᵂ!ələtəs tə scəɬtən niʔ
+θə sɬenəyʔ qᵂ!əl-ət-∅3OBJ-əs tə scəɬtən niʔ-∅3SUBJ
+DET(FP) woman bake-TR-3OBJ-3TR DET(MP) salmon there-3SUBJ
+The woman baked the salmon.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+θə sɬenəyʔ qᵂ!ələtəs niʔ tə scəɬtən
+θə sɬenəyʔ qᵂ!əl-ət-∅3OBJ-əs niʔ-∅3SUBJ tə scəɬtən 
+DET(FP) woman bake-TR-3OBJ-3TR there-3SUBJ DET(MP) salmon
+The woman baked the salmon.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+θə sɬenəyʔ tə scəɬtən qᵂ!ələtəs niʔ
+θə sɬenəyʔ tə scəɬtən qᵂ!əl-ət-∅3OBJ-əs niʔ-∅3SUBJ 
+DET(FP) woman DET(MP) salmon bake-TR-3OBJ-3TR there-3SUBJ
+The woman baked the salmon.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+θə sɬenəyʔ tə scəɬtən niʔ qᵂ!ələtəs
+θə sɬenəyʔ tə scəɬtən niʔ-∅3SUBJ qᵂ!əl-ət-∅3OBJ-əs 
+DET(FP) woman DET(MP) salmon there-3SUBJ bake-TR-3OBJ-3TR
+The woman baked the salmon.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+θə sɬenəyʔ niʔ tə scəɬtən qᵂ!ələtəs
+θə sɬenəyʔ niʔ-∅3SUBJ tə scəɬtən qᵂ!əl-ət-∅3OBJ-əs 
+DET(FP) woman there-3SUBJ DET(MP) salmon bake-TR-3OBJ-3TR
+The woman baked the salmon.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+θə sɬenəyʔ niʔ qᵂ!ələtəs tə scəɬtən
+θə sɬenəyʔ niʔ-∅3SUBJ qᵂ!əl-ət-∅3OBJ-əs tə scəɬtən 
+DET(FP) woman there-3SUBJ bake-TR-3OBJ-3TR DET(MP) salmon
+The woman baked the salmon.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+tə scəɬtən θə sɬenəyʔ niʔ qᵂ!ələtəs
+tə scəɬtən θə sɬenəyʔ niʔ-∅3SUBJ qᵂ!əl-ət-∅3OBJ-əs 
+DET(MP) salmon DET(FP) woman there-3SUBJ bake-TR-3OBJ-3TR
+The salmon baked the woman.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+tə scəɬtən θə sɬenəyʔ qᵂ!ələtəs niʔ
+tə scəɬtən θə sɬenəyʔ qᵂ!əl-ət-∅3OBJ-əs niʔ-∅3SUBJ 
+DET(MP) salmon DET(FP) woman bake-TR-3OBJ-3TR there-3SUBJ
+The salmon baked the woman.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+tə scəɬtən niʔ θə sɬenəyʔ qᵂ!ələtəs
+tə scəɬtən niʔ-∅3SUBJ θə sɬenəyʔ qᵂ!əl-ət-∅3OBJ-əs 
+DET(MP) salmon there-3SUBJ DET(FP) woman bake-TR-3OBJ-3TR
+The salmon baked the woman.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+tə scəɬtən niʔ qᵂ!ələtəs θə sɬenəyʔ
+tə scəɬtən niʔ-∅3SUBJ qᵂ!əl-ət-∅3OBJ-əs θə sɬenəyʔ 
+DET(MP) salmon there-3SUBJ bake-TR-3OBJ-3TR DET(FP) woman
+The salmon baked the woman.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+tə scəɬtən qᵂ!ələtəs niʔ θə sɬenəyʔ
+tə scəɬtən qᵂ!əl-ət-∅3OBJ-əs niʔ-∅3SUBJ θə sɬenəyʔ 
+DET(MP) salmon bake-TR-3OBJ-3TR there-3SUBJ DET(FP) woman
+The salmon baked the woman.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+tə scəɬtən qᵂ!ələtəs θə sɬenəyʔ niʔ
+tə scəɬtən qᵂ!əl-ət-∅3OBJ-əs θə sɬenəyʔ niʔ-∅3SUBJ 
+DET(MP) salmon bake-TR-3OBJ-3TR DET(FP) woman there-3SUBJ
+The salmon baked the woman.
+
+
+##############
+## Pronouns ##
+##############
+
+# Subject pronouns for non-passive main clauses always occur
+# in the second position.
+# Absence of 1st or 2nd person pronoun indicates 3rd person.
+
+#       sg              pl
+# 1     cən  1SUBJ      ct     1PSUBJ
+# 2     tʃxᵂ 2SUBJ      cep    2PSUBJ
+# 3     ∅    3SUBJ      ∅/ʔəɬtən 3PSUBJ
+
+# With intranstive verbs
+
+Source: a:327
+Vetted: s
+Judgment: g
+Phenomena: {pn}
+nemʔ cən
+nemʔ-cən
+go-1SUBJ
+I go.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn}
+nemʔ tʃxᵂ 
+nemʔ-tʃxᵂ 
+go-2SUBJ
+You go.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn}
+nemʔ ct
+nemʔ-ct
+go-1PSUBJ
+We go. 
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn}
+nemʔ cep
+nemʔ-cep
+go-2PSUBJ
+You all go.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn}
+nemʔ
+nemʔ-∅
+go-3SUBJ
+He/She/It/They go(es).
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn}
+nemʔ ʔeɬtən
+nemʔ-ʔeɬtən
+go-3PSUBJ
+They go.
+
+# With transitive verbs, with or without objects
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn}
+c!əwət cən
+c!əw-ət-∅3OBJ-∅NON3TR-cən
+help-TR-3OBJ-NON3TR-1SUBJ
+I help him/her/it/them.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn}
+c!əwət cən ɬə sɬenəyʔ 
+c!əw-ət-∅3OBJ-∅NON3TR-cən ɬə sɬenəyʔ 
+help-TR-3OBJ-NON3TR-1SUBJ DET(FN) woman
+I help the woman
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn}
+c!əwət tʃxᵂ ɬə sɬenəyʔ 
+c!əw-ət-∅3OBJ-∅NON3TR-tʃxᵂ ɬə sɬenəyʔ 
+help-TR-3OBJ-NON3TR-2SUBJ DET(FN) woman
+You help the woman.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn}
+c!əwətəs
+c!əw-ət-∅3OBJ-əs-∅3SUBJ
+help-TR-3OBJ-3TR-3SUBJ
+He/She/It/They help(s) him/her/it/them.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn}
+c!əwətəs ɬə sɬenəyʔ 
+c!əw-ət-∅3OBJ-əs-∅3SUBJ ɬə sɬenəyʔ 
+help-TR-3OBJ-3TR-3SUBJ DET(FN) woman
+He/She/It/They help(s) the woman. # * The woman helps him/her/it/them.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn}
+c!əwətəs ʔeɬtən ɬə sɬenəyʔ 
+c!əw-ət-∅3OBJ-əs-ʔeɬtən ɬə sɬenəyʔ 
+help-TR-3OBJ-3TR-3PSUBJ DET(FN) woman
+They help the woman.
+
+
+
+##########
+## Case ##
+##########
+
+# N/A
+
+#################
+## Determiners ##
+#################
+
+# F = feminine
+# M = plain (masculine)
+# P = present and visible
+# N = nearby and invisible
+# R = remote or hypothetical
+
+#     M               F          
+# P   tə (tᶱə)        θə
+# N   kᵂθə, kᵂə, kᵂ   ɬə, kᵂɬə, ɬ, kᵂɬ
+# R   kᵂ!ə, kᵂ!       kᵂsə
+
+# Note: P, N and R are in relation to the speaker at the time
+# of the utterance and are typically not translated.
+
+# Only about 7 words are strictly masculine or feminine. Virtually
+# all others can take either form, though most frequently the plain
+# form. In addition, small animals and objects tend to take 
+# feminine determiners, but this tendency will not be addressed
+# in this grammar.
+
+# N and R determiners sometimes impart indefiniteness, typically
+# translated as 'a' or 'some' in English, but this interpretation
+# will not be included here.
+
+# Demonstratives used as determiners distinguish the same two categories as
+# the articles.  Demonstratives, however, are always definite, and also have compound 
+# forms that express more information. Most demonstratives have the same form as the articles, but with longer vowels.
+
+#	M		F
+# P	tθe		θe
+# N	kᵂθe		kᵂɬe
+# R	kᵂ!i
+
+# Compound with ʔi and niʔ and plural:
+
+#	M		F		Pl
+# P	teʔi, təniʔ	θəʔi		yəθeʔ, tən!aɬtən
+# N					kᵂθeləy!, yən!aɬtən
+
+
+# Illustrating plain determiners
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+ʔəɬtən tə sqᵂəmeyʔ 
+ʔəɬtən-∅3SUBJ tə sqᵂəmeyʔ 
+eat-3SUBJ DET(MP) dog
+The dog eats.
+
+Source: author 
+Vetted: f
+Judgment: u
+Phenomena: {det}
+ʔəɬtən sqᵂəmeyʔ 
+ʔəɬtən-∅3SUBJ sqᵂəmeyʔ 
+eat-3SUBJ dog
+The dog eats.
+
+Source: author
+Vetted: f
+Judgment: u 
+Phenomena: {det}
+ʔəɬtən sqᵂəmeyʔ tə 
+ʔəɬtən-∅3SUBJ sqᵂəmeyʔ tə
+eat-3SUBJ dog DET(MP)
+The dog eats.
+
+Source: author
+Vetted: s
+Judgment: g
+Phenomena: {det}
+ʔəɬtən kᵂθə sqᵂəmeyʔ 
+ʔəɬtən-∅3SUBJ kᵂθə sqᵂəmeyʔ 
+eat-3SUBJ DET(MN) dog
+The dog eats.
+
+Source: author 
+Vetted: f
+Judgment: u
+Phenomena: {det}
+ʔəɬtən sqᵂəmeyʔ 
+ʔəɬtən-∅3SUBJ sqᵂəmeyʔ 
+eat-3SUBJ dog
+The dog eats.
+
+Source: author
+Vetted: f
+Judgment: u 
+Phenomena: {det}
+ʔəɬtən sqᵂəmeyʔ kᵂθə 
+ʔəɬtən-∅3SUBJ sqᵂəmeyʔ kᵂθə
+eat-3SUBJ dog DET(MN)
+The dog eats.
+
+
+# Illustrating feminine determiners
+
+Source: author
+Vetted: s
+Judgment: g
+Phenomena: {det}
+ʔiməx θə  sɬenəyʔ
+ʔiməx-∅3SUBJ θə  sɬenəyʔ
+walk-3SUBJ DET(FP) woman
+The woman walks.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+ʔiməx sɬenəyʔ
+ʔiməx-∅3SUBJ sɬenəyʔ
+walk-3SUBJ woman
+The woman walks.
+
+Source: author 
+Vetted: f
+Judgment: u
+Phenomena: {det}
+ʔiməx sɬenəyʔ θə 
+ʔiməx-∅3SUBJ sɬenəyʔ θə 
+walk-3SUBJ woman DET(FP)
+The woman walks.
+
+Source: author
+Vetted: s
+Judgment: g
+Phenomena: {det}
+ʔiməx ɬə sɬenəyʔ
+ʔiməx-∅3SUBJ ɬə sɬenəyʔ
+walk-3SUBJ DET(FN) woman
+The woman walks.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+ʔiməx sɬenəyʔ
+ʔiməx-∅3SUBJ sɬenəyʔ
+walk-3SUBJ woman
+The woman walks.
+
+Source: author 
+Vetted: f
+Judgment: u
+Phenomena: {det}
+ʔiməx sɬenəyʔ ɬə 
+ʔiməx-∅3SUBJ sɬenəyʔ ɬə 
+walk-3SUBJ woman DET(FN)
+The woman walks.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+qaʔqaʔ kᵂsə sɬenəyʔ
+qaʔqaʔ-∅3SUBJ kᵂsə sɬenəyʔ  
+drink-3SUBJ DET(FR) woman
+The woman drinks.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+qaʔqaʔ sɬenəyʔ 
+qaʔqaʔ-∅3SUBJ sɬenəyʔ
+drink-3SUBJ woman
+The woman drinks.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+qaʔqaʔ sɬenəyʔ kᵂsə
+qaʔqaʔ-∅3SUBJ sɬenəyʔ kᵂsə  
+drink-3SUBJ woman DET(FR)
+The woman drinks.
+
+
+# Proper nouns require determiners
+
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {det}
+net kᵂ!ə John
+net-∅3SUBJ kᵂ!ə John
+late-3SUBJ DET(MR) John
+John is late.
+
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {det}
+net John
+net-∅3SUBJ John
+late-3SUBJ John
+John is late.
+
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {det}
+net John kᵂ!ə
+net-∅3SUBJ John kᵂ!ə 
+late-3SUBJ John DET(MR)
+John is late.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+t!iləm θə Mary
+t!iləm-∅3SUBJ θə Mary
+sing-3SUBJ DET(FP) Mary
+Mary sings.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+t!iləm Mary
+t!iləm-∅3SUBJ Mary
+sing-3SUBJ Mary
+Mary sings.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+t!iləm Mary θə 
+t!iləm-∅3SUBJ Mary θə 
+sing-3SUBJ Mary DET(FP)
+Mary sings.
+
+
+# Demonstratives as determiners
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: {det}
+nemʔ cən kᵂ!i spəɬχən
+nemʔ-cən kᵂ!i spəɬχən
+go-1SUBJ DET(MR) pasture
+I'm going to the pasture.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+nemʔ cən spəɬχən
+nemʔ-cən spəɬχən
+go-1SUBJ pasture
+I'm going to the pasture.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+nemʔ cən spəɬχən  kᵂ!i
+nemʔ-cən spəɬχən  kᵂ!i
+go-1SUBJ pasture  DET(MR)
+I'm going to the pasture.

@@ -1,0 +1,172 @@
+ADJECTIVES, ADVERBS and PREDICATE RULES
+
+There were some missing predicates on the RELS lists of sentences containing adverbs last week including failure to match indexes properly. The problem was that adjective-lex was not identifying its INDEX with ARG1, so we changed the entry for adjectives to be the following: 
+
+adjective-lex := basic-adjective-lex & intersective-mod-lex & norm-ltop-lex-item & emph-prefix-rule-dtr & adj-pred-rule-dtr &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD [ MOD < [ LOCAL.CAT [ HEAD noun,
+						      VAL.SPR cons ] ] > ],
+			   VAL [ SUBJ < >,
+				 COMPS < >,
+				 SPR < >,
+				 SPEC < > ],
+			   POSTHEAD - ],
+		     CONT.HOOK [ XARG #xarg,
+			         INDEX #arg0 ] ],
+	     LKEYS.KEYREL [ ARG0 #arg0,
+		            ARG1 #xarg ] ] ].
+
+This gives us the correct MRSs for #9 and #11 (which you can view in testcorpus9 in [incr tsdb()]).
+
+Another contributor to this problem was adj-predicate-phrase, which was not identifying LTOPs between daughter and C-CONT, and lacked a constraint on HCONS. An additional problem with this rule, however, was that adjectives had to be completely satisfied for inflection before they could be its daughter. Then after going through the predicate phrase rule, they could act as predicates in the sentence, but could not take any of the subordinate subject suffixes. The same applied to n-bar-predicate phrase. This prevented instances like #214 and #215 below from parsing.
+
+  #214
+  Source: author
+  Vetted: f
+  Judgment: g
+  Phenomena: {emb-d}
+  q!alt wəkᵂ!amʔkᵂ!əmʔəs
+  q!al-ət wə kᵂ!amʔkᵂ!əmʔ-əs
+  believe-TR COMP strong-3SUBSUBJ
+  He believes he is strong.
+
+ #215
+  Source: author
+  Vetted: f
+  Judgment: g
+  Phenomena: {emb-d}
+  q!alt wə sqᵂəmeyʔəs
+  q!al-ət wə sqᵂəmeyʔ-əs
+  believe-TR COMP strong-3SUBSUBJ
+  He believes he is a dog.
+
+
+Although we do not have any attested forms with the wə complementizer, we do see nouns in other subordinate clause types taking the subordinate suffixes, as in
+
+  page 97
+  stem ʔəɬsqᵂəmeyʔəs tθeʔ 
+  stem ʔəɬ-sqᵂəmeyʔ-əs tθeʔ 
+  what that-dog-3SUBSUBJ DEM(MP)
+  What kind of dog is it?
+
+One solution to this could have been to create another set of subject suffixes for adjectives and nouns, but this is overly complicated. Instead, we have converted the phrase structure rules into lexical rules. This allows adjectives and nouns to become verbs before being passed to subj-suffix-rule. The lexical rules are as follows:
+
+********** Matthew:
+* obviously, comment out adj-predicte and n-bar-predicate phrase rules
+* add these lines to lrules.tdl:
+    adj-pred-lex := adj-pred-lex-rule.
+    nbar-pred-lex := nbar-pred-lex-rule.
+* make sure noun-lex and adjective-lex look like this at the top:
+    adjective-lex := basic-adjective-lex & intersective-mod-lex & norm-ltop-lex-item & emph-prefix-rule-dtr & adj-pred-rule-dtr &
+    noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item & nbar-pred-rule-dtr &
+* add these rules to the grammar
+
+
+adj-pred-lex-rule-super := const-lex-rule & subj-suffix-rule-dtr &
+  [ INFLECTED [ SUBJ-SUFFIX-FLAG - ],
+    DTR adj-pred-rule-dtr ].
+
+adj-pred-lex-rule := adj-pred-lex-rule-super &
+  [ SYNSEM.LOCAL [ CAT [ HEAD verb &
+			         [ MOD < > ],
+		           VAL [ COMPS < >,
+			          SPEC < >,
+			          SPR < >,
+			          SUBJ < [ LOCAL [ CONT.HOOK.INDEX #index,
+				  	             CAT [ HEAD noun,
+						            VAL.SPR < > ] ] ] > ] ],
+		     CONT [ HOOK.INDEX #arg0 ] ],
+    C-CONT [ HOOK [ XARG #xarg,
+                    LTOP #ltop ],
+	      RELS <! !>, 
+	      HCONS <! !> ],
+    DTR.SYNSEM [ LOCAL [ CAT [ HEAD adj &
+		                      [ MOD < [ LOCAL.CONT.HOOK.INDEX #index ] > ] ],
+			    CONT.HOOK [ XARG #xarg,
+			                LTOP #ltop ] ],
+		   LKEYS.KEYREL.ARG0 #arg0 ] ].
+
+
+nbar-pred-lex-rule-super := const-lex-rule & subj-suffix-rule-dtr &
+  [ INFLECTED [ SUBJ-SUFFIX-FLAG - ],
+    DTR nbar-pred-rule-dtr ].
+
+nbar-pred-lex-rule := nbar-pred-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT [ HEAD verb &
+			     [ MOD < > ],
+		         VAL [ COMPS < >,
+			        SPEC < >,
+			        SPR < >,
+			        SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
+				   	           CAT [ HEAD noun,
+						          VAL.SPR < > ] ] ] > ],
+		       INIT + ],
+    C-CONT [ HOOK [ LTOP #ltop,
+ 		      INDEX #index,
+		      XARG #arg1 ],
+	      RELS <! arg12-ev-relation &
+		       [ PRED "_be_v_id_rel",
+		         LBL #ltop,
+		         ARG0 #index,
+		         ARG1 #arg1,
+		         ARG2 #arg2 ],
+		       quant-relation &
+		       [ PRED "exist_q_rel",
+		         ARG0 #arg2,
+		         RSTR #harg ] !>,
+	      HCONS <! qeq &
+		        [ HARG #harg, 
+		        LARG #larg ] !> ],
+    DTR.SYNSEM.LOCAL [ CAT [ HEAD noun,
+		               VAL.SPR cons ],
+		         CONT.HOOK [ INDEX #arg2,
+                                   LTOP #larg ] ] ].
+
+These result in behavior almost identical to their phrase structure rule counterparts, with the exception that they allow nonverbal predicates to acquire verbal suffixes. Adj-pred-lex-rule additionally has the proper LTOP identification between daughter and C-CONT and constrains the HCONS list.
+
+Just as with adjective/n-bar-predicate rules, we can parse nonverbal predicates when they are the main verb:
+
+  #207
+  Source: a:62
+  Vetted: s
+  Judgment: g
+  Phenomena: {cop, adj}
+  ʔəy swəyʔqeʔ tə John
+  ʔəy swəyʔqeʔ tə John
+  good man DET(MP) John
+  John is a good man.
+
+when they are complements of main clause or interrogative auxiliaries:
+
+  #208
+  Source: a:32
+  Vetted: s
+  Judgment: g
+  Phenomena: {cop, pn}
+  swəyʔqeʔ cən
+  swəyʔqeʔ c-ən
+  man AUX-1SUBJ
+  I am a man.
+
+  #204
+  Source: a:31
+  Vetted: s
+  Judgment: g
+  Phenomena: {cop, q}
+  speʔeθ ʔə
+  speʔeθ ʔə
+  black.bear ROG
+  Is it a bear?
+
+or when they are right-branching complements:
+
+  #209
+  Source: author # from a:59
+  Vetted: f
+  Judgment: g
+  Phenomena: {cop, aux, pn, adj}
+  ʔi cən ʔəyʔ 
+  ʔi c-ən ʔəy 
+  be.here AUX-1SUBJ good
+  I'm fine.
+
+

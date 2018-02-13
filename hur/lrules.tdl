@@ -1,0 +1,20 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+obl-trans-lex := obl-trans-lex-rule.
+
+3-obj-lex := 3-obj-lex-rule.
+
+comp-obj-lex := comp-obj-lex-rule.
+
+3-reg-subj-lex := 3-reg-subj-lex-rule.
+
+non3-reg-subj-lex := non3-reg-subj-lex-rule.
+
+non3-trans-subj-lex := non3-trans-subj-lex-rule.
+
+adv-head-lex := adv-head-lex-rule.
+
+head-adv-lex-rule := head-adv-lex-rule.
+
+adj-pred-lex := adj-pred-lex-rule.
+
+nbar-pred-lex := nbar-pred-lex-rule.

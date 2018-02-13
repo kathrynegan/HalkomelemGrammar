@@ -1,0 +1,293 @@
+Matthew Benak and Kathryn Nichols
+
+	The first and easiest change we made was a fix for the problem of having the head-opt-subj rule applying before the auxiliaries had taken on a main predicate.  For a simple sentence with a a main-clause auxiliary and a full auxiliary like:
+
+#3 <- test suite number
+niʔ ʔiməx ɬə sɬenəyʔ 
+be.there walk DET(FN) woman
+The woman walked.
+
+We were getting 5 different parses that were the same other than the level of the head-opt-subj application.
+
+	The feature VC was right there to keep track of just such a condition. It was already marked as VC + on the head-subj-rule, but not the head-opt-subj rule.  This was likely because the head-opt-subj rule originally required a an empty comps list – a stronger condition than VC + - but we had to remove this constraint so that the head-opt-subj rule could apply before a verb cluster took it's object complement, since we have an VSO language. So we added the following:
+
+basic-head-opt-subj-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
+
+and everything worked out as we wanted.
+
+
+
+	The second problem tackled was fixing the aspectual lexical rules so that they didn't add a relation, but rather changed the aspect feature. So we came up with:
+
+durative-aspect-lex-rule := durative-prefix-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT dur ].
+
+progressive-aspect-lex-rule := progressive-prefix-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT prog ].
+
+still-aspect-lex-rule := still-prefix-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT still ].
+
+emph-aspect-lex-rule := emph-prefix-lex-rule-super & 
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT emph ].
+
+and this associated hierarchy of aspects:
+
+dur := aspect.
+prog := aspect.
+still := aspect.
+emph := aspect.
+still-dur := still & dur.
+emph-dur := emph & dur.
+prog-dur := prog & dur.
+still-prog := still & prog.
+emph-prog := emph & prog.
+emph-still := emph & still.
+emph-prog-dur := emph-prog & prog-dur & emph-dur.
+still-prog-dur := still-prog & prog-dur & still-dur.
+emph-still-dur := still-dur & emph-dur & emph-still.
+emph-still-prog := still-prog & emph-prog & emph-still.
+emph-still-prog-dur := emph-still-dur & emph-still-prog & emph-prog-dur & still-prog-dur.
+
+	We decided that it would be best to treat all intransitive verbs as transitive verbs that take core case subjects and oblique case complements.  We also have full transitive verbs that can take oblique complements in a different manner. Before, our verbs were selecting for case in the right way, but we didn't constrain them to only take a complement headed by an adposition. So for a sentence like this:
+
+#3
+niʔ ʔiməx ɬə sɬenəyʔ 
+be.there walk DET(FN) woman
+The woman walked.
+
+We were getting two readings: the one we wanted where ɬə sɬenəyʔ was interpreted as the subject and the oblique complement was unexpressed, and one we didn't want where the subject was unexpressed and  ɬə sɬenəyʔ was an oblique case complement.
+
+ 	Now we have:
+
+cor-obl-transitive-verb-lex := transitive-verb-lex &
+  [ ARG-ST < [ LOCAL.CAT.HEAD noun &
+                              [ CASE cor ] ],
+             [ LOCAL.CAT.HEAD adp &
+                              [ CASE obl ] ] >,
+    SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CAT.HEAD.CASE-MARKED + ] >,
+                           COMPS < [ LOCAL.CAT.HEAD.CASE-MARKED + ] > ] ].
+and
+
+obl-trans-lex-rule := const-lex-rule & intrans-suffix-rule-dtr & trans-suffix-lex-rule-super &
+  [ INFLECTED.OBJ-SUFFIX-FLAG #obj-suffix,
+    DTR.INFLECTED.OBJ-SUFFIX-FLAG #obj-suffix,
+    SYNSEM.LOCAL.CAT.VAL [ COMPS.FIRST.LOCAL.CAT.HEAD adp &
+                                                      [ CASE obl,
+                                                        CASE-MARKED + ],
+                           SUBJ.FIRST.LOCAL.CAT.HEAD [ CASE cor,
+                                                       CASE-MARKED + ] ] ].
+
+and everything works fine with no spurious parses.
+
+And the last thing we had to do before moving forward was to get a handle on these combined facts: the main-clause aux only appears in the second position (in main clauses); it takes a complement to its left; if that complement is a full aux, the aux phrase then takes a complement to the left; the initial word in a sentence is either a main verb (possibly a non-verbal predicate), full aux, adverbial aux, or negative word. See the following:
+
+#3
+niʔ ʔiməx ɬə sɬenəyʔ 
+be.there walk DET(FN) woman
+The woman walked.
+
+#9
+ʔiməx c-ən
+walk AUX-1ST.SG.SUBJ
+I walk.
+
+#11
+nemʔ c-ən ʔiməx
+go AUX-1SUBJ walk
+I'm going to walk.
+
+
+
+	We have started to deal with this by introducing a feature subtype of CAT called INIT (for initial position) with a luk value.  If a verb can be the first word in a sentence and can be selected for by a main-clause aux (and hopefully in the future, other particles that are always seen in second position – working on the interrogative now, and there's about 15 more) it is marked as INIT +.  If it can be the first word, but not be selected for by an auxiliary (the negative) it gets the value na.  If it's a second position aux (right now, just the main clause aux and the interrogative), it gets the value -.
+
+This allowed us to change the default aux-comp rule to the following:
+
+aux-comp-phrase := basic-head-1st-comp-phrase & head-initial &
+  [ SYNSEM.LOCAL.CAT [ HEAD verb &
+                          [ AUX + ] ,
+                       INIT + ],
+    HEAD-DTR.SYNSEM.LOCAL.CAT.INIT + ,
+    NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD verb,
+                                    INIT na-or-+ ] ].
+
+This allows only INIT + aux verbs or phrases to take a complement to the right, which is itself INIT na-or-+ , which keeps main-clause aux from being taken as complements (We're not sure if we need the na, but we figured we'd leave it as unconstrained as possible since it's still a work in progress).  The resulting phrase is INIT + because it's initial, but perhaps it should be na, since I'm not sure whether or not a phrase like this can be selected for as a complement (again, work in progress – but we think this is how the interrogative and other second position particles will select).
+
+Then we added this rule so that the main clause aux could unify with its complement:
+
+
+comp-aux-phrase := basic-head-1st-comp-phrase & head-final &
+  [ SYNSEM.LOCAL.CAT [ HEAD verb &
+                          [ AUX + ,
+                            FORM finite ],
+                       INIT + ],
+    HEAD-DTR.SYNSEM.LOCAL.CAT.INIT - ,
+    NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD verb,
+                                    INIT + ] ].
+
+This way only INIT – verbs can take a complement to the left.  And the resulting phrase is INIT +, so it can further take a complement to the right if needed using the aux-comp rule.  The FORM value is because this is the bare minimum for a main-aux headed clause to be a full sentence and there's another interaction with the subordinate form later on.
+
+
+
+
+
+
+
+The basic negative word is ʔəwə, translated as 'not', 'no', or 'refuse.'  We were interested in its role as 'not' – the predicate negator. To negate a an affirmative predicate, the clause is embedded in a matrix clause headed by ʔəwə.  The form of the clause is either subordinate or nominalized, depending on the person and presence of a full auxiliary– subordinate for all but the 3rd person without a full auxiliary.
+  
+A subordinate clause has the same form as a main clause, except that the main clause auxiliary, if present, moves to the front of the clause (it's normally second) and the head of the phrase that the main clause aux takes as a complement (or the head of the phrase, if there is no main clause aux) gets a subordinate subject marker. 
+
+#108
+ʔəwə nemʔ-əs
+NEG go-3SUBJ
+He/she/it does/will not go.
+
+#110
+ʔəwə c-ən     nemʔ-ən
+NEG AUX-1SUBJ go-1SUBJ
+I do/will not go.
+
+#112
+ʔəwə c-xᵂ     niʔ-əxᵂ        kᵂ!əc-nəxᵂ-amx 
+NEG AUX-2SUBJ be.there-2SUBJ look-TR-1OBJ
+You didn't see me.
+
+
+To avoid the difficulty of pronouncing a transitive verb with  a third person subject and no full auxiliary, such as 
+
+*ʔəwə  kᵂ!əc-ncxᵂ-əs-əs
+NEG    look-TR-3TR-3SUBJ
+He doesn't see him.
+
+the negative word takes a nominalized clause instead
+
+#114
+ʔəwə kᵂθə          s-kᵂ!əc-nəxᵂ-s
+NEG DET(MN) NOM-see-TR-3NOMSUBJ
+He doesn't see him.
+
+
+	In nominalized clauses, there are no main-clause aux nor transitive agreement, and the subject is shown with a possessive suffix (here called a nom subject since we don't have possessive). The clause is initialized with a nominalizing prefix 's-'.
+
+We created two new features for FORM: subord and nom.  Then we used the existing position class for subjects that currently had lexical rules for main-clause subject suffixes and the 0 morpheme suffixes that mark 3rd person main predicates and full aux as finite. The lexical rules all add suffixes (or in the case of the 1sg and 2sg nom, prefixes), mark the verb FORM, and mark their subjects for person and number.  We added constraints so that the 3TR cannot occur with either form and allowed the trans, trans-obl, full aux, and adverbial aux to go through the lexical rules. Lastly, we made a rule to add the nominalizer prefix.
+
+Since our other auxiliaries were arg-comp auxiliaries, we had to create a form for a s-comp auxiliary for use with our negation aux (which is just the one the matrix gives if one specifies aux that take saturated sentences):
+
+s-comp-aux := aux-lex & basic-one-arg &
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR < >,
+                           SPEC < >,
+                           SUBJ < >,
+                           COMPS < #comps > ],
+    ARG-ST < #comps &
+             [ LOCAL.CAT [ VAL [ SUBJ < >,
+                                 COMPS < >,
+                                 SPR < >,
+                                 SPEC < > ],
+                           HEAD verb ] ] > ].
+                           
+and an associated predicate subtype:
+
+s-comp-aux-with-pred := s-comp-aux & hcons-lex-item &
+  [ SYNSEM [ LOCAL.CONT.HCONS <! qeq &
+                                 [ HARG #harg,
+                                   LARG #larg ] !>,
+             LKEYS.KEYREL event-relation &
+                          [ ARG1 #harg ] ],
+    ARG-ST < [ LOCAL.CONT.HOOK.LTOP #larg ] > ].
+
+to go with our auxiliary:
+
+neg-aux-lex := s-comp-aux-with-pred &
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
+                       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nom+subord,
+                       INIT na ] ].
+
+
+The last thing we had to do was to create a rule for the main-clause aux to take a complement to its right instead of to its right as in main clauses.  Our new INIT feature came in handy here:
+
+sub-aux-comp-phrase := basic-head-1st-comp-phrase & head-initial &
+  [ SYNSEM.LOCAL.CAT [ HEAD verb &
+                          [ AUX + ,
+                            FORM subord ] ,
+                       INIT + ],
+    HEAD-DTR.SYNSEM.LOCAL.CAT.INIT - ,
+    NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD verb,
+                                    INIT + ] ].
+
+Unlike the regular aux-comp rule, this one has an INIT – head-dtr, so only the main clause aux can fill that slot (the interrog aux is barred by the FORM of the mother, but the main-clause is to this point unconstrained – this was the reason for moving the finite form for mc aux to the comp-aux rule). Also, now the whole subordinate phrase is constrained as FORM subord so the negative word and others (clause embedding verbs) can select for it.
+
+However, we originally had the negative aux act in much the same way as the full aux (an arg-comp aux that can be taken by a mc aux), except it couldnt take any agreement with the subject.  We changed this so that the negtive aux was selecting for the mc aux, rather than the other way around.  We originally did this in part because we felt that the negative relation should outscope everything else. But we don't have the mc aux contributing a rel, so does it actually matter? The MRS look the same in both analyses.
+
+
+
+	The closest verb for can, scəwʔet, selects for a FORM nom comp as above. The current analysis treats the nominalized complement as a type of nonfinite verb. While this gets us the MRS we need, the analysis does not yet handle the required determiner. Thus the sentence
+
+* scəwʔet c-ən nə-s-ɬəyχ-ət tə c!awi 
+can AUX-1SUBJ 1NOMSUBJ-NOM-eat-TR DET(MP) glass
+I can eat glass.
+
+is covered, although ungrammatical. The grammatical counterpart
+
+scəwʔet c-ən kᵂθə nə-s-ɬəyχ-ət tə c!awi 
+can AUX-1SUBJ DET(MN) 1NOMSUBJ-NOM-eat-TR DET(MP) glass
+I can eat glass.
+
+does not parse. We are looking into an alternate analysis.
+
+scəwʔet is the following verb type:
+
+nominal-comp-lex := main-verb-lex & trans-first-arg-raising-lex-item-1 & subj-suffix-rule-dtr &
+  [ SYNSEM.LOCAL [ CAT [ VAL [ SPR < >,
+                             SPEC < >,
+                             COMPS < #comps &
+                                     [ LOCAL.CAT.HEAD [ FORM nom ] ] .
+                                     #vcomps >,
+                             SUBJ < #subj > ],
+                         INIT + ],
+                  CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CAT [ HEAD noun &
+                                  [ CASE #case ],
+                             VAL [ SUBJ < >,
+                                   SPR < >,
+                                   SPEC < >,
+                                   COMPS < > ] ],
+                       CONT.HOOK.INDEX #xarg ] ],
+            #comps &
+            [ LIGHT +,
+              LOCAL [ CONT.HOOK.XARG #xarg,
+	              CAT [ HEAD verb,
+                          VAL [ COMPS #vcomps,
+                                SUBJ < [ LOCAL.CAT.HEAD.CASE #case ] > ] ] ] ] >,
+    INFLECTED [  NOM-SUBJ-OR-REG-SUBJ-OR-SUB-SUBJ-FLAG -,
+                FULL-AUX-OR-MC-AUX-FLAG +,
+                ADV-AUX-OR-FULL-AUX-OR-MC-AUX-FLAG + ] ].
+
+This type, like arg-comp-aux lexemes, takes on the subject and complements of its complement.
+
+
+	This sentence from our test corpus parsed straight away when we added the appropriate lexical entry:
+
+#4
+sq!əlim c-t ceʔ 
+camped.out AUX-1PSUBJ FUT
+We'll be camped out.
+
+and we also got two more slightly modified sentences to parse:
+
+#14
+stqᵂ!iqən tə sment ʔəyʔ ƛ!ə stətiqᵂ! tə stalʔəw
+steep DET(MP) moutain and too sheer DET(MP) river
+The mountainside is steep and also the river bank is sheer.
+
+#15
+nemʔ ʔalʔ χᵂənxenəm kᵂθə sməyəθ
+go just run DET(MN) deer
+The deer can only run.
+
+The alterations here consisted of removal of the wə- emphatic prefix that is currently in our verbal morphology, but has not been extended to adjectives and adverbs yet. In addition, #15 had two consecutive auxiliaries that weren't handled by our grammar.
+
+	Thanks in large part to the big fixes we made before starting the lab, we are now at 82.4% coverage and 4.8% overgeneration on the 7.4 skeleton (also, all of the permutations of aux, mc aux, trans, and intrans verbs parse with either 1 reading or 0 readings, as is appropriate). Our average number of analyses bumped up from 2.1 to 2.7, but our coverage went up from 51% and our overgeneration came down from 17%.
+
+
+

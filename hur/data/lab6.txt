@@ -1,0 +1,652 @@
+Kathryn Nichols
+Matthew Benak
+LING 567
+Lab 6 Write-up
+
+A good portion of our time this week was spent fixing up some of the persistent problems with our treatment of the so-called pronominal, interrogative and future particles. We feel we have finally landed on an analysis that adequately covers these phenomena. The first few sections will present the patterns motivating our analysis and our changes to the grammar. After this discussion we will briefly show a few other minor changes made between last week's grammar and this week's, and then we will present our treatment of embedded clauses and non-verbal predicates.
+
+
+PRONOMINAL ENCLITICS
+
+Pronominal enclitics almost always occur immediately after the first item in the sentence. When dealing solely with verbal types up through Lab 4, it was convenient to simply incorporate this particle into the morphology of verbs. However, the reality is that this particle can 'attach' to adverbs, adjectives and some types of nouns as well.
+
+Our new approach to these particles (as of Lab 5) is to treat them as a special class of auxiliary verb (credit to Emily and Suttles for the insight). This verb serves as the head of a sentences with a 1st- or 2nd-person subject, organizing the structure of the sentence around it, which is why it (almost) always appears second in the sentence. In Lab 5 we called it personal-aux, as it seemed to denote the PERS value of the sentence. However, a more apt name is main-clause-aux, since PERS is actually derived from the personal suffixes. Furthermore, in subordinate clauses we see no instance of this auxiliary type, yet personal suffixes may still attach to finite verbs to show the subject. So the true defining characteristic of this auxiliary is that it is required in main clauses with 1st- and 2nd-person subjects.
+
+In Lab 5 we had an analysis that inflected main-clause-aux for person and number and allowed it to combine with complements as in the grammatical sentences below:
+
+1) Source: a:327
+   Vetted: s
+   Judgment: g
+   Phenomena: {pn}
+   nemʔ cən
+   nemʔ c-ən
+   go AUX-1SUBJ
+   I go.
+
+2) Source: a:35
+   Vetted: s
+   Judgment: g
+   Phenomena: {pn}
+   ʔi cən tecəl
+   ʔi c-ən tecəl
+   be.here AUX-1SUBJ arrive
+   I arrived here.
+
+However, this grammar did nothing to prevent the main-clause-aux from taking its complement to the right, as in the example below:
+
+3) Source: author
+   Vetted: f
+   Judgment: u
+   Phenomena: {pn}
+   cən nemʔ 
+   c-ən nemʔ 
+   AUX-1SUBJ go
+   I go.
+
+This reason for this was that aux-comp-phrase---the rule that allows full-aux-lex types (those not main and not interrogative) to combine with complements on the right---was not constrained to apply ONLY to those types. We were able to prevent pron-aux-comp-phrase from applying to full-aux-lex's by specifying that the head of that phrase must be [ PRD - ] (formerly PR). But this HEAD feature would be inappropriate to place on aux-comp-lex, as this would prevent (2). Indeed any HEAD feature would be inappropriate, because main-clause-aux would need to appear to the right of its complement as in (1) and (2), without a phrase headed by a main-clause-aux also being allowed to do so, as in
+
+4) Source: author
+   Vetted: f
+   Judgment: u
+   Phenomena: {pn}
+   tecəl ʔi cən
+   tecəl ʔi cən
+   arrive AUX-1SUBJ be.here 
+   I arrived here.
+
+Instead, we defined a feature COMPSAT (complement-satisfied) in CAT that tracks whether the phrase formed by main-clause-aux is fully satisfied in its complements. Our new entry for the main-clause aux is below:
+
+  main-clause-aux-lex := arg-comp-aux-with-pred &
+    [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
+                         VAL.COMPS.FIRST.LOCAL.CAT [ HEAD [ FORM nonfinite,
+                                                            PRD + ],
+						     COMPSAT - ],
+		         COMPSAT - ],
+      INFLECTED [ PRON-AUX-INFLECT-FLAG -,
+                  TRANS-VERB-FLAG na-or-- ] ].
+
+This lexeme must pass through pron-aux-inflect, which gives it its finiteness. It is defined to be [ COMPSAT - ], which also helps prevent it from appearing in the sentence alone. As in the previous version, main-clause-aux requires a nonfinite, PRD + complement, and we have further constrained this complement to be [ COMPSAT - ]. This is a bit overkill, as there is no word that we know of in the language that is [ COMPSAT + ] and [ PRD - ], however given the clear complement preferences of main-clause-aux, we feel that restricting its complements in this way ensures that any unforeseen combination of lexical entry and lexical rule that could result in such a word would be barred from combining in this phrase.
+
+We then add to aux-comp-phrase, saying that the head-daughter must be [ COMPSAT + ], and the result phrase is also [ COMPSAT + ]:
+
+  aux-comp-phrase := basic-head-1st-comp-phrase & head-initial &
+    [ SYNSEM.LOCAL.CAT [ HEAD verb &
+                            [ AUX + ],
+	  	         COMPSAT + ],
+      HEAD-DTR.SYNSEM.LOCAL.CAT.COMPSAT +,
+      NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD verb ].
+
+This prevents (3). Furthermore, we revise pron-aux-comp to be comp-aux-phrase with the specification that its marker-daughter be [ COMPSAT - ] and [ PRD - ]. This rule results in a phrase that is [ COMPSAT + ].
+
+  comp-aux-phrase := basic-marker-comp-phrase & marker-final-phrase & basic-head-1st-comp-phrase & head-final &
+    [ MARKER-DTR.SYNSEM.LOCAL.CAT [ HEAD verb &
+                                         [ AUX +,
+				           PRD -,
+                                           FORM #vform ],
+     				    COMPSAT - ],
+      NON-MARKER-DTR.SYNSEM.LOCAL.CAT [ HEAD verb,
+                                        VC #vc ],
+      SYNSEM.LOCAL.CAT [ VC #vc,
+		         COMPSAT +,
+                         HEAD verb &
+                              [ FORM #vform,
+                                AUX +,
+			        PRD - ] ],
+      NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD verb ].
+
+A main-clause-aux that has gone through this phrase structure rule becomes COMPSAT +, and therefore can't go through the rule again, preventing (4).
+
+The exception is the 3rd-person, which disallows the presence of a main-clause-aux (it was hypothesized in an earlier lab that an enclitic for 'they' existed, but this word follows a different pattern that we will not cover in our grammar). Instead of anchoring the sentence around main-clause-aux, we specify that lexemes that go through the 3rd-fin-lex-rule or aux-3rd-fin-lex-rule become [ COMPSAT + ], so are free to combine with their complements, if any. The example below shows niʔ combining with ʔiməx without a main-clause-aux.
+
+5) Source: c:38
+   Vetted: s
+   Judgment: g
+   Phenomena: {wo}
+   niʔ ʔiməx ɬə sɬenəyʔ 
+   niʔ ʔiməx ɬə sɬenəyʔ 
+   be.there walk DET(FN) woman
+   The woman walked.
+
+niʔ has gone through aux-3rd-fin-lex-rule where it acquires its 3rd, singular, finite and [ COMPSAT + ] values, after which it is licensed to take a VP complement via aux-comp-phrase, then a 3rd-singular subject via head-subj-phrase, resulting in a saturated, finite sentence.
+
+Since COMPSAT is not in a HEAD feature, there is no rule that automatically carries its values from the daughter to the mother. We have defined its value for auxiliary phrases, but otherwise it is improperly underspecified. To prevent this value from being underspecified higher in the tree, we make the following change to head-comp-phrase:
+
+  head-comp-phrase := basic-head-1st-comp-phrase & head-initial &
+    [ SYNSEM.LOCAL.CAT.COMPSAT +,
+      HEAD-DTR.SYNSEM.LOCAL.CAT [ VAL.SUBJ < >,
+				  COMPSAT + ] ].
+
+This prevents the phrase from firing in place of the aux-comp-phrase. In addition, we perform a type addendum to basic-head-subj-phrase, basic-head-opt-subj-phrase and basic-head-opt-comp-phrase to carry the COMPSAT information up the tree:
+
+  basic-head-subj-phrase :+ [ SYNSEM.LOCAL.CAT.COMPSAT #cs,
+  			      HEAD-DTR.SYNSEM.LOCAL.CAT.COMPSAT #cs ].
+
+  basic-head-opt-subj-phrase :+ [ SYNSEM.LOCAL.CAT.COMPSAT #cs,
+			          HEAD-DTR.SYNSEM.LOCAL.CAT.COMPSAT #cs ].
+
+  basic-head-opt-comp-phrase :+ [ SYNSEM.LOCAL.CAT.COMPSAT #cs,
+			          HEAD-DTR.SYNSEM.LOCAL.CAT.COMPSAT #cs ].
+
+We don't want to alter basic-head-comp-phrase because one of its subtypes is basic-head-1st-comp-phrase, from which both aux-comp-phrase and comp-aux-phrase inherit, and comp-aux-phrase alters the COMPSAT status of the phrase while aux-comp-phrase and head-comp-phrase explicitly require [ COMPSAT + ] on the head-daughter.
+
+This analysis explains the position of the pronominal enclitics in the sentence and their selection behavior while also generalizing the morphology of the personal suffixes -ən, -xᵂ, -t and -ep. However, it still has some inconsistencies that we need to debug. The primary one is the fact that main-clause-aux appears to block a complement from attaching to some phrases, like in the testsuite item below:
+
+(5b) Source: author # from a:65
+     Vetted: f
+     Judgment: g
+     Phenomena: {adv}
+     kᵂ!əcnəxᵂ cən kᵂ!ə sc!ec!ənʔ θi qᵂtayθən
+     kᵂ!əc-nəxᵂ c-ən kᵂ!ə sc!ec!ən θi qᵂtayθən
+     see-TR AUX-1SUBJ DET(MR) really big sturgeon
+     I saw a really big sturgeon.
+
+We were unable to debug this far, however, and there are potentially several interactions conspiring to cause this, such as subject and complement optionality.
+
+
+
+
+
+INTERROGATIVE PARTICLE
+
+We mentioned above that the main clause auxiliary is almost always in the second position in the sentence. The exception to this arises from the presence of the interrogative particle ʔə, which is truly the second-position particle in that precedes even main-clause-aux. The tricky part about this auxiliary is that follows both finite and nonfinite verbs. For example, in (6) and (7) it follows the nonfinite auxiliary niʔ.
+
+6) Source: a:372
+   Vetted: s
+   Judgment: g
+   Phenomena: {q}
+   ni ʔə ləc!
+   niʔ ʔə ləc!
+   be.there QUE be.full
+   Is it full?
+
+7) Source: a:372
+   Vetted: s
+   Judgment: g
+   Phenomena: {q}
+   ni ʔə tʃxᵂ kᵂ!əcnəxᵂ 
+   niʔ ʔə c-xᵂ kᵂ!əc-nəxᵂ 
+   be.there QUE AUX-2SUBJ see-TR
+   Did you see him?
+
+However, it can also follow finite verbs, such as the nominal predicate below:
+
+8) Source: a:31
+   Vetted: s
+   Judgment: g
+   Phenomena: {cop}
+   speʔeθ ʔə
+   speʔeθ ʔə
+   black.bear QUE
+   Is it a bear?
+
+And it can also follow adjectives:
+
+9) Source: a:59
+   Vetted: s
+   Judgment: g
+   Phenomena: {cop}
+   kᵂ!amkᵂ!əm ʔə tʃxᵂ
+   kᵂ!amʔkᵂ!əmʔ ʔə c-xᵂ
+   strong QUE AUX-1SUBJ
+   Are you strong?
+
+Our challenge here was pinpointing the characteristics of this particle and its left or right neighbors that would produce these sentences. What we have settled on is treating it as a [ PRD - ] auxiliary that selects for a finite complement. It is further distinguished from the main-clause-aux by the feature QUES and starts out as [ COMPSAT - ]. Thus for interrog-aux-lex we have the entry
+
+  interrog-aux-lex := arg-comp-aux-no-pred &
+    [ SYNSEM.LOCAL [ CAT [ HEAD [ PRD - ,
+		   	          QUES + ],
+                           VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite,
+                           COMPSAT - ],
+  		     CONT.HOOK.INDEX.SF ques ],
+      INFLECTED [ TRANS-VERB-FLAG na-or-- ] ].
+
+The [ COMPSAT - ] specification is necessary in order to prevent aux-comp-phrase or head-comp-phrase taking ʔə as the head daughter and combining with an element on the right, as in
+
+10) Source: author
+    Vetted: f
+    Judgment: u
+    Phenomena: {cop}
+    ʔə speʔeθ 
+    ʔə speʔeθ
+    QUE bear
+    Is it a bear?
+
+The addition of QUES in the head also means we have to make main-clause-aux-lex [ QUES - ] and comp-aux-phrase [ QUES - ] so that it can only apply to main-clause-aux.
+
+  main-clause-aux-lex := arg-comp-aux-with-pred &
+    [ SYNSEM.LOCAL.CAT [ HEAD [ PRD -,
+      		       	        QUES - ],
+                         VAL.COMPS.FIRST.LOCAL.CAT [ HEAD [ FORM nonfinite,
+                                                            PRD + ],
+						     COMPSAT - ],
+		         COMPSAT - ],
+      INFLECTED [ PRON-AUX-INFLECT-FLAG -,
+                  TRANS-VERB-FLAG na-or-- ] ].
+
+  comp-aux-phrase := basic-marker-comp-phrase & marker-final-phrase & basic-head-1st-comp-phrase & head-final &
+    [ MARKER-DTR.SYNSEM.LOCAL.CAT [ HEAD verb &
+                                         [ AUX +,
+				           PRD -,
+					   QUES -,
+                                           FORM #vform ],
+     				    COMPSAT - ],
+      NON-MARKER-DTR.SYNSEM.LOCAL.CAT [ HEAD verb,
+                                        VC #vc ],
+      SYNSEM.LOCAL.CAT [ VC #vc,
+		         COMPSAT +,
+                         HEAD verb &
+                              [ FORM #vform,
+                                AUX +,
+			        PRD -,
+				QUES - ] ],
+      NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD verb ].
+
+We have identified three combinations that need to be accounted for with phrase structure rules: interrog-aux combining with main-clause-aux in, (7) and (9), this resulting phrase combining with a finite complement, also (7) and (9), and interrog-aux alone combining with a finite complement. The first pattern can be accounted for with a head-initial phrase targeting interrog-aux:
+
+  interrog-aux-comp-phrase := basic-head-1st-comp-phrase & head-initial &
+    [ SYNSEM.LOCAL.CAT [ HEAD verb &
+                              [ PRD - ,
+			        AUX +,
+			        QUES + ],
+		         COMPSAT - ],
+      NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD verb &
+				        [ PRD -,
+				          QUES - ],
+				      COMPSAT - ].
+
+Note that in contrast to aux-comp-phrase, this phrase specifies that the non-head daughter be [ COMPSAT - ]. The resulting phrase is also [ COMPSAT - ]. This prevents the unsatisfied phrase formed by an interrogative and an auxiliary from taking a V complement to its right, demonstrated by (11) below:
+
+(11) Source: author
+    Vetted: f
+    Judgment: u
+    Phenomena: {q}
+    ʔə tʃxᵂ kᵂ!əcnəxᵂ 
+    ʔə c-xᵂ kᵂ!əc-nəxᵂ 
+    QUE AUX-2SUBJ see-TR
+    Did you see him?
+
+The remaining two will be taken care of by head-final phrases. However, we cannot glom them into one phrase rule because their selection constraints are different. Instead, the both inherit from interrog-comp-aux-phrase:
+
+  interrog-comp-aux-phrase := basic-marker-comp-phrase & marker-final-phrase & basic-head-1st-comp-phrase & head-final &
+    [ MARKER-DTR.SYNSEM.LOCAL.CAT [ HEAD #head,
+			            COMPSAT - ],
+      NON-MARKER-DTR.SYNSEM.LOCAL.CAT [ HEAD verb,
+                                        VC #vc ],
+      SYNSEM.LOCAL.CAT [ VC #vc,
+                         HEAD #head & verb &
+                              [ FORM #vform,
+	 		        AUX +,
+			        PRD -,
+			        QUES + ],
+   		         COMPSAT + ],
+      NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD verb &
+				         [ PRD + ] ].
+
+which requires that the marker daughter and resulting phrase be [ QUES + ], [ PRD - ], [ AUX + ]. It also constrains the marker daughter to be [ COMPSAT - ], which prevents a [ COMPSAT + ] phrase formed by a full-aux and an interrog-aux from taking a complement to its left, like in (12).
+
+12) Source: author
+    Vetted: f
+    Judgment: u
+    Phenomena: {q}
+    kᵂ!əcnəxᵂ-əs ni ʔə 
+    kᵂ!əcnəxᵂ-əs niʔ ʔə 
+    see-TR-3TR be.there QUE
+    Does he see him?
+
+It also constrains the non-head daughter to be a verb and [ PRD + ], yielding up a phrase that is [ COMPSAT + ].
+
+ Then a lone interrog-aux will require a [ COMPSAT + ] complement, which (with the [ PRD + ] constraint) means it's a finite verb that has gone through (aux-)3rd-fin-lex-rule. In contrast, the interrog-aux-main-clause-aux phrase requires a [ COMPSAT - ] complement, which means it has gone through (aux-)nonfin-lex-rule. Thus we have the two additional phrase rules That inherit from interrog-comp-aux-phrase above:
+
+  interrog-comp-aux-non3rd-phrase := interrog-comp-aux-phrase &
+    [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.COMPSAT - ].
+
+  interrog-comp-aux-3rd-phrase := interrog-comp-aux-phrase &
+    [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.COMPSAT + ].
+
+This combination of features and selection constraints produces the grammatical phrases above with the correct value of ques for sentential force.
+
+
+
+
+
+SEMANTICS FOR LEXICAL RULES
+
+This has ended up being an extremely important development in our grammar. Previously, the aspectual affixes contributed no semantics to the lexicon. In testing our grammar for generation, however, we found that even a two-word sentence had dozens of versions on the generation side due to every conceivable combination of affixes being attached. To counter this, we added the following template to past-suffix-lex-rule-super, durative-prefix-lex-rule-super, progressive-prefix-lex-rule-super, still-prefix-lex-rule-super and est-prefix-lex-rule-super, with "predication" substituted with "past_rel", "durative_rel", "progressive_rel", "_still_a_rel" and "emph_rel" respectively, and appropriate rules substituted for x-rule-dtr:
+
+  [ INFLECTED #infl,
+    C-CONT [ RELS <! [ LBL #ltop,
+                       PRED "predication",
+                       ARG1 #index ] !>,
+             HOOK #hook ],
+    DTR x-rule-dtr &
+        [ INFLECTED #infl ]
+          SYNSEM.LOCAL.CONT.HOOK #hook & 
+                                [ INDEX #index,
+                                  LTOP #ltop ] ] ].
+
+Versions of this template may also have some additional inflectional information. This cut our number of parses down significantly.
+
+
+
+
+DEMONSTRATIVES
+
+
+
+
+
+
+NON-VERBAL PREDICATES
+
+Halkomelem permits adjectives, adverbs and nouns to behave as verbs (to some degree---certain affixes are off-limits) in the sentence. As discussed in Lab 5, adverbs behave like auxiliaries in that they may take a verb complement, so they are covered by phrase rules for the auxiliaries and will not be discussed or amended here (although it should be noted that a late change in the type hierarchy has broken this feature too close to the deadline to debug now---they worked last week and we will restore their place among the parsable soon). The examples below show how adjectives and nouns can behave like intransitive verbs, taking main clause auxiliaries, interrogative auxiliaries and subjects:
+
+(13) Source: a:59
+     Vetted : s
+     Judgment: g
+     Phenomena: {cop}
+     kʷ!amʔkʷ!əmʔ cən
+     kʷ!amʔkʷ!əmʔ c-ən
+     strong AUX-1SUBJ
+     I'm strong.
+
+(14) Source: a:59
+     Vetted: s
+     Judgment: g
+     Phenomena: {cop}
+     kᵂ!amkᵂ!əm ʔə tʃxᵂ
+     kᵂ!amʔkᵂ!əmʔ ʔə c-xᵂ
+     strong QUE AUX-1SUBJ
+     Are you strong? 
+
+(15) Source: a:31
+     Vetted: s
+     Judgment: g
+     Phenomena: {cop}
+     speʔeθ ʔə
+     speʔeθ ʔə
+     black.bear ROG
+     Is it a bear?
+
+(16) Source: a:32
+     Vetted: s
+     Judgment: g
+     Phenomena: {cop}
+     swəyʔqeʔ cən
+     swəyʔqeʔ c-ən
+     man AUX-1SUBJ
+     I am a man.
+
+(17) Source: a:62
+     Vetted: s
+     Judgment: g
+     Phenomena: {cop}
+     ʔəy swəyʔqeʔ tə John
+     ʔəy swəyʔqeʔ tə John
+     good man DET(MP) John
+     John is a good man.
+
+(18) Source: author
+     Vetted: f
+     Judgment: g
+     Phenomena: {cop}
+     θi tə speʔeθ
+     θi tə speʔeθ
+     big DET(MP) bear
+     The bear is big.
+
+For noun predicates, we used the non-branching phrase provided by Emily in class:
+
+  n-bar-predicate-phrase := unary-phrase &
+    [ SYNSEM.LOCAL.CAT [ HEAD verb &
+                               [ MOD < > ],
+                         VAL [ COMPS < >,
+                               SPEC < >,
+                               SPR < >,
+                               SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
+                                                CAT [ HEAD noun,
+                                                      VAL.SPR < > ] ] ] > ] ],
+      C-CONT [ HOOK [ LTOP #ltop,
+                      INDEX #index,
+                      XARG #arg1 ],
+               RELS <! arg12-ev-relation &
+                     [ PRED "_be_v_id_rel",
+                       LBL #ltop,
+                       ARG0 #index,
+                       ARG1 #arg1,
+                       ARG2 #arg2 ],
+                       quant-relation &
+                     [ PRED "exist_q_rel",
+                       ARG0 #arg2,
+                       RSTR #harg ] !>,
+              HCONS <! qeq &
+                      [ HARG #harg, 
+                        LARG #larg ] !> ],
+      ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun,
+                                    VAL.SPR cons ],
+                              CONT.HOOK [ INDEX #arg2,
+                                          LTOP #larg ] ] ] > ].
+ 
+With this phrase we were able to get parses for (15), (16) and (17), however (17) does not recognize ʔəy as the modifier of John, instead turning both into VPs and coordinating them. It's not clear to me how to correct this. Removing the modifier we get a correct parse with the ARG0s of _man_n_rel and exist_q_rel being identified with ARG2 in _be_v_id_rel and ARG1 of _be_v_id_rel being identified with the ARG0s of john_rel and exist_q_rel and ARG1 of proximal+dem_a_rel.
+
+The recommendation in the Lab 6 specifications was to give adjective-lex the ability to take a subject. However, this did not produce the behavior we needed for (13) or (14) since they were invalid complements to interrog- and main-clause-aux, being adjectives and not verbs. Instead of altering the system already in place, we took a clue from the n-bar-predicate-phrase and came up with the following rule:
+
+  adj-predicate-phrase := unary-phrase &
+    [ SYNSEM.LOCAL.CAT [ HEAD verb &
+                               [ MOD < > ],
+                         VAL [ COMPS < >,
+                               SPEC < >,
+                               SPR < >,
+                               SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg2,
+                                                CAT [ HEAD noun,
+                                                      VAL.SPR < > ] ] ] > ] ],
+      C-CONT [ HOOK [ LTOP #ltop,
+                      INDEX #index,
+                      XARG #arg1 ],
+               RELS <! arg12-ev-relation &
+                      [ PRED "_be_v_id_rel",
+                        LBL #ltop,
+                        ARG0 #index,
+                        ARG1 #arg1,
+                        ARG2 #arg2 ] !> ],
+      ARGS < [ SYNSEM.LOCAL [ CAT.HEAD adj,
+                              CONT.HOOK [ XARG #arg1,
+  				          INDEX #arg2 ] ] ] > ].
+
+What we get with this rule when parsing (18) is a phrase that has identified the ARG1 of _big_a_rel with the ARG1 of _be_v_id_rel, and the ARG2 of _be_v_id_rel with the ARG0s of _bear_n_rel and exist_q_rel and the ARG1 of proximal+dem_a_rel. I'm not sure if this is the proper identification for each predicate, but there is at least a thread of relations here. There is also an extremely ill-formed extraneous parse here that is allowing the determiner to modify the adjective before both the resulting adjective phrase and the noun are converted to verbs and coordinated. There are multiple issues here, but we have been unable to dig deep enough to find the reason yet as this problem cropped up rather late.
+
+Unfortunately, parsing (13) we do not have a thread of relations from the ARG1s of _strong_a_rel and _be_v_id_rel to pronoun_rel. It's an unduring problem that the pronoun_rel from main-clause-aux is not attached integrated properly into the MRS, but it's unclear to us right now how we should go about doing this. Any guidance would be appreciated.
+
+Adjectives and predicate nouns appear to be neither marked for case nor restricted. Suttles gives examples (for explication only---not in the testsuite) such as
+
+(19) kᵂ!amʔkᵂ!əmʔ sc!enʔəm θə nəten
+     kᵂ!amʔkᵂ!əmʔ sc!enʔəm θə nəten
+     strong Shaker DET(FP) 1POSS-mother
+     My mother was a strong Shaker.
+
+(20) təmχəyʔƛ!
+     təm-χəyʔƛ!
+     time.of-cold
+     It was winter.
+
+where the meaning is past, but past tense is not explicitly marked. We also have examples like
+
+(21) ƛ!cesəɬ c!ə tθe
+     ƛ!ces-əɬ c!ə tθe
+     island-PAST QUOT that
+     That is said to have been an island.
+
+where past is clearly indicated. There are also examples of non-verbal predicates taking aspectual markers, so it is our understanding that no restrictions (at least, within the confines of our grammar fragment) are to be made concerning tense and aspect in non-verbal predicates.
+
+Allowing nouns and adjectives to become verbs had the side effect of causing lots of invalid parses akin to the ill-formed sentence mentioned above. Adj-head-int-phrase and head-adj-int-phrase were allowing these phrases to modify other nouns and verbs as well as taking those nouns as subjects. To prevent this, we added the following constraints in halkomelem.tdl:
+
+head-adj-int-phrase :+ [ SYNSEM.LOCAL.CAT.HEAD +jrc ].
+adj-head-int-phrase :+ [ SYNSEM.LOCAL.CAT.HEAD +jrc ].
+
+These prevented the bad parses, although we have not fully explored the ramifications of restricting these rules so much. It's possible that the lack of these restriction in Lab 5 was what caused the confusion about the role of POSTHEAD in adj-head-phrase.
+
+
+
+ADPOSITIONS
+
+Halkomelem has only one adposition, ʔə, typically called the oblique marker. It already exists in our grammar as a semantically-bleached case-marking adposition. Our initial plan was to expand the role of this adposition to being the head of a modifier phrase, but it turns out that the data do not support this idea. First of all, unlike adjectives, adverbs and nouns, an ʔə-phrase cannot be a predicate. Suttle does not explicitly say this is the case, but throughout our grammar reference we have not come across a single instance of ʔə heading a sentence. In addition, the section on non-verbal predicates makes no mention of PPs heading phrases, and the omission seems as much a statement of fact. This tells us that ʔə probably has not predicate to lend to the sentence.
+
+In addition, ʔə is used to convey that its complement is taking a role in the action of the verb it modifies, but not *what* role. Regardless of the complement's part to play---instrument, destination, location, patient, agent, etc.---it is headed by ʔə. Roles seem to be understood from the context of the utterance, the world knowledge of the speaker and the semantics of the verb it modifies. Consider the examples below:
+
+(22) Source: a:46
+     Vetted: s
+     Judgment: g
+     Phenomena: {c}
+     nemʔ cən ceʔ [ʔə] tə spəɬχən
+     nemʔ c-ən ceʔ ʔə tə spəɬχən
+     go AUX-1SUBJ FUT OBL DET(MP) pasture
+     I'm going to the pasture.
+
+(23) Source: a:46
+     Vetted: s
+     Judgment: g
+     Phenomena: {c}
+     ni c!eʔ ə tə sment
+     niʔ c!eʔ ʔə tə sment
+     be.there land OBL DET(MP) rock
+     It landed on the rock.
+
+(24) Source: author # from a:46
+     Vetted: s
+     Judgment: g
+     Phenomena: {c}
+     ni sc!əc!eʔ tə watʃ ʔə tə puk
+     niʔ sc!əc!eʔ tə watʃ ʔə tə puk
+     be.there be.atop DET(MP) watch OBL DET(MP) book
+     The watch is on top of the book.
+
+(25) Source: a:46
+     Vetted: s
+     Judgment: g
+     Phenomena: {c}
+     ni cən ɬəc!cəs ʔə kᵂθə ɬec!tən
+     niʔ c-ən ɬəc!cəs ʔə kᵂθə ɬec!tən
+     be.there AUX-1SUBJ get.hand.cut OBL DET(MN) knife
+     I got cut in the hand with a knife.
+
+In (22) and (23) ʔə shows destination, while in (24) it shows location and (25) instrument. This further supports the hypothesis that ʔə 
+is semantically empty, and thus has no business being a modifier. However, we must account for (22)-(25).
+
+Our approach to this is to release the restriction on the intransitive verbs that prevented them from taking objects. This has the effect of making them all the hypothesized oblique verbs that could not take a transitive suffix, yet could take an oblique object (of sorts). Thus our verb hierarchy only has two types of main verbs: transitives, which can take transitivizing suffixes and direct objects; and intransitives, which cannot take transitivizing suffixes, are generally thought to have no objects, yet can take oblique adjuncts denoting another role in the action besides that of agent. Our analysis identifies these complements with the ARG2 of the verb, essentially precisely as the transitive verbs do. 
+
+
+
+
+EMBEDDED CLAUSES
+
+
+Subordinate clauses in Halkomelem are generally marked by three different properties: first of all, they lack the main clause auxiliary, which seems to be the rule across the board; secondly, 1st and 2nd person are indicated by pronominal suffixes attached to finite verbs in the subordinate clause (rather than main-clause-aux), and since there is no main-clause-aux for the 3rd person, a subordinate clause subject suffix, -əs, is used instead; lastly, embedded clauses of type requested for this lab are complementized by wə. Examples of other subordinate clauses are in negative and cleft sentences, analysis pending. The testsuite item below shows the structure of this type of embedded clause:
+
+(26) Source: author # adapted from a:96
+     Vetted: f
+     Judgment: g
+     Phenomena: {emb-q}
+     ni cən melqt wəniʔəs θə tintən 
+     niʔ c-ən melq wə niʔ-əs θə tintən
+     be.there AUX-1SUBJ forget COMP be.there-3RD.SUB.SUBJ DET(FP) bell
+     I had forgotten the bell was there.
+
+To halkomelem.tdl we added
+
+  clause-embed-lex := main-verb-lex & clausal-second-arg-trans-lex-item & subj-suffix-rule-dtr
+   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps > ,
+     ARG-ST < [ LOCAL.CAT.HEAD +np ],
+               #comps &
+              [ LOCAL [ CAT [ HEAD comp & 
+                                 [ FORM subord ],
+                              VAL [ SUBJ < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK.INDEX.SF prop-or-ques ] ] >,
+     INFLECTED [ SUBJ-SUFFIX-FLAG  - ] ].
+
+which selects for a +np subject and a complement that is headed by a complementizer, [ FORM subord ], and has empty SUBJ and COMPS lists. This verb, like all verbs, has to go through subj-suffix-rule, so it's constrained to be subj-suffix-rule-dtr and [ SUBJ-SUFFIX-FLAG  - ]. The SF also has to be prop-or-ques.
+
+For the complementizer, we added this the following:
+
+  complementizer-lex-item := raise-sem-lex-item & basic-one-arg &
+    [ SYNSEM.LOCAL [ CAT [ HEAD comp,
+                           VAL [ COMPS < #comps >,
+                                 SUBJ < > ] ],
+                     CONT.HOOK.INDEX.SF prop-or-ques ],
+      ARG-ST < #comps &
+               [ LOCAL [ CAT [ HEAD +vj & 
+                                    [ FORM subord ],
+                               VAL [ SUBJ < >,
+                                     COMPS < > ] ],
+                         CONT.HOOK.INDEX.SF prop-or-ques ] ] > ]. 
+
+This entry identifies the first item on its ARG-ST as its complement and declares its HEAD value comp. The idea here is that the complementizer does not add any predicates, simply passing up the information from its complement.
+
+We also added a clause-embed-lex verb to our lexicon:
+
+  melq := clause-embed-lex &
+    [ STEM < "melq" >,
+      SYNSEM.LKEYS.KEYREL.PRED "_forget_v_rel" ].
+
+As well as the complementizer:
+
+  wə := complementizer-lex-item &
+    [ STEM < "wə" > ].
+
+
+Lastly we split nonfinite verbs into two FORMs: nonfin, which is the FORM of all verbal complements of aux verbs, and subord, which is the FORM value for all subordinate phrases. The last adjustment was creating new lexical rules in the position class of the subject suffixes that constrained the form of the verb to be suborn and gave it the proper suffix:
+
+1st-sg-sub-subj-lex-rule := infl-lex-rule & verb-subj-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM subord,
+                       VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
+                                                                  PER 1st ] ] ].
+
+1st-pl-sub-subj-lex-rule := infl-lex-rule & verb-subj-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                                                  PER 1st ],
+                       HEAD.FORM subord ] ].
+
+2nd-sg-sub-subj-lex-rule := infl-lex-rule & verb-subj-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
+                                                                  PER 2nd ],
+                       HEAD.FORM subord ] ].
+
+2nd-pl-sub-subj-lex-rule := infl-lex-rule & verb-subj-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                                                  PER 2nd ],
+                       HEAD.FORM subord ] ].
+
+3rd-sub-subj-lex-rule := infl-lex-rule & verb-subj-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd,
+                       HEAD.FORM subord ] ].
+
+
+These rules and lexical entries give us complete coverage on the testsuite examples. In the MRS of (26) we have the ARG0s of exist_q_rel and _bell_n_rel ID'ed with the ARG1s of _be_there_v_rel and proximal+dem_a_rel. LBL of _be_there_v_rel is qeq'ed with ARG2 of _forget_v_rel. Thus the RELs of the subordinate clause are correctly linked together.
+
+
+
+
+COVERAGE, GENERATION and ISSUES
+
+As discussed above, some remaining issues we need to look into are the odd parse of the NBAR in (17), the odd and extraneous parse in (18) (possibly related to each other) and refining and debugging of the role of the pronoun_rel in an MRS headed by a main-clause-aux, among others. We welcome any suggestions on how to tie this relation in to the sentence accurately, as its current status is a little strange to us. We feel that it's erroneous to have this be the only predicate assigned to main-clause-aux (especially since pronoun_rel then appears to play an event-like role in the MRS), yet are unsure how to proceed. Because of this we are still having issues with generation for some sentences, but get a decent set of sentences back from the MRSs of simple testsuite items like
+
+(27) Source: author
+     Vetted: f
+     Judgment: g
+     Phenomena: {wo}
+     ʔiməx ɬə sɬenəyʔ 
+     ʔiməx ɬə sɬenəyʔ 
+     walk DET(FN) woman
+     The woman walks.
+
+Currently we are getting 62.8% overall coverage of the testsuite and 15% overgeneration. Our Lab 5 grammar's coverage of the same testsuite is 51.4% and overgeneration is 16.8%. Thus we have reduced overgeneration while simultaneously increasing what our grammar can handle. You can find the baseline instance under halk/baseline/lkb
+
+
+
+
+
+
+
+
+
+
+

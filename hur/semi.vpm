@@ -1,0 +1,86 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+; A basic VPM for Matrix grammars.
+event          <> e
+ref-ind        <> x
+individual     <> i
+handle         <> h
+non_event      <> p
+*              >> u
+semarg         << u
+
+SORT : SORT
+  * <> *
+  semsort << *
+
+E.TENSE : E.TENSE
+  present <> present
+  past <> past
+  future <> future
+  * >> present
+  present << [e]
+
+E.ASPECT : E.ASPECT
+  emph-still-prog-dur <> emph-still-prog-dur
+  still-prog-dur <> still-prog-dur
+  emph-prog-dur <> emph-prog-dur
+  emph-still-dur <> emph-still-dur
+  emph-still-prog <> emph-still-prog
+  still-dur <> still-dur
+  emph-dur <> emph-dur
+  prog-dur <> prog-dur
+  still-prog <> still-prog
+  emph-prog <> emph-prog
+  emph-still <> emph-still
+  no-aspect <> no-aspect
+  dur <> dur
+  prog <> prog
+  still <> still
+  emph <> emph
+  * >> no-aspect
+  no-aspect << [e]
+
+SF : SF
+  prop <> prop
+  ques <> ques
+  prop-or-ques >> prop-or-ques
+  prop << prop-or-ques
+  comm <> comm
+
+COG-ST : COG-ST
+  type-id <> type-id
+  uniq-id <> uniq-id
+  familiar <> familiar
+  activated <> activated
+  in-foc <> in-foc
+  activ+fam <> activ+fam
+  uniq+fam <> uniq+fam
+  activ-or-more <> activ-or-more
+  uniq-or-less <> uniq-or-less
+  uniq+fam+act <> uniq+fam+act
+  fam-or-more <> fam-or-more
+  fam-or-less <> fam-or-less
+  uniq-or-more <> uniq-or-more
+  activ-or-less <> activ-or-less
+
+PNG.PER : PNG.PER
+  1st <> 1st
+  2nd <> 2nd
+  3rd <> 3rd
+  * <> !
+
+PNG.NUM : PNG.NUM
+  sg <> sg
+  pl <> pl
+  * >> sg
+
+PNG.GEND : PNG.GEND
+  fem <> fem
+  masc <> masc
+  * <> !
+  masc << *
+
+PROXIMITY : PROXIMITY
+  visible <> visible
+  near-invisible <> near-invisible
+  remote <> remote
+  * <> !

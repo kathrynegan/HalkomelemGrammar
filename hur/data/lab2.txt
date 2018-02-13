@@ -1,0 +1,255 @@
+Kathryn Nichols
+Matthew Benak
+LING 567
+Lab 2 Write up
+
+
+1.
+
+WORD ORDER
+
+Halkomelem is predominantly a VSO language and requires at the minimum a predicate (edges cases of VOS sentences will be ignored for the sake of simplicity [and sanity]). Subjects and objects are optional, even for transitive verbs. Our testsuite includes the permutations V, VS and SV with an intransitive verb, and VSO, VOS, SVO, OVS, SOV and OSV with a transitive, where S and O are full NPs. We didn't include subject- and object-dropping in the transitive permutations of Word Order, as this gives rise to some complicated semantic analysis (to be addressed in future labs), and they wouldn't parse anyway due to currently-unanalyzed 3rd-person agreement with the verb. However, we have provided examples with personal pronouns in the Pronoun section (see Person for discussion). The VS and SVO instances are below:
+
+1) Source: author
+   Vetted: f
+   Judgment: g
+   Phenomena: {wo}
+   ʔiməx ɬə sɬenəyʔ 
+   ʔiməx ɬə sɬenəyʔ 
+   walk DET(FN) woman
+   The woman walks.
+
+2) Source: author
+   Vetted: f
+   Judgment: u
+   Phenomena: {wo}
+   θə sɬenəyʔ qᵂ!ələtəs tə scəɬtən
+   θə sɬenəyʔ qᵂ!ələt-əs tə scəɬtən
+   DET(FP) woman bake-3TR DET(MP) salmon
+   The woman bakes the salmon.
+
+We also included examples of auxiliary position as requested, although none of these instances will currently parse due to a lack of auxiliaries in the lexicon. Since the order VSO has already been established, our examples simply reposition the auxiliary within a grammatical sentence. We provide the permutations AVS, VAS and VSA with an intransitive verb and AVSO, VASO, VSAO and VSOA with a transitive. Below are VAS and AVSO:
+
+3) Source: author
+   Vetted: f
+   Judgment: u
+   Phenomena: {wo}
+   ʔiməx niʔ ɬə sɬenəyʔ
+   ʔiməx niʔ ɬə sɬenəyʔ
+   walk AUX.past DET(FN) woman
+   The woman walked.
+
+4) Source: c:38
+   Vetted: s
+   Judgment: g
+   Phenomena: {wo}
+   niʔ qᵂ!ələtəs θə sɬenəyʔ tə scəɬtən
+   niʔ qᵂ!ələt-əs θə sɬenəyʔ tə scəɬtən
+   AUX.past bake-3TR DET(FP) woman DET(MP) salmon
+   The woman baked the salmon.
+
+Halkomelem also requires determiners in front of nouns for all but the pronouns. Two examples from our testsuite are below:
+
+5) Source: author
+   Vetted: f
+   Judgment: g
+   Phenomena: {det}
+   ʔəɬtən tə sqᵂəmeyʔ
+   ʔəɬtən tə sqᵂəmeyʔ
+   eat DET(MP) dog
+   The dog eats.
+
+6) Source: author
+   Vetted: f
+   Judgment: u
+   Phenomena: {det}
+   ʔəɬtən sqᵂəmeyʔ tə
+   ʔəɬtən sqᵂəmeyʔ tə
+   eat dog DET(MP)
+   The dog eats.
+
+(5) has the determiner before the noun and is grammatical, while (6), which shows the determiner after the noun, is ungrammatical.
+
+
+NUMBER
+
+Halkomelem distinguishes number in the personal pronouns. We have yet to analyze plurality in common nouns, which can appear as reduplication on the stem, infixation, or vowel change. If possible, this should be taken care of by a lexical rule, however this may not be feasible due to the variety of forms and the added complexity of reduplication. Setting this problem aside for now, we will simply mark all common nouns as singular.
+
+
+PERSON
+
+The feature PERSON has the values 1st, 2nd and 3rd. 1st and 2nd are reserved for the pronouns, as in English, while 3rd covers common and proper nouns and the 3rd plural pronoun. Interestingly, there is no basic 3rd singular pronoun in Halkomelem (emphatic forms are sometimes used). Sentences lacking a 1st or 2nd pronoun or overt subject are assumed to be in the 3rd person (singular or plural), to the point where the NP of a transitive verb with a single argument is assumed to be the object rather than the subject. Suttles (2004, p. 48) gives the example
+
+  q!iq!əkᵂ!ətəs tə nəsqᵂəmeyʔ 
+  q!iq!əkᵂ!-ət-əs tə nə-sqᵂəmeyʔ 
+  be.biting-TR-3RT ART my-dog
+  He is biting my dog. (* My dog is biting him.)
+
+where NP 'the dog' is interpreted as the object of the action rather than the performer, even though the interpretation becomes strange. Similar constructions are demonstrated in our testsuite under Pronouns:
+
+7) Source: author
+   Vetted: f
+   Judgment: g
+   Phenomena: {pn}
+   c!əwətəs ɬə sɬedəyʔ
+   c!əwət-əs ɬə sɬedəyʔ
+   help-3TR DET(FN) woman
+   He/She/It/They help(s) the woman. # * The woman helps him/her/it/them.
+
+
+GENDER
+
+Gender is marked by obligatory determiners and has a rather interesting distribution. Gerdts (1982) uses the distinction 'plain' and 'feminine' and  Suttles (2004) uses 'feminine' and 'non-feminine' because either type can apply to almost any entity, though plain is used most frequently. Speakers have even been known to switch between plain and feminine articles in reference to one item in the course of a few utterances. While there are distinctions based on sex, choice of determiner for inanimate objects or animals is often tied to size, with small entities receiving feminine determiners.
+
+In our grammar we do not use plain or feminine as the value of GENDER, but masculine and feminine, with plainness being expressed through underspecification. This is due to an observation by Suttles (1982) that only 7 words in Halkomelem have strictly-enforced gender, among them 'woman', 'man', 'mother' and 'father'. We have given these words the appropriate value for GENDER so that they cannot take the wrong determiner, but the freedom of gender assignment is conveyed by underspecification. All other words can freely take a feminine or masculine article, even proper nouns referring to people. While there is a tendency for speakers to use feminine articles for females and plain for males, in fact any combination is permissible, and our grammar will reflect this.
+
+
+CASE
+
+Our current understanding of Halkomelem is that it does not mark case. Pronominal objects of verbs are affixes on the verb stem that may acquire further suffixes indicating transitivity or passiveness. Possession is indicated with clitics on determiners and/or nouns, and NP roles are determined by word order and certain prepositions.
+
+
+DIRECT-INVERSE
+
+To our knowledge Halkomelem does not exhibit direct-inverse.
+
+
+LEXICON
+
+Nouns
+
+In our lexicon, noun-lexeme is a direct supertype of 1st-person, 2nd-person, 3rd-person, masc, fem, sg and pl. 1st-person and 2nd-person nouns (i.e. pronouns) never take determiners, so this requirement is enforced here. The 3rd-person plural pronoun inherits from 3rd-person and pl and also never takes a determiner. Other types include basic-noun-sg, which inherits from 3rd-person and sg and is a supertype of both common and proper singular nouns (when we add plurality, this portion of the hierarchy will have to be adjusted). This type is underspecified in gender for the reasons discussed above, and determiners are obligatory. Inheriting from basic-noun-sg we have the subtypes fem-noun-sg and masc-noun-sg which differentiate the gender-specific words above.
+
+Determiners
+
+We are giving the determiners the type det-masc and det-fem, which have the expected features. This way masculine determiners will only combine with masculine nouns and feminine determiners only with feminine nouns. Nouns whose gender is not specified (all but those seven), can take either type.
+
+Besides distinguishing gender or size, Halkomelem determiners express the proximity or visibility of the noun to the speaker. There are three established values: proximity and visibility (P), near and invisible (N) and remote or hypothetical (R). The table below shows their forms.
+
+      M      F
+  P   tə     θə
+  N   kᵂθə   ɬə
+  R   kᵂ!ə   kᵂsə
+
+In fact there are more determiners than this, but for the present analysis we will include only these basic six. Other determiners are the result of alternate pronunciations or spellings of those above, either due to phonological context or slight dialect differences. There is also an oblique determiner for proper nouns that we have left out because we neither have the mechanisms in our grammar to analyze it, nor would any of our example sentences require it.
+
+Verbs
+
+For now, we are making a transitive-intransitive distinction between verbs, although the situation is actually much more complex. In general, Halkomelem verbs consist of an intransitive root, which is the type we demonstrate in our mini-lexicon. These verbs may express either activity or non-activity (e.g. a state of being), and are thought of as having an inherent transitive or intransitive quality, although they are grammatically intransitive (like 'dine' in English: we know from the meaning of the word that there is something being dined upon, but the word cannot take a direct object). Most---but not all---roots can accept a variety of suffixes (sometimes multiple suffixes at the same time) that convey the (in)transitivity, direction, degree of control, and patient of the action, among other things.
+
+The basic transitive suffix is -(ə)t and it can productively combine with most stems whose meaning contains some notion of agent and patient (like 'eat' or 'hit'). Verbs possessing this suffix are then free to take direct objects. Roots can also take objects, but only those in the oblique case, which is indicated with the preposition ʔə. Another suffix, -əm, can combine with a verb to make it intransitive. As far as we can tell, it has no discernible effect on an already semantically intransitive root (although some of these roots take this suffix obligatorily). When -əm it combines with a semantically transitive root, it gives it an active meaning regardless of its original meaning. Furthermore, a grammatically transitive verb with the intransitive suffix takes on a passive meaning. The complexity of these (and other suffixes) means that we will most likely be treating transitivity (etc.) as a property of the verb, and either require that a transitive stem take a transitive morpheme before taking an object, or treat the morpheme as a part of the stem. The latter may be the preferred of the two, as there are morphophonological phenomena with affixation that are beyond the scope of this project.
+
+
+
+
+
+2.
+
+AUXILIARIES
+
+We included examples of auxiliaries in Word Order, although we have not allowed for them in the grammar yet. There are two outcomes of this: because they won't parse, coverage of our grammar over the testsuite will be lower than if we had avoided them; and most of the examples are author-composed, since the vast majority of native speaker utterances use auxiliaries.
+
+
+3RD-PERSON AGREEMENT
+Another property of Halkomelem that we included in our testsuite but did not put into our grammar yet was agreement between the verb and the 3rd-person subject. Agreement is realized as the suffix -əs on the transitive verb, illustrated by the examples
+
+8) Source: c:38
+   Vetted: s
+   Judgment: g
+   Phenomena: {wo}
+   niʔ qᵂ!ələtəs θə sɬenəyʔ tə scəɬtən
+   niʔ qᵂ!ələt-əs θə sɬenəyʔ tə scəɬtən
+   AUX.past bake-3TR DET(FP) woman DET(MP) salmon
+   The woman baked the salmon.
+
+9) Source: author
+   Vetted: f
+   Judgment: g
+   Phenomena: {pn}
+   c!əwətəs ʔeɬtən ɬə sɬenəyʔ
+   c!əwət-əs ʔeɬtən ɬə sɬenəyʔ
+   help-3TR they DET(FN) woman
+   They help the woman.
+
+10) Source: author
+    Vetted: f
+    Judgment: g
+    Phenomena: {pn}
+    nemʔ ʔeɬtən
+    nemʔ ʔeɬtən
+    go they
+    They go.
+
+11) Source: author
+    Vetted: f
+    Judgment: g
+    Phenomena: {pn}
+    c!əwət cən ɬə sɬenəyʔ 
+    c!əwət cən ɬə sɬenəyʔ 
+    help I DET(FN) woman 
+    I help the woman
+
+Agreement occurs for both singular and plural 3rd-person subjects (demonstrated by (8) and (9)) and only appears on transitive verbs (example (10)). Agreement does not occur with 1st- or 2nd-person pronouns, as in (11).
+
+
+OPTIONAL ARGUMENTS
+
+Another property of Halkomelem not covered by the starter grammar is argument optionality. Both subjects and objects are optional, resulting in entries like
+
+12) Source: author
+    Vetted: f
+    Judgment: g
+    Phenomena: {pn}
+    c!əwətəs
+    c!əwət-əs
+    help-3TR
+    He/She/It/They help(s) him/her/it/them.
+
+Subject-dropping results in the interpretation of the agent as 3rd-person (further enforced by the agreement marker), and the transitive suffix -t (not glossed) shows that there is an unspecified patient for the action. We use pronouns to show these roles in the translation.
+
+
+3. Documentation of the coverage of your grammar over the testsuite. This should include both summary numbers, which you can get by using the Analyze | Coverage and Analyze | Overgeneration options in [incr tsdb()], and discussion of specific examples. If there are examples that thare parsed incorrectly (unanalyzed grammatical examples, analyzed ungrammatical examples, or grammatical examples assigned surprising parses), reflect on why that might be.
+
+We get 57.7% overall coverage of the testsuite with our grammar. Part of the reason for this low number is the inclusion of word order permutations containing auxiliaries. Later versions of the grammar that include an analysis of auxiliaries should see this improve. Another factor is the inclusion of subject- and object-dropping verbs, as in examples (7) and (12). However, we get coverage of transitive and intransitive verbs with overt subjects and objects such as 
+
+13) Source: author
+    Vetted: f
+    Judgement: g
+    Phenomena: {det}
+    net kᵂ!ə John
+    net kᵂ!ə John
+    be.late DET(MR) John
+    John is late. 
+
+14) Source: author
+    Vetted: f
+    Judgment: g
+    Phenomena: {pn}
+    c!əwət tʃxᵂ ɬə sɬenəyʔ 
+    c!əwət tʃxᵂ ɬə sɬenəyʔ 
+    help you DET(FN) woman
+    You help the woman.
+
+We also see no ungrammatical sentences being parsed, such as this counterpart to (13):
+
+15) Source: author
+    Vetted: f
+    Judgement: u
+    Phenomena: {det}
+    net John
+    net John
+    be.late John
+    John is late.
+
+
+4. So far, the customization page seems able to handle the Halkomelem phenomena asked for in Lab 2. Some of the more advanced phenomena we included (such as argument-dropping, auxiliaries and 3rd-person-transitive agreement) will probably be adequately accounted for in future labs. One area that the customization page may not be able to address completely is the transitive suffix. However, some workarounds exist that not only enable us to use the Grammar Matrix, but stay within the scope of the project.
+
+
+
+
+
+
+REFERENCES
+
+Donna Gerdts. 1982. Object and Absolutive in Halkomelem Salish. Dissertation Abstracts International, 43, no. 3.
+Wayne Suttles. 2004. Musqueam Reference Grammar. UBC Press.

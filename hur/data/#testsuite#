@@ -1,0 +1,2770 @@
+Language: Halkomelem
+Language code: hur
+Lines: translit translit-seg gloss translat
+Author: Kathryn Nichols, Matthew Benak
+Date: April 9, 2013
+Source a: Wayne Suttles. 2004. Musqueam Reference Grammar. UBC Press.
+Source b: http://web.uvic.ca/hrd/hulq
+Source c: Donna Gerdts. 1982. Object and Absolutive in Halkomelem Salish. Dissertation Abstracts International, 43, no. 3.
+
+# For all c, individual words and phonemes may have been adapted to the Downriver dialect. No structural changes were performed.
+
+################
+## Word Order ##
+################
+
+##### Intransitive #######
+
+### Bare intransitive verbs
+
+#1
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo}
+œô¤´imœô£Ùx œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+œô¤´imœô£Ùx œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+walk DET(FN) woman
+The woman walks.
+
+#2
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ œô¤´imœô£Ùx
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ œô¤´imœô£Ùx
+DET(FN) woman walk
+The woman walks.
+
+
+### Intransitive verbs with full auxiliaries
+
+#3
+Source: c:38
+Vetted: s
+Judgment: g
+Phenomena: {wo}
+niœô¤´ œô¤´imœô£Ùx œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+niœô¤´ œô¤´imœô£Ùx œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+be.there walk DET(FN) woman
+The woman walked.
+
+#4
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ œô¤´imœô£Ùx 
+niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ œô¤´imœô£Ùx 
+be.there DET(FN) woman walk
+The woman walked.
+
+#5
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+œô¤´imœô£Ùx niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+œô¤´imœô£Ùx niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+walk be.there DET(FN) woman
+The woman walked.
+
+#6
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+œô¤´imœô£Ùx œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´
+œô¤´imœô£Ùx œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´
+walk DET(FN) woman be.there
+The woman walked
+
+#7
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ œô¤´imœô£Ùx niœô¤´ 
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ œô¤´imœô£Ùx niœô¤´ 
+DET(FN) woman walk be.there 
+The woman walked.
+
+#8
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ œô¤´imœô£Ùx 
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ œô¤´imœô£Ùx 
+DET(FN) woman be.there walk 
+The woman walked.
+
+### Intransitive verbs with main-clause auxiliaries
+
+#9
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, pro-d, pn}
+œô¤´imœô£Ùx cœô£Ùn
+œô¤´imœô£Ùx c-œô£Ùn
+walk AUX-1ST.SG.SUBJ
+I walk.
+
+#10
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+cœô£Ùnœô¤´ imœô£Ùx
+c-œô£Ùn œô¤´imœô£Ùx
+AUX-1ST.SG.SUBJ walk
+I walk.
+
+### Intransitive verb with full and main auxiliaries.
+
+#11
+Source: a:37
+Vetted: s
+Judgment: g
+Phenomena: {wo, pro-d, pn}
+nemœô¤´ cœô£Ùn œô¤´imœô£Ùx
+nemœô¤´ c-œô£Ùn œô¤´imœô£Ùx
+go AUX-1SUBJ walk
+I'm going to walk.
+
+#12
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+nemœô¤´ œô¤´imœô£Ùx cœô£Ùn
+nemœô¤´ œô¤´imœô£Ùx c-œô£Ùn
+go walk AUX-1SUBJ
+I'm going to walk.
+
+#13
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+cœô£Ùn nemœô¤´ œô¤´imœô£Ùx 
+c-œô£Ùn nemœô¤´ œô¤´imœô£Ùx 
+AUX-1SUBJ go walk 
+I'm going to walk.
+
+#14
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+cœô£Ùn œô¤´imœô£Ùx nemœô¤´ 
+c-œô£Ùn œô¤´imœô£Ùx nemœô¤´ 
+AUX-1SUBJ walk go 
+I'm going to walk.
+
+#15
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+œô¤´imœô£Ùx cœô£Ùn nemœô¤´ 
+œô¤´imœô£Ùx c-œô£Ùn nemœô¤´ 
+walk AUX-1SUBJ go 
+I'm going to walk.
+
+#16
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+œô¤´imœô£Ùx nemœô¤´ cœô£Ùn 
+œô¤´imœô£Ùx nemœô¤´ c-œô£Ùn 
+walk go AUX-1SUBJ 
+I'm going to walk.
+
+##### Transitive Verbs #####
+
+### Bare transitive verbs
+
+#17
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, agr}
+qœôëÂ!œô£Ùlœô£Ùtœô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn
+qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn
+bake-TR-3TR DET(FP) woman DET(MP) salmon
+The woman bakes the salmon.
+
+#18
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, agr}
+qœôëÂ!œô£Ùlœô£Ùtœô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´
+qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ 
+bake-TR-3TR DET(MP) salmon DET(FP) woman 
+The salmon bakes the woman.
+
+#19
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ qœôëÂ!œô£Ùlœô£Ùtœô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn
+DET(FP) woman bake-TR-3TR DET(MP) salmon
+The woman bakes the salmon.
+
+#20
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùlœô£Ùtœô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ 
+tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´
+DET(MP) salmon bake-TR-3TR DET(FP) woman
+The salmon bakes the woman.
+
+#21
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùlœô£Ùtœô£Ùs
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs 
+DET(FP) woman DET(MP) salmon bake-TR-3TR 
+The woman bakes the salmon.
+
+#22
+Source: author
+Vetted: f
+Judgment:u
+Phenomena: {wo}
+tœô£Ù scœô£Ùœô£ìtœô£Ùn œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ qœôëÂ!œô£Ùlœô£Ùtœô£Ùs 
+tœô£Ù scœô£Ùœô£ìtœô£Ùn œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs 
+DET(MP) salmon DET(FP) woman bake-TR-3TR 
+The salmon bakes the woman.
+
+
+### Transitive verbs with full auxiliaries
+
+#23
+Source: c:38
+Vetted: s
+Judgment: g
+Phenomena: {wo, aux, agr}
+niœô¤´ qœôëÂ!œô£Ùlœô£Ùtœô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn
+niœô¤´ qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn
+be.there bake-TR-3TR DET(FP) woman DET(MP) salmon
+The woman baked the salmon.
+
+#24
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, aux, agr}
+niœô¤´ qœôëÂ!œô£Ùlœô£Ùtœô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´
+niœô¤´ qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´
+be.there bake-TR-3TR DET(MP) salmon DET(FP) woman
+The salmon baked the woman.
+
+#25
+Source: author
+Vetted:f
+Judgment: u
+Phenomena: {wo}
+niœô¤´ œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ qœôëÂ!œô£Ùlœô£Ùtœô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn
+niœô¤´ œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn
+be.there DET(FP) woman bake-TR-3TR DET(MP) salmon
+The woman baked the salmon.
+
+#26
+Source: author
+Vetted:f
+Judgment: u
+Phenomena: {wo}
+niœô¤´ œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùlœô£Ùtœô£Ùs
+niœô¤´ œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs
+be.there DET(FP) woman DET(MP) salmon bake-TR-3TR
+The woman baked the salmon.
+
+#27
+Source: author
+Vetted:f
+Judgment: u
+Phenomena: {wo}
+niœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ qœôëÂ!œô£Ùlœô£Ùtœô£Ùs
+niœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs
+be.there DET(MP) salmon DET(FP) woman bake-TR-3TR
+The salmon baked the woman.
+
+#28
+Source: author
+Vetted:f
+Judgment: u
+Phenomena: {wo}
+niœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùlœô£Ùtœô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´
+niœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´
+be.there DET(MP) salmon bake-TR-3TR DET(FP) woman
+The salmon baked the woman.
+
+#29
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+qœôëÂ!œô£Ùlœô£Ùtœô£Ùs niœô¤´ œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn
+qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs niœô¤´ œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn
+bake-TR-3TR be.there DET(FP) woman DET(MP) salmon
+The woman baked the salmon.
+
+#30
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+qœôëÂ!œô£Ùlœô£Ùtœô£Ùs niœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´
+qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs niœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´
+bake-TR-3TR be.there DET(MP) salmon DET(FP) woman
+The salmon baked the woman.
+
+#31
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+qœôëÂ!œô£Ùlœô£Ùtœô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn
+qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn
+bake-TR-3TR DET(FP) woman be.there DET(MP) salmon
+The woman baked the salmon.
+
+#32
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+qœôëÂ!œô£Ùlœô£Ùtœô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn niœô¤´
+qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn niœô¤´
+bake-TR-3TR DET(FP) woman DET(MP) salmon be.there
+The woman baked the salmon.
+
+#33
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+qœôëÂ!œô£Ùlœô£Ùtœô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´
+qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´
+bake-TR-3TR DET(MP) salmon DET(FP) woman be.there
+The salmon baked the woman.
+
+#34
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+qœôëÂ!œô£Ùlœô£Ùtœô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn niœô¤´ œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´
+qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn niœô¤´ œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´
+bake-TR-3TR DET(MP) salmon be.there DET(FP) woman
+The salmon baked the woman.
+
+#35
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ qœôëÂ!œô£Ùlœô£Ùtœô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn niœô¤´
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn niœô¤´ 
+DET(FP) woman bake-TR-3TR DET(MP) salmon be.there
+The woman baked the salmon.
+
+#36
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ qœôëÂ!œô£Ùlœô£Ùtœô£Ùs niœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs niœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn 
+DET(FP) woman bake-TR-3TR be.there DET(MP) salmon
+The woman baked the salmon.
+
+#37
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùlœô£Ùtœô£Ùs niœô¤´
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs niœô¤´ 
+DET(FP) woman DET(MP) salmon bake-TR-3TR be.there
+The woman baked the salmon.
+
+#38
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn niœô¤´ qœôëÂ!œô£Ùlœô£Ùtœô£Ùs
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn niœô¤´ qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs 
+DET(FP) woman DET(MP) salmon be.there bake-TR-3TR
+The woman baked the salmon.
+
+#39
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùlœô£Ùtœô£Ùs
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs 
+DET(FP) woman be.there DET(MP) salmon bake-TR-3TR
+The woman baked the salmon.
+
+#40
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ qœôëÂ!œô£Ùlœô£Ùtœô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn
+œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ qœôëÂ!œô£Ùl-œô£Ùt-œô£Ùs tœô£Ù scœô£Ùœô£ìtœô£Ùn 
+DET(FP) woman be.there bake-TR-3TR DET(MP) salmon
+The woman baked the salmon.
+
+#41
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+
+
+
+
+#48
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+qœôëÂ!œô£Ùlœô£Ùt tœô£Ù scœô£Ùœô£ìtœô£Ùn cœô£Ùn
+qœôëÂ!œô£Ùl-œô£Ùt tœô£Ù scœô£Ùœô£ìtœô£Ùn c-œô£Ùn
+bake-TR  DET(MP) salmon AUX-1SG.SUBJ
+I bake the salmon.
+
+#49
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùlœô£Ùt cœô£Ùn
+tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùl-œô£Ùt c-œô£Ùn
+DET(MP) salmon bake-TR  AUX-1SG.SUBJ
+I bake the salmon.
+
+#50
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+tœô£Ù scœô£Ùœô£ìtœô£Ùn cœô£Ùn qœôëÂ!œô£Ùlœô£Ùt
+tœô£Ù scœô£Ùœô£ìtœô£Ùn c-œô£Ùn qœôëÂ!œô£Ùl-œô£Ùt
+DET(MP) salmon AUX-1SG.SUBJ bake-TR
+I bake the salmon.
+
+#51
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+cœô£Ùn tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùlœô£Ùt
+c-œô£Ùn tœô£Ù scœô£Ùœô£ìtœô£Ùn qœôëÂ!œô£Ùl-œô£Ùt
+AUX-1SG.SUBJ DET(MP) salmon bake-TR
+I bake the salmon.
+
+#52
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+cœô£Ùn qœôëÂ!œô£Ùlœô£Ùt tœô£Ù scœô£Ùœô£ìtœô£Ùn
+c-œô£Ùn qœôëÂ!œô£Ùl-œô£Ùt tœô£Ù scœô£Ùœô£ìtœô£Ùn
+AUX-1SG.SUBJ bake-TR DET(MP) salmon
+I bake the salmon.
+
+### Transitive verb with full and main-clause auxiliaries.
+
+#53
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, pro-d, pn, aux}
+niœô¤´ cœô£Ùn kœôëÂ!œô£Ùcnœô£ÙxœôëÂ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+niœô¤´ c-œô£Ùn kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+be.there AUX-1SUBJ see-TR DET(FN) woman
+I saw the woman.
+
+#54
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+niœô¤´ cœô£Ùn œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ 
+niœô¤´ c-œô£Ùn œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ 
+be.there AUX-1SUBJ DET(FN) woman see-TR
+I saw the woman.
+
+#55
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+niœô¤´ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ cœô£Ùn œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+niœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ c-œô£Ùn œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+be.there see-TR AUX-1SUBJ DET(FN) woman
+I saw the woman.
+
+#56
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+niœô¤´ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ cœô£Ùn 
+niœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ c-œô£Ùn 
+be.there see-TR DET(FN) woman AUX-1SUBJ
+I saw the woman.
+
+#57
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ cœô£Ùn kœôëÂ!œô£Ùcnœô£ÙxœôëÂ 
+niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ c-œô£Ùn kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ 
+be.there DET(FN) woman AUX-1SUBJ see-TR
+I saw the woman.
+
+#58
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ cœô£Ùn 
+niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ c-œô£Ùn 
+be.there DET(FN) woman see-TR AUX-1SUBJ
+I saw the woman.
+
+#59
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+cœô£Ùn niœô¤´ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+c-œô£Ùn niœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+AUX-1SUBJ be.there see-TR DET(FN) woman
+I saw the woman.
+
+#60
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+cœô£Ùn niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ 
+c-œô£Ùn niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ 
+AUX-1SUBJ be.there DET(FN) woman see-TR
+I saw the woman.
+
+#61
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+cœô£Ùn kœôëÂ!œô£Ùcnœô£ÙxœôëÂ niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+c-œô£Ùn kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+AUX-1SUBJ see-TR be.there DET(FN) woman
+I saw the woman.
+
+#62
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+cœô£Ùn kœôëÂ!œô£Ùcnœô£ÙxœôëÂ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ 
+c-œô£Ùn kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ 
+AUX-1SUBJ see-TR DET(FN) woman be.there
+I saw the woman.
+
+#63
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+cœô£Ùn œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ niœô¤´ 
+c-œô£Ùn œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ niœô¤´ 
+AUX-1SUBJ DET(FN) woman see-TR be.there
+I saw the woman.
+
+#64
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+cœô£Ùn œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ 
+c-œô£Ùn œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ 
+AUX-1SUBJ DET(FN) woman be.there see-TR
+I saw the woman.
+
+#65
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+kœôëÂ!œô£Ùcnœô£ÙxœôëÂ niœô¤´ cœô£Ùn œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ niœô¤´ c-œô£Ùn œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+see-TR be.there AUX-1SUBJ DET(FN) woman
+I saw the woman.
+
+#66
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+kœôëÂ!œô£Ùcnœô£ÙxœôëÂ niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ cœô£Ùn
+kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ c-œô£Ùn 
+see-TR be.there DET(FN) woman AUX-1SUBJ
+I saw the woman.
+
+#67
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+kœôëÂ!œô£Ùcnœô£ÙxœôëÂ cœô£Ùn niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ c-œô£Ùn niœô¤´ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+see-TR AUX-1SUBJ be.there DET(FN) woman
+I saw the woman.
+
+#68
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+kœôëÂ!œô£Ùcnœô£ÙxœôëÂ cœô£Ùn œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ 
+kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ c-œô£Ùn œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ 
+see-TR AUX-1SUBJ DET(FN) woman be.there
+I saw the woman.
+
+#69
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+kœôëÂ!œô£Ùcnœô£ÙxœôëÂ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ cœô£Ùn 
+kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ c-œô£Ùn 
+see-TR DET(FN) woman be.there AUX-1SUBJ
+I saw the woman.
+
+#70
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+kœôëÂ!œô£Ùcnœô£ÙxœôëÂ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ cœô£Ùn niœô¤´ 
+kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ c-œô£Ùn niœô¤´ 
+see-TR DET(FN) woman AUX-1SUBJ be.there
+I saw the woman.
+
+#71
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ cœô£Ùn kœôëÂ!œô£Ùcnœô£ÙxœôëÂ 
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ c-œô£Ùn kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ  
+DET(FN) woman be.there AUX-1SUBJ see-TR 
+I saw the woman.
+
+#72
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ cœô£Ùn 
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ niœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ c-œô£Ùn  
+DET(FN) woman be.there see-TR AUX-1SUBJ 
+I saw the woman.
+
+#73
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ cœô£Ùn niœô¤´ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ 
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ c-œô£Ùn niœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ  
+DET(FN) woman AUX-1SUBJ be.there see-TR 
+I saw the woman.
+
+#74
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ cœô£Ùn kœôëÂ!œô£Ùcnœô£ÙxœôëÂ niœô¤´ 
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ c-œô£Ùn kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ niœô¤´  
+DET(FN) woman AUX-1SUBJ see-TR be.there 
+I saw the woman.
+
+#75
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ niœô¤´ cœô£Ùn 
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ niœô¤´ c-œô£Ùn  
+DET(FN) woman see-TR be.there AUX-1SUBJ 
+I saw the woman.
+
+#76
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo, pro-d, pn}
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ cœô£Ùn niœô¤´ 
+œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ c-œô£Ùn niœô¤´  
+DET(FN) woman see-TR AUX-1SUBJ be.there 
+I saw the woman.
+
+
+##########
+## Case ##
+##########
+
+# Core transitive #
+
+#77
+Source: a:43
+Vetted: s
+Judgment: g
+Phenomena: {c, aux, agr}
+ni qœôëÂ!aqœôëÂœô£Ùtœô£Ùs tœô£Ù swœô£Ùyœô¤´qeœô¤´ tœô£Ù speœô¤´eœô§¸ 
+niœô¤´ qœôëÂ!aqœôëÂ-œô£Ùt-œô£Ùs tœô£Ù swœô£Ùyœô¤´qeœô¤´ tœô£Ù speœô¤´eœô§¸ 
+be.there club-TR-3TR DET(MP) man DET(MP) bear
+The man clubbed the bear.
+
+#78
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {c}
+ni qœôëÂ!aqœôëÂœô£Ùs tœô£Ù swœô£Ùyœô¤´qeœô¤´ tœô£Ù speœô¤´eœô§¸ 
+niœô¤´ qœôëÂ!aqœôëÂ-œô£Ùs tœô£Ù swœô£Ùyœô¤´qeœô¤´ tœô£Ù speœô¤´eœô§¸ 
+be.there club-3TR DET(MP) man DET(MP) bear
+The man clubbed the bear.
+
+#79
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {c}
+ni qœôëÂ!aqœôëÂœô£Ùtœô£Ùs tœô£Ù swœô£Ùyœô¤´qeœô¤´ œô¤´œô£Ù tœô£Ù speœô¤´eœô§¸ 
+niœô¤´ qœôëÂ!aqœôëÂ-œô£Ùt-œô£Ùs tœô£Ù swœô£Ùyœô¤´qeœô¤´ œô¤´œô£Ù tœô£Ù speœô¤´eœô§¸ 
+be.there club-TR-3TR DET(MP) man OBL DET(MP) bear
+The man clubbed the bear.
+
+# Oblique transitive #
+
+#80
+Source: author # from a:47
+Vetted: f
+Judgment: g
+Phenomena: {c, aux}
+nemœô¤´ tœô¤£xœôëÂ sœô£Ùwq! kœôëÂ!œô£Ù sœô¤´œô£Ùœô£ìtœô£Ùn
+nemœô¤´ c-xœôëÂ sœô£Ùwq! œô¤´œô£Ù kœôëÂ!œô£Ù sœô¤´œô£Ùœô£ìtœô£Ùn
+go AUX-2SUBJ seek OBL DET(MR) food
+Go look for food.
+
+#81
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {c}
+nemœô¤´ tœô¤£xœôëÂ sœô£Ùwq! kœôëÂ!œô£Ù sœô¤´œô£Ùœô£ìtœô£Ùn
+nemœô¤´ c-xœôëÂ sœô£Ùwq! kœôëÂ!œô£Ù sœô¤´œô£Ùœô£ìtœô£Ùn
+go AUX-2SUBJ seek DET(MR) food
+Go look for food.
+
+#82
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {c}
+nemœô¤´ tœô¤£xœôëÂ sœô£Ùwq!œô£Ùt kœôëÂ!œô£Ù sœô¤´œô£Ùœô£ìtœô£Ùn
+nemœô¤´ c-xœôëÂ sœô£Ùwq!-œô£Ùt œô¤´œô£Ù kœôëÂ!œô£Ù sœô¤´œô£Ùœô£ìtœô£Ùn
+go AUX-2SUBJ seek-TR OBL DET(MR) food
+Go look for food.
+
+#83
+Source: a:47
+Vetted: s
+Judgment: g
+Phenomena: {c, aux}
+nemœô¤´ cœô£Ùn œô§Çteœô¤´em kœôëÂ! snetœô£Ùœô£ìqœô£Ùn
+nemœô¤´ c-œô£Ùn œô§Çteœô¤´-œô£Ùm œô¤´œô£Ù kœôëÂ!œô£Ù snetœô£Ùœô£ìqœô£Ùn
+go AUX-1SUBJ make-INTR OBL DET(MR) breakfast
+I'm going to make breakfast.
+
+#84
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {c}
+nemœô¤´ cœô£Ùn œô§Çteœô¤´em kœôëÂ! snetœô£Ùœô£ìqœô£Ùn
+nemœô¤´ c-œô£Ùn œô§Çteœô¤´-œô£Ùm kœôëÂ!œô£Ù snetœô£Ùœô£ìqœô£Ùn
+go AUX-1SUBJ make-INTR DET(MR) breakfast
+I'm going to make breakfast.
+
+#85
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {c}
+nemœô¤´ cœô£Ùn œô§Çteœô¤´œô£Ùt kœôëÂ! snetœô£Ùœô£ìqœô£Ùn
+nemœô¤´ c-œô£Ùn œô§Çteœô¤´-œô£Ùt kœôëÂ!œô£Ù snetœô£Ùœô£ìqœô£Ùn
+go AUX-1SUBJ make-TR DET(MR) breakfast
+I'm going to make breakfast.
+
+
+#################
+## Determiners ##
+#################
+
+# Illustrating plain determiners
+
+#86
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+œô¤´œô£Ùœô£ìtœô£Ùn tœô£Ù sqœôëÂœô£Ùmeyœô¤´ 
+œô¤´œô£Ùœô£ìtœô£Ùn tœô£Ù sqœôëÂœô£Ùmeyœô¤´ 
+eat DET(MP) dog
+The dog eats.
+
+#87
+Source: author
+Vetted: f
+Judgment: u 
+Phenomena: {det}
+œô¤´œô£Ùœô£ìtœô£Ùn sqœôëÂœô£Ùmeyœô¤´ tœô£Ù 
+œô¤´œô£Ùœô£ìtœô£Ùn sqœôëÂœô£Ùmeyœô¤´ tœô£Ù
+eat dog DET(MP)
+The dog eats.
+
+#88
+Source: author 
+Vetted: f
+Judgment: u
+Phenomena: {det}
+œô¤´œô£Ùœô£ìtœô£Ùn sqœôëÂœô£Ùmeyœô¤´ 
+œô¤´œô£Ùœô£ìtœô£Ùn sqœôëÂœô£Ùmeyœô¤´ 
+eat dog
+The dog eats.
+
+# Illustrating feminine determiners
+
+#89
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+qaœô¤´qaœô¤´ kœôëÂsœô£Ù sœô£ìenœô£Ùyœô¤´
+qaœô¤´qaœô¤´ kœôëÂsœô£Ù sœô£ìenœô£Ùyœô¤´ 
+drink DET(FR) woman
+The woman drinks.
+
+#90
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+qaœô¤´qaœô¤´ sœô£ìenœô£Ùyœô¤´ kœôëÂsœô£Ù
+qaœô¤´qaœô¤´ sœô£ìenœô£Ùyœô¤´ kœôëÂsœô£Ù 
+drink woman DET(FR)
+The woman drinks.
+
+#91
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+qaœô¤´qaœô¤´ sœô£ìenœô£Ùyœô¤´ 
+qaœô¤´qaœô¤´ sœô£ìenœô£Ùyœô¤´
+drink woman
+The woman drinks.
+
+# Proper nouns require determiners
+
+#92
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {det}
+net kœôëÂœô§¸œô£Ù John
+net kœôëÂœô§¸œô£Ù John
+be.late DET(MN) John
+John is late.
+
+#93
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {det}
+net John kœôëÂœô§¸œô£Ù
+net John kœôëÂœô§¸œô£Ù 
+be.late John DET(MN)
+John is late.
+
+#94
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {det}
+net John
+net John
+be.late John
+John is late.
+
+# Demonstratives as determiners
+
+#95
+Source: a
+Vetted: s
+Judgment: g
+Phenomena: {det, aux, pn, c}
+nemœô¤´ cœô£Ùn kœôëÂ!i spœô£Ùœô£ìœô§Çœô£Ùn
+nemœô¤´ c-œô£Ùn œô¤´œô£Ù kœôëÂ!i spœô£Ùœô£ìœô§Çœô£Ùn
+go AUX-1SUBJ OBL DET(MR) pasture
+I'm going to the pasture.
+
+#96
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+nemœô¤´ cœô£Ùn spœô£Ùœô£ìœô§Çœô£Ùn kœôëÂ!i
+nemœô¤´ c-œô£Ùn œô¤´œô£Ù spœô£Ùœô£ìœô§Çœô£Ùn kœôëÂ!i
+go AUX-1SUBJ OBL pasture DET(MR)
+I'm going to the pasture.
+
+#97
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+nemœô¤´ cœô£Ùn spœô£Ùœô£ìœô§Çœô£Ùn
+nemœô¤´ c-œô£Ùn œô¤´œô£Ù spœô£Ùœô£ìœô§Çœô£Ùn
+go AUX-1SUBJ OBL pasture
+I'm going to the pasture.
+
+
+###############
+## Agreement ##
+###############
+
+#98
+Source: a:323
+Vetted: s
+Judgment: g
+Phenomena: {agr, adv}
+c!ewœô£Ùt cœô£Ùn ceœô¤´
+c!ew-œô£Ùt c-œô£Ùn ceœô¤´
+help-TR AUX-1SUBJ FUT
+I will help him/her.
+
+#99
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+c!ewœô£Ùtœô£Ùs cœô£Ùn ceœô¤´ 
+c!ew-œô£Ùt-œô£Ùs c-œô£Ùn ceœô¤´ 
+help-TR-3TR AUX-1SUBJ FUT
+I will help him/her.
+
+#100
+Source: a:323
+Vetted: s
+Judgment: g
+Phenomena: {agr, adv}
+c!ewœô£Ùtœô£Ùs cœô£Ùn ceœô¤´
+c!ew-œô£Ùt-œô£Ùs ceœô¤´
+help-TR-3TR FUT
+He/she will help him/her.
+
+#101
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+c!ewœô£Ùt ceœô¤´ 
+c!ew-œô£Ùt ceœô¤´ 
+help-TR FUT
+He/she will help him/her.
+
+#102
+Source: a:323
+Vetted: s
+Judgment: g
+Phenomena: {agr, aux, pn}
+ni cœô£Ùn c!ewœô£Ùt
+niœô¤´ c-œô£Ùn c!ew-œô£Ùt
+be.there AUX-1SUBJ help-TR
+I helped him/her.
+
+#103
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+ni cœô£Ùn c!ewœô£Ùtœô£Ùs 
+niœô¤´ c-œô£Ùn c!ew-œô£Ùt-œô£Ùs 
+be.there AUX-1SUBJ help-TR-3TR
+I helped him/her.
+
+#104
+Source: a:323
+Vetted: s
+Judgment: g
+Phenomena: {agr, aux}
+ni c!ewœô£Ùtœô£Ùs
+niœô¤´ c!ew-œô£Ùt-œô£Ùs
+be.there help-TR-3TR
+He/she helped him/her.
+
+#105
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+ni c!ewœô£Ùt 
+niœô¤´ c!ew-œô£Ùt 
+be.there help-TR
+He/she helped him/her.
+
+#106
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr, adv}
+kœôëÂ!œô£Ùcnamxœô£Ùs ceœô¤´
+kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ-amx-œô£Ùs ceœô¤´
+see-TR-1OBJ-3TR FUT
+He/she will see me.
+
+#107
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+kœôëÂ!œô£Ùcnœô£Ùsamx ceœô¤´
+kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ-œô£Ùs-amx ceœô¤´
+see-TR-3TR-1OBJ FUT
+He/she will see me.
+
+
+##############
+## Negation ##
+##############
+
+#108
+Source: a:119
+Vetted: s
+Judgment: g
+Phenomena: {neg}
+œô¤´œô£Ùwœô£Ù nemœô¤´œô£Ùs
+œô¤´œô£Ùwœô£Ù nemœô¤´-œô£Ùs
+NEG go-3SUBJ
+He/she/it does/will not go.
+
+#109
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+œô¤´œô£Ùwœô£Ù nemœô¤´
+œô¤´œô£Ùwœô£Ù nemœô¤´
+NEG go
+He/she/it does/will not go.
+
+#110
+Source: a:118
+Vetted: s
+Judgment: g
+Phenomena: {neg, pn}
+œô¤´œô£Ùwœô£Ù cœô£Ùn nemœô¤´en
+œô¤´œô£Ùwœô£Ù c-œô£Ùn nemœô¤´-œô£Ùn
+NEG AUX-1SUBJ go-1SUBJ
+I do/will not go.
+
+#111
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+œô¤´œô£Ùwœô£Ù cœô£Ùn nemœô¤´œô£Ùs
+œô¤´œô£Ùwœô£Ù c-œô£Ùn nemœô¤´-œô£Ùs
+NEG AUX-1SUBJ go-3SUBJ
+I do/will not go.
+
+#112
+Source: a:120
+Vetted: s
+Judgment: g
+Phenomena: {neg, pn}
+œô¤´œô£Ùwœô£Ù cxœôëÂ niœô¤´œô£ÙxœôëÂ kœôëÂ!œô£Ùcnamx 
+œô¤´œô£Ùwœô£Ù c-xœôëÂ niœô¤´-œô£ÙxœôëÂ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ-amx 
+NEG AUX-2SUBJ be.there-2SUBJ see-TR-1OBJ
+You didn't see me.
+
+#113
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+œô¤´œô£Ùwœô£Ù cxœôëÂ niœô¤´ kœôëÂ!œô£Ùcnamxœô£ÙxœôëÂ
+œô¤´œô£Ùwœô£Ù c-xœôëÂ niœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ-amx-œô£ÙxœôëÂ 
+NEG AUX-2SUBJ be.there see-TR-1OBJ-2SUBJ
+You didn't see me.
+
+#114
+Source: a:120
+Vetted: s
+Judgment: g
+Phenomena: {neg, pn}
+œô¤´œô£Ùwœô£Ù kœôëÂs kœôëÂ!œô£Ùcnœô£ÙxœôëÂs
+œô¤´œô£Ùwœô£Ù kœôëÂœô£Ù s-kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ-s
+NEG DET(MN) NOM-see-TR-3NOMSUBJ
+He doesn't see him.
+
+#115
+Source: a:120
+Vetted: s
+Judgment: u
+Phenomena: {neg}
+œô¤´œô£Ùwœô£Ù kœôëÂ!œô£Ùcnœô£ÙxœôëÂs
+œô¤´œô£Ùwœô£Ù kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ-œô£Ùs
+NEG see-TR-3SUBJ
+He doesn't see him.
+
+#Source: author
+#Vetted: f
+#Judgment: g
+#Phenomena: {neg}
+#œô¤´œô£Ùwœô£Ù niœô¤´œô£Ùs nemœô¤´
+#œô¤´œô£Ùwœô£Ù niœô¤´-œô£Ùs nemœô¤´
+#NEG be.there-3SUBJ go
+#He/She/It did not go.
+
+#Source: a:119
+#Vetted: s
+#Judgment: g
+#Phenomena: {neg}
+#œô¤´œô£Ùwœô£Ù cœô£Ùn nin nemœô¤´
+#œô¤´œô£Ùwœô£Ù c-œô£Ùn niœô¤´-œô£Ùn nemœô¤´
+#NEG AUX-1SUBJ be.there-1SUBJ go
+#I did not go.
+
+#Source: a:119
+#Vetted: s
+#Judgment: g
+#Phenomena: {neg}
+#œô¤´œô£Ùwœô£Ù tœô¤£xœôëÂ nemœô¤´œô£ÙxœôëÂ 
+#œô¤´œô£Ùwœô£Ù c-xœôëÂ nemœô¤´-xœôëÂ 
+#NEG AUX-2SUBJ go-2SUBJ
+#You do/will not go.
+
+#Source: a:119
+#Vetted: s
+#Judgment: g
+#Phenomena: {neg}
+#œô¤´œô£Ùwœô£Ù ct nemœô¤´œô£Ùt 
+#œô¤´œô£Ùwœô£Ù c-t nemœô¤´-t 
+#NEG AUX-1PSUBJ go-1PSUBJ
+#We do/will not go.
+
+#Source: a:119
+#Vetted: s
+#Judgment: g
+#Phenomena: {neg}
+#œô¤´œô£Ùwœô£Ù cep nemœô¤´ep 
+#œô¤´œô£Ùwœô£Ù c-ep nemœô¤´-ep 
+#NEG AUX-2PSUBJ go-2PSUBJ
+#You folks do/will not go.
+
+#Source: a:120
+#Vetted: s
+#Judgment: g
+#Phenomena: {neg}
+#œô¤´œô£Ùwœô£Ù tœô¤£xœôëÂ niœô¤´œô£ÙxœôëÂ kœôëÂ!œô£Ùcnamx
+#œô¤´œô£Ùwœô£Ù c-xœôëÂ niœô¤´-xœôëÂ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ-amx
+#NEG AUX-2SUBJ be.there-2SUBJ see-TR-1OBJ
+#You didn't see me.
+
+#Source: a:120
+#Vetted: s
+#Judgment: g
+#Phenomena: {neg}
+#œô¤´œô£Ùwœô£Ù niœô¤´œô£Ùs kœôëÂ!œô£Ùcnamxœô£Ùs
+#œô¤´œô£Ùwœô£Ù niœô¤´-œô£Ùs kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ-amx-œô£Ùs
+#NEG be.there-3SUBJ see-TR-1OBJ-3TR
+#He didn't see me.
+
+
+##########################
+## Argument Optionality ##
+##########################
+
+#116
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pro-d}
+kœôëÂœô£Ùn kœôëÂœô§¸œô£Ù sœô¤´œô£Ùœô£ìtœô£Ùn
+kœôëÂœô£Ùn kœôëÂœô§¸œô£Ù sœô¤´œô£Ùœô£ìtœô£Ùn
+take DET(MN) food
+The food gets taken.
+
+#117
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pro-d}
+kœôëÂœô£Ùn
+kœôëÂœô£Ùn
+take
+He/she/it gets taken.
+
+#118
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pro-d, agr}
+kœôëÂœô£Ùnœô£Ùtœô£Ùs kœôëÂœô§¸œô£Ù sqœôëÂœô£Ùmeyœô¤´ kœôëÂœô§¸œô£Ù sœô¤´œô£Ùœô£ìtœô£Ùn
+kœôëÂœô£Ùn-œô£Ùt-œô£Ùs kœôëÂœô§¸œô£Ù sqœôëÂœô£Ùmeyœô¤´ kœôëÂœô§¸œô£Ù sœô¤´œô£Ùœô£ìtœô£Ùn
+take-TR-3TR DET(MN) dog DET(MN) food
+The dog takes the food.
+
+#119
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pro-d, agr}
+kœôëÂœô£Ùnœô£Ùtœô£Ùs kœôëÂœô§¸œô£Ù sœô¤´œô£Ùœô£ìtœô£Ùn
+kœôëÂœô£Ùn-œô£Ùt-œô£Ùs kœôëÂœô§¸œô£Ù sœô¤´œô£Ùœô£ìtœô£Ùn
+take-TR-3TR DET(MN) food
+He/she/it takes the food. # * The food takes him/her/it.
+
+#120
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pro-d, agr}
+kœôëÂœô£Ùnœô£Ùtœô£Ùs
+kœôëÂœô£Ùn-œô£Ùt-œô£Ùs
+take-TR-3TR
+He/she/it takes him/her/it.
+
+
+#####################################
+## Pronominal Enclitics (Pronouns) ##
+#####################################
+
+
+# With intranstive verbs
+
+#121
+Source: a:327
+Vetted: s
+Judgment: g
+Phenomena: {pn, pro-d}
+nemœô¤´ cœô£Ùn
+nemœô¤´ c-œô£Ùn
+go AUX-1SUBJ
+I go.
+
+#122
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn, pro-d}
+nemœô¤´ tœô¤£xœôëÂ 
+nemœô¤´ c-xœôëÂ 
+go AUX-2SUBJ
+You go.
+
+#123
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn, pro-d}
+nemœô¤´ ct
+nemœô¤´ c-t
+go AUX-1PSUBJ
+We go. 
+
+#124
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn, pro-d}
+nemœô¤´ cep
+nemœô¤´ c-ep
+go AUX-2PSUBJ
+You all go.
+
+#125
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn, pro-d}
+nemœô¤´
+nemœô¤´
+go
+He/She/It/They go(es).
+
+# With transitive verbs, with or without objects
+
+#126
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn, pro-d}
+c!ewœô£Ùt cœô£Ùn
+c!ew-œô£Ùt c-œô£Ùn
+help-TR AUX-1SUBJ
+I help him/her/it/them.
+
+#127
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn}
+c!ewœô£Ùt cœô£Ùn œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+c!ew-œô£Ùt c-œô£Ùn œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+help-TR AUX-1SUBJ DET(FN) woman
+I help the woman.
+
+#128
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn, pro-d, agr}
+c!ewœô£Ùtœô£Ùs
+c!ew-œô£Ùt-œô£Ùs
+help-TR-3TR
+He/She/It/They help(s) him/her/it/them.
+
+#129
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pn, pro-d, agr}
+c!ewœô£Ùtœô£Ùs œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+c!ew-œô£Ùt-œô£Ùs œô£ìœô£Ù sœô£ìenœô£Ùyœô¤´ 
+help-TR-3TR DET(FN) woman
+He/She/It/They help(s) the woman. # * The woman helps him/her/it/them.
+
+#130
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {pn}
+nemœô¤´en
+nemœô¤´-œô£Ùn
+go-1SUBJ
+I go.
+
+#131
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {pn}
+nemœô¤´œô£ÙxœôëÂ 
+nemœô¤´-xœôëÂ 
+go-2SUBJ
+You go.
+
+#132
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {pn}
+nemœô¤´œô£Ùs
+nemœô¤´-œô£Ùs
+go-3SUBJ
+He/she/it/they go(es).
+
+#133
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {pn}
+nemœô¤´œô£Ùt
+nemœô¤´-œô£Ùt
+go-1PSUBJ
+We go.
+
+#134
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {pn}
+nemœô¤´ep
+nemœô¤´-ep
+go-2PSUBJ
+You all go.
+
+
+###########
+## Tense ##
+###########
+
+## Past ##
+
+#135
+Source: a:369
+Vetted: s
+Judgment: g
+Phenomena: {tam, pn, pro-d}
+c!ewœô£Ùtœô£Ùœô£ì cœô£Ùn
+c!ew-œô£Ùt-œô£Ùœô£ì c-œô£Ùn
+help-TR-PAST AUX-1SUBJ
+I was going to help him.
+
+#136
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+c!ewœô£Ùt cœô£Ùnœô£Ùœô£ì 
+c!ew-œô£Ùt c-œô£Ùn-œô£Ùœô£ì 
+help-TR AUX-1SUBJ-PAST
+I was going to help him.
+
+#137
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+c!ewœô£Ùœô£ìœô£Ùt cœô£Ùn 
+c!ew-œô£Ùœô£ì-œô£Ùt c-œô£Ùn 
+help-PAST-TR AUX-1SUBJ
+I was going to help him.
+
+#138
+Source: a:369
+Vetted: s
+Judgment: g
+Phenomena: {tam, aux, pn, pro-d}
+niœô£ì cœô£Ùn c!ewœô£Ùt
+niœô¤´-œô£Ùœô£ì c-œô£Ùn c!ew-œô£Ùt
+be.there-PAST AUX-1SUBJ help-TR
+I helped him. 
+
+## Future ##
+
+#139
+Source: a:375
+Vetted: s
+Judgment: g
+Phenomena: {tam, adv}
+kœôëÂ!aqœôëÂ tœô¤£xœôëÂ ceœô¤´ 
+kœôëÂ!aqœôëÂ c-xœôëÂ ceœô¤´ 
+get.hit AUX-2SUBJ FUT
+You'll get hit.
+
+#140
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+kœôëÂ!aqœôëÂ ceœô¤´ tœô¤£xœôëÂ 
+kœôëÂ!aqœôëÂ ceœô¤´ c-xœôëÂ 
+get.hit FUT AUX-2SUBJ
+You'll get hit.
+
+#141
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+ceœô¤´ kœôëÂ!aqœôëÂ tœô¤£xœôëÂ 
+ceœô¤´ kœôëÂ!aqœôëÂ c-xœôëÂ 
+FUT get.hit AUX-2SUBJ
+You'll get hit.
+
+
+## Both together ##
+## actually grammatical ##
+
+#142
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam, adv}
+kœôëÂ!aqœôëÂœô£Ùœô£ì tœô¤£xœôëÂ ceœô¤´ 
+kœôëÂ!aqœôëÂ-œô£Ùœô£ì c-xœôëÂ ceœô¤´ 
+get.hit-PAST AUX-2SUBJ FUT
+?You'll got hit.
+
+
+############
+## Aspect ##
+############
+
+## Emphatic ##
+
+#143
+Source: a:252
+Vetted: s
+Judgment: g
+Phenomena: {tam}
+œô¤´i cœô£Ùn wœô£Ùcnœô£ÙxœôëÂœô£Ùœô£ì 
+œô¤´i c-œô£Ùn wœô£Ù-cnœô£ÙxœôëÂœô£Ùœô£ì 
+be.here AUX-1SUBJ EMPH-get.canoe
+I do have a canoe.
+
+
+## Still ##
+
+#144
+Source: author # adapted from c:174
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+xœôëÂœô£ÙnqœôëÂel cœô£Ùn
+xœôëÂœô£Ùn-qœôëÂœô£Ùl c-œô£Ùn
+still-speak AUX-1SUBJ
+I'll speak soon.
+
+#145
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+qœôëÂaqœôëÂœô£Ùlœô¤´ cœô£Ùn
+PROG-qœôëÂœô£Ùl c-œô£Ùn
+PROG-speak AUX-1SUBJ
+I am speaking.
+
+#146
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+qœôëÂœô£ÙqœôëÂel cœô£Ùn
+DUR-qœôëÂœô£Ùl c-œô£Ùn
+DUR-speak AUX-1SUBJ
+I give a speech.
+
+# The durative reduplicats the 
+# initial C and epenthesizes
+# œô£Ù, which the progressive raises to i.
+#147
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+qœôëÂiqœôëÂelœô¤´ cœô£Ùn
+PROG-DUR-qœôëÂœô£Ùl c-œô£Ùn
+PROG-DUR-speak AUX-1SUBJ
+I am giving a speech.
+
+#148
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+xœôëÂœô£ÙnqœôëÂaqœôëÂœô£Ùlœô¤´ cœô£Ùn
+xœôëÂœô£Ùn-PROG-qœôëÂœô£Ùl c-œô£Ùn
+still-PROG-speak AUX-1SUBJ
+I am still speaking.
+
+#149
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+xœôëÂœô£ÙnqœôëÂœô£ÙqœôëÂel cœô£Ùn
+xœôëÂœô£Ùn-DUR-qœôëÂœô£Ùl c-œô£Ùn
+still-DUR-speak AUX-1SUBJ
+I'll soon give a speech.
+
+# The durative reduplicats the 
+# initial C and epenthesizes
+# œô£Ù, which the progressive raises to i.
+#150
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+xœôëÂœô£ÙnqœôëÂiqœôëÂelœô¤´ cœô£Ùn
+xœôëÂœô£Ùn-PROG-DUR-qœôëÂœô£Ùl c-œô£Ùn
+still-PROG-DUR-speak AUX-1SUBJ
+I am still giving a speech.
+
+# Hypothetical reduplication pattern
+#151
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+xœôëÂœô£ÙnqœôëÂaqœôëÂelœô¤´ cœô£Ùn
+xœôëÂœô£Ùn-DUR-PROG-qœôëÂœô£Ùl c-œô£Ùn
+still-DUR-PROG-speak AUX-1SUBJ
+I am still giving a speech.
+
+# Hypothetical reduplication on the prefix
+#152
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+xœôëÂinqœôëÂœô£ÙqœôëÂelœô¤´ cœô£Ùn
+PROG-xœôëÂœô£Ùn-DUR-qœôëÂœô£Ùl c-œô£Ùn
+PROG-still-DUR-speak AUX-1SUBJ
+I am still giving a speech.
+
+#153
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+qœôëÂixœôëÂœô£ÙnqœôëÂelœô¤´ cœô£Ùn
+PROG-DUR-xœôëÂœô£Ùn-qœôëÂœô£Ùl c-œô£Ùn
+PROG-DUR-still-speak AUX-1SUBJ
+I am still giving a speech.
+
+#154
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+wœô£ÙxœôëÂœô£ÙnqœôëÂiqœôëÂelœô¤´ cœô£Ùn
+wœô£Ù-xœôëÂœô£Ùn-PROG-DUR-qœôëÂœô£Ùl c-œô£Ùn
+EMPH-still-PROG-DUR-speak AUX-1SUBJ
+I am indeed still giving a speech.
+
+#155
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+xœôëÂœô£Ùnwœô£ÙqœôëÂiqœôëÂelœô¤´ cœô£Ùn
+xœôëÂœô£Ùn-wœô£Ù-PROG-DUR-qœôëÂœô£Ùl c-œô£Ùn
+still-EMPH-PROG-DUR-speak AUX-1SUBJ
+I am indeed still giving a speech.
+
+
+######################
+## Yes/No Questions ##
+######################
+
+#156
+Source: a:372
+Vetted: s
+Judgment: g
+Phenomena: {q, aux}
+ni œô¤´œô£Ù lœô£Ùc!
+niœô¤´ œô¤´œô£Ù lœô£Ùc!
+be.there QUE full
+Is it full?
+
+#157
+Source: author
+Vetted: s
+Judgment: u
+Phenomena: {q}
+ni lœô£Ùc! œô¤´œô£Ù
+niœô¤´ lœô£Ùc! œô¤´œô£Ù
+be.there full QUE
+Is it full?
+
+#158
+Source: author
+Vetted: s
+Judgment: u
+Phenomena: {q}
+œô¤´œô£Ù ni lœô£Ùc!
+œô¤´œô£Ù niœô¤´ lœô£Ùc!
+QUE be.there full
+Is it full?
+
+#159
+Source: a:372 # wrong analysis on see-TR
+Vetted: s
+Judgment: g
+Phenomena: {q, aux}
+ni œô¤´œô£Ù tœô¤£xœôëÂ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ 
+niœô¤´ œô¤´œô£Ù c-xœôëÂ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ 
+be.there QUE AUX-2SUBJ see-TR
+Did you see him?
+
+#160
+Source: author
+Vetted: s
+Judgment: u
+Phenomena: {q}
+ni tœô¤£xœôëÂ œô¤´œô£Ù kœôëÂ!œô£Ùcnœô£ÙxœôëÂ 
+niœô¤´ c-xœôëÂ œô¤´œô£Ù kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ 
+be.there AUX-2SUBJ QUE see-TR
+Did you see him?
+
+#161
+Source: a:372
+Vetted: s
+Judgment: g
+Phenomena: {q}
+c!ewœô£Ùtœô£Ùœô£ì œô¤´œô£Ù tœô¤£xœôëÂ 
+c!ew-œô£Ùt-œô£Ùœô£ì œô¤´œô£Ù c-xœôëÂ 
+help-TR-PAST QUE AUX-2SUBJ
+Were you going to help him?
+
+#162
+Source: a:373
+Vetted: s
+Judgment: g
+Phenomena: {q, neg}
+œô¤´œô£Ùwe cœô£Ùn nemœô¤´en 
+œô¤´œô£Ùwœô£Ù œô¤´œô£Ù c-œô£Ùn nemœô¤´-œô£Ùn 
+NEG QUE AUX-1SUBJ go-1SUBJ
+Can't I go?
+
+#163
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+œô¤´œô£Ù ni tœô¤£xœôëÂ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ 
+œô¤´œô£Ù niœô¤´ c-xœôëÂ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ
+QUE be.there AUX-2SUBJ see-TR
+Did you see him? 
+
+#164
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+ni tœô¤£xœôëÂ œô¤´œô£Ù kœôëÂ!œô£Ùcnœô£ÙxœôëÂ 
+niœô¤´ c-xœôëÂ œô¤´œô£Ù kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ
+be.there AUX-2SUBJ QUE see-TR 
+Did you see him?
+
+#165
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+ni tœô¤£xœôëÂ kœôëÂ!œô£Ùcnœô£ÙxœôëÂ œô¤´œô£Ù 
+niœô¤´ c-xœôëÂ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ œô¤´œô£Ù 
+be.there AUX-2SUBJ see-TR QUE
+Did you see him?
+
+#166
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+c!ewœô£Ùt œô¤´œô£Ùœô£Ùœô£ì tœô¤£xœôëÂ 
+c!ew-œô£Ùt œô¤´œô£Ù-œô£Ùœô£ì c-xœôëÂ 
+help-TR QUE-PAST AUX-2SUBJ
+Were you going to help him?
+
+#167
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+œô¤´œô£Ùwe cœô£Ùn nemœô¤´en œô¤´œô£Ù
+œô¤´œô£Ùwœô£Ù c-œô£Ùn nemœô¤´-œô£Ùn œô¤´œô£Ù
+NEG AUX-1SUBJ go-1SUBJ QUE
+Can't I go?
+
+
+
+##################
+## Coordination ##
+##################
+
+# coordinating NPs
+
+#168
+Source: a:70
+Vetted: s
+Judgment: g
+Phenomena: {crd}
+kœôëÂœô£Ùnœô£Ùtœô£Ùs tœô£Ù sp!œô£Ùlœô¤´xœôëÂœô£Ùm i tœô£Ù tœôìÑ!elœô¤´œô£Ù i tœô£Ù mœô£Ùsœô£Ùn
+kœôëÂœô£Ùn-œô£Ùt-œô£Ùs tœô£Ù sp!œô£Ùlœô¤´xœôëÂœô£Ùm œô¤´œô£Ùyœô¤´ tœô£Ù tœôìÑ!elœô¤´œô£Ù œô¤´œô£Ùyœô¤´ tœô£Ù mœô£Ùsœô£Ùn
+take-TR-3TR DET(MP) lungs and DET(MP) heart and DET(MP) gall
+He took the lungs and the heart and the gall.
+
+#169
+Source: author # (from a:70)
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+œô¤´œô£Ùœô£ìtœô£Ùn tœô£Ù œô¤´eœô¤£xœôëÂ, tœô£Ù kœôëÂ!an, œô£Ùy tœô£Ù xœô£Ùs
+œô¤´œô£Ùœô£ìtœô£Ùn tœô£Ù œô¤´eœô¤£xœôëÂ tœô£Ù kœôëÂ!an œô¤´œô£Ùyœô¤´ tœô£Ù xœô£Ùs
+eat DET(MP) seal DET(MP) porpoise and DET(MP) sea.lion
+The seals, porpoises, and sea lions eat.
+
+#170
+Source: author
+Vetted: s
+Judgment: g
+Phenomena: {crd}
+niœô¤´ ct œô¤´œô£Ùœô£ìtœô£Ùn œô¤´i œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ 
+niœô¤´ c-t œô¤´œô£Ùœô£ìtœô£Ùn œô¤´œô£Ùyœô¤´ œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ 
+be.there AUX-2SUBJ eat and DET(FP) woman
+The woman and I ate.
+
+#171
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {crd}
+niœô¤´ ct œô¤´œô£Ùœô£ìtœô£Ùn œô¤´i tœô¤£xœôëÂ
+niœô¤´ c-t œô¤´œô£Ùœô£ìtœô£Ùn œô¤´œô£Ùyœô¤´ c-xœôëÂ 
+be.there AUX-1SUBJ eat and AUX-2SUBJ
+You and I ate.
+
+#172
+Source: author # from a:71
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+niœô¤´ kœôëÂ!œô£Ùcnamxœô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ œô¤´i kœôëÂœô§¸œô£Ù kœôëÂ!an 
+niœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ-amx-œô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ œô¤´œô£Ùyœô¤´ kœôëÂœô§¸œô£Ù kœôëÂ!an 
+be.there see-TR-1OBJ-3TR DET(FP) woman and DET(MN) porpoise
+The woman saw me and the porpoise.
+
+#173
+Source: author # from a:71
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+niœô¤´ kœôëÂ!œô£Ùcnamxœô£Ùs œô¤´i kœôëÂœô§¸œô£Ù kœôëÂ!an œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ 
+niœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ-amx-œô£Ùs œô¤´œô£Ùyœô¤´ kœôëÂœô§¸œô£Ù kœôëÂ!an œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ 
+be.there see-TR-1OBJ-3TR and DET(MN) porpoise DET(FP) woman 
+The woman saw me and the porpoise.
+
+#174
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {crd}
+niœô¤´ kœôëÂ!œô£Ùcnamxœô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ œô¤´i alœô£Ù 
+niœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ-amx-œô£Ùs œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ œô¤´œô£Ùyœô¤´-alœô£Ù 
+be.there see-TR-1OBJ-3TR DET(FP) woman and-2POBJ
+The woman saw me and you all.
+
+# Sentential and VP coordination
+
+#175
+Source: a:113
+Vetted: s
+Judgment: g
+Phenomena: {crd}
+kœôëÂœô£Ùnœô£Ùtœô£Ùs i cœô£Ùmœô£Ùtœô£Ùs
+kœôëÂœô£Ùn-œô£Ùt-œô£Ùs œô¤´œô£Ùyœô¤´ cœô£Ùm-œô£Ùt-œô£Ùs
+take-TR-3TR and pack-TR-3TR
+He took it and put it on his back.
+
+#176
+Source: a:114
+Vetted: s
+Judgment: g
+Phenomena: {crd, adv}
+xœôëÂœô¤´amœô¤´œô£Ùt cœô£Ùn ceœô¤´ i xqœô£Ùt cœô£Ùn
+xœôëÂœô¤´amœô¤´œô£Ùt c-œô£Ùn ceœô¤´ œô¤´œô£Ùyœô¤´ xœô£Ùq-œô£Ùt c-œô£Ùn
+be.sitting AUX-1SUBJ FUT and be.finished-TR AUX-1SUBJ
+When I get home, I will finish it.
+
+#177
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+xœôëÂœô¤´amœô¤´œô£Ùt ceœô¤´ i xqœô£Ùt cœô£Ùn
+xœôëÂœô¤´amœô¤´œô£Ùt ceœô¤´ œô¤´œô£Ùyœô¤´ xœô£Ùq-œô£Ùt c-œô£Ùn
+be.sitting FUT and be.finsihed-TR AUX-1SUBJ
+When he gets home, I will finish it.
+
+#178
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+kœôëÂœô£Ùnœô£Ùtœô£Ùs i cœô£Ùmœô£Ùtœô£Ùs tœô£Ù swœô£Ùyœô¤´qeœô¤´ 
+kœôëÂœô£Ùn-œô£Ùt-œô£Ùs œô¤´œô£Ùyœô¤´ cœô£Ùm-œô£Ùt-œô£Ùs tœô£Ù swœô£Ùyœô¤´qeœô¤´ 
+take-TR-3TR and pack-TR-3TR DET(MP) man 
+The man took it and put it on his back.
+# ? He took it and the man put it on his back
+
+
+
+################
+## Adjectives ##
+################
+
+#179
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adj}
+niœô¤´ cœô£Ùn kœôëÂ!œô£Ùcœô£Ùt kœôëÂ!œô£Ù œô¡Û!eqt xœô£Ùs
+niœô¤´ c-œô£Ùn kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ kœôëÂ!œô£Ù œô¡Û!eqt xœô£Ùs
+be.there AUX-1SUBJ see-TR DET(MR) long sealion
+I saw a long sea lion.
+
+#180
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+niœô¤´ cœô£Ùn kœôëÂ!œô£Ùcœô£Ùt kœôëÂ!œô£Ù xœô£Ùs œô¡Û!eqt
+niœô¤´ c-œô£Ùn kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ kœôëÂ!œô£Ù xœô£Ùs œô¡Û!eqt
+be.there AUX-1SUBJ see-TR DET(MR) sealion long
+I saw a long sea lion.
+
+#181
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+niœô¤´ cœô£Ùn kœôëÂ!œô£Ùcœô£Ùt œô¡Û!eqt kœôëÂ!œô£Ù xœô£Ùs
+niœô¤´ c-œô£Ùn kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ œô¡Û!eqt kœôëÂ!œô£Ù xœô£Ùs
+be.there AUX-1SUBJ see-TR long DET(MR) sealion
+I saw a long sea lion.
+
+
+
+#############
+## Adverbs ##
+#############
+
+### As predicates ###
+
+#182
+Source: a:442
+Vetted: s
+Judgment: g
+Phenomena: {tam, aux}
+sc!ec!œô£Ùnœô¤´ wœô£Ùœô£ìewœô¤´ 
+sc!ec!œô£Ùn wœô£Ù-œô£ìewœô¤´ 
+really EMPH-flee
+They were really escaping.
+
+#183
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+niœô£ì sc!ec!œô£Ùn kœôëÂœô£Ùnœô£Ùtœô£Ùs
+niœô¤´-œô£Ùœô£ì sc!ec!œô£Ùn kœôëÂœô£Ùn-œô£Ùt-œô£Ùs
+be.there-PAST really take-TR-3TR
+He surely took it.
+
+#184
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+wœô£Ùœô£ìewœô¤´ sc!ec!œô£Ùnœô¤´ 
+wœô£Ù-œô£ìewœô¤´ sc!ec!œô£Ùn
+EMPH-flee really
+They were really escaping.
+
+#185
+Source: author # from a:65
+Vetted: f
+Judgment: g
+Phenomena: {adv, adj}
+kœôëÂ!œô£Ùcnœô£ÙxœôëÂ cœô£Ùn kœôëÂ!œô£Ù sc!ec!œô£Ùnœô¤´ œô§¸i qœôëÂtayœô§¸œô£Ùn
+kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ c-œô£Ùn kœôëÂ!œô£Ù sc!ec!œô£Ùn œô§¸i qœôëÂtayœô§¸œô£Ùn
+see-TR AUX-1SUBJ DET(MR) really big sturgeon
+I saw a really big sturgeon.
+
+#186
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adv}
+kœôëÂ!œô£Ùcnœô£ÙxœôëÂ cœô£Ùn kœôëÂ!œô£Ù œô§¸i sc!ec!œô£Ùnœô¤´ qœôëÂtayœô§¸œô£Ùn
+kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ c-œô£Ùn kœôëÂ!œô£Ù œô§¸i sc!ec!œô£Ùn qœôëÂtayœô§¸œô£Ùn
+see-TR AUX-1SUBJ DET(MR) big really sturgeon
+I saw a really big sturgeon.
+
+#187
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adv, adj}
+kœôëÂ!œô£Ùcnœô£ÙxœôëÂ sc!ec!œô£Ùn cœô£Ùn kœôëÂ!œô£Ù œô§¸i qœôëÂtayœô§¸œô£Ùn 
+kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ sc!ec!œô£Ùn c-œô£Ùn kœôëÂ!œô£Ù œô§¸i qœôëÂtayœô§¸œô£Ùn
+see-TR really AUX-1SUBJ DET(MR) big sturgeon
+I saw a really big sturgeon.
+
+#188
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {aux, adj}
+sc!ec!œô£Ùn cœô£Ùn kœôëÂ!œô£Ùcnœô£ÙxœôëÂ kœôëÂ!œô£Ù œô§¸i qœôëÂtayœô§¸œô£Ùn
+sc!ec!œô£Ùn c-œô£Ùn kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ kœôëÂ!œô£Ù œô§¸i qœôëÂtayœô§¸œô£Ùn
+really AUX-1SUBJ see-TR DET(MR) big sturgeon
+I really saw a big sturgeon. # intensifier of see
+
+#189
+Source: a:417
+Vetted: s
+Judgment: g
+Phenomena: {aux, adj}
+wœô£Ùyaœô§¸œô£Ùœô£ì cœô£Ùn wœô£Ùq!aq!œô£Ùyœô¤´ 
+wœô£Ù-yaœô§¸-œô£Ùœô£ì c-œô£Ùn wœô£Ù-q!aq!œô£Ùyœô¤´ 
+EMPH-always-PAST AUX-1SUBJ EMPH-sick
+I was always sick.
+
+#Source: author
+#Vetted: f
+#Judgment: g
+#Phenomena: {aux, adj}
+#yaœô§¸œô£Ùœô£ì cœô£Ùn q!aq!œô£Ùyœô¤´ 
+#yaœô§¸-œô£Ùœô£ì c-œô£Ùn q!aq!œô£Ùyœô¤´ 
+#always-PAST AUX-1SUBJ sick
+#I was always sick.
+
+#190
+Source: a:424
+Vetted: s
+Judgment: g
+Phenomena: {adv}
+wœô£Ùq!aq!œô£Ùyœô¤´œô£Ùœô£ì cœô£Ùn wœô£Ùyaœô§¸
+wœô£Ù-q!aq!œô£Ùyœô¤´-œô£Ùœô£ì c-œô£Ùn wœô£Ù-yaœô§¸
+EMPH-sick-PAST AUX-1SUBJ EMPH-always
+I was frequently sick.
+
+#Source: author # from a:424
+#Vetted: f
+#Judgment: g
+#Phenomena: {adv}
+#q!aq!œô£Ùyœô¤´œô£Ùœô£ì cœô£Ùn yaœô§¸
+#q!aq!œô£Ùyœô¤´-œô£Ùœô£ì c-œô£Ùn yaœô§¸
+#sick-PAST AUX-1SUBJ always
+#I was frequently sick.
+
+#191
+Source: a:424
+Vetted: s
+Judgment: g
+Phenomena: {adv}
+ni cœô£Ùn wœô£Ùyaœô§¸ wœô£Ùhœô£Ùnœô¤´œô£Ùmœô¤´ 
+niœô¤´ c-œô£Ùn wœô£Ù-yaœô§¸ wœô£Ù-hœô£Ùnœô¤´œô£Ùmœô¤´
+be.there AUX-1SUBJ EMPH-always EMPH-be.going
+Yes, I always do.
+
+#Source: author # from a:424
+#Vetted: f
+#Judgment: g
+#Phenomena: {adv}
+#ni cœô£Ùn yaœô§¸ hœô£Ùnœô¤´œô£Ùmœô¤´ 
+#niœô¤´ c-œô£Ùn yaœô§¸ hœô£Ùnœô¤´œô£Ùmœô¤´
+#be.there AUX-1SUBJ always be.going
+#Yes, I always do.
+
+#192
+Source: a:417
+Vetted: s
+Judgment: g
+Phenomena: {aux}
+qeœô¤´is cœô£Ùn ni kœôëÂ!œô£Ùcnœô£ÙxœôëÂ 
+qeœô¤´is c-œô£Ùn niœô¤´ kœôëÂ!œô£Ùc-nœô£ÙxœôëÂ 
+recently AUX-1SUBJ be.there see-TR
+I saw him just now.
+
+#193
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {aux}
+mœô£ÙkœôëÂ! cœô£Ùn kœôëÂœô£Ùnœô£Ùt
+mœô£ÙkœôëÂ! c-œô£Ùn kœôëÂœô£Ùn-œô£Ùt
+all AUX-1SUBJ take-TR
+I took them all.
+
+#194
+Source: a:435
+Vetted: s
+Judgment: g
+Phenomena: {aux}
+œô¡Û!œô£Ù cœô£Ùn ceœô¤´ niw steœô¤´e
+œô¡Û!œô£Ù c-œô£Ùn ceœô¤´ niœô¤´ wœô£Ù-steœô¤´e
+too AUX-1SUBJ FUT be.there EMPH-like
+I'll be the same.
+
+#Source: author # from a:435
+#Vetted: f
+#Judgment: g
+#Phenomena: {aux}
+#œô¡Û!œô£Ù cœô£Ùn ceœô¤´ ni steœô¤´e
+#œô¡Û!œô£Ù c-œô£Ùn ceœô¤´ niœô¤´ steœô¤´e
+#too AUX-1SUBJ FUT be.there like
+#I'll be the same.
+
+#195
+Source: a:435
+Vetted: s
+Judgment: g
+Phenomena: {adv, tam}
+ni œô¤´œô£Ù œô¡Û!œô£Ùw nemœô¤´ 
+niœô¤´ œô¤´œô£Ù œô¡Û!œô£Ù wœô£Ù-nemœô¤´ 
+be.there QUE also EMPH-go
+Did he go too?
+
+#196
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+ni nemœô¤´ œô¡Û!œô£Ù 
+niœô¤´ nemœô¤´ œô¡Û!œô£Ù 
+be.there go too
+He went too.
+
+#197
+Source: a:443
+Vetted: s
+Judgment: g
+Phenomena: {adv}
+ni œô§¸œô£Ùœô¤´it c!œô£Ùwnœô£ÙxœôëÂœô£Ùs 
+niœô¤´ œô§¸œô£Ùœô¤´it c!ew-nœô£ÙxœôëÂ-œô£Ùs 
+be.there truly help-TR-3TR
+It really helped him.
+
+#198
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adv}
+ni c!œô£Ùwnœô£ÙxœôëÂœô£Ùs œô§¸œô£Ùœô¤´it 
+niœô¤´ c!ew-nœô£ÙxœôëÂ-œô£Ùs œô§¸œô£Ùœô¤´it 
+be.there help-TR-3TR truly
+It really helped him.
+
+
+
+
+###########################
+## Non-Verbal Predicates ##
+###########################
+
+# Adjectival Predicates
+
+#199
+Source: a:31
+Vetted : s
+Judgment: g
+Phenomena: {cop, adj}
+œô§¸i
+œô§¸i
+big
+It's big.
+
+#200
+Source: a:59
+Vetted : s
+Judgment: g
+Phenomena: {cop, adj, pn}
+kœô¤×!amœô¤´kœô¤×!œô£Ùmœô¤´ cœô£Ùn
+kœôëÂ!amœô¤´kœôëÂ!œô£Ùmœô¤´ c-œô£Ùn
+strong AUX-1SUBJ
+I'm strong.
+
+#201
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+cœô£Ùn kœôëÂ!amkœôëÂ!œô£Ùm 
+c-œô£Ùn kœôëÂ!amœô¤´kœôëÂ!œô£Ùmœô¤´  
+AUX-1SUBJ strong 
+I am strong.
+
+#202
+Source: a:59
+Vetted: s
+Judgment: g
+Phenomena: {cop, q, adj, pn}
+kœôëÂ!amkœôëÂ!œô£Ùm œô¤´œô£Ù tœô¤£xœôëÂ
+kœôëÂ!amœô¤´kœôëÂ!œô£Ùmœô¤´ œô¤´œô£Ù c-xœôëÂ
+strong QUE AUX-1SUBJ
+Are you strong?
+
+# Nominal predicates
+
+#203
+Source: a:31
+Vetted : s
+Judgment: g
+Phenomena: {cop}
+œô¤´enœô§¸œô£Ù
+œô¤´enœô§¸œô£Ù
+be.I
+It's me.
+
+#204
+Source: a:31
+Vetted: s
+Judgment: g
+Phenomena: {cop, q}
+speœô¤´eœô§¸ œô¤´œô£Ù
+speœô¤´eœô§¸ œô¤´œô£Ù
+black.bear ROG
+Is it a bear?
+
+#205
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+œô¤´œô£Ù speœô¤´eœô§¸ 
+œô¤´œô£Ù speœô¤´eœô§¸
+QUE bear
+Is it a bear?
+
+#206
+Source: author #adapted from a:62
+Vetted: s
+Judgment: g
+Phenomena: {cop}
+swœô£Ùyœô¤´qeœô¤´ tœô£Ù John
+swœô£Ùyœô¤´qeœô¤´ tœô£Ù John
+man DET(MP) John
+John is a man
+
+#207
+Source: a:62
+Vetted: s
+Judgment: g
+Phenomena: {cop, adj}
+œô¤´œô£Ùy swœô£Ùyœô¤´qeœô¤´ tœô£Ù John
+œô¤´œô£Ùy swœô£Ùyœô¤´qeœô¤´ tœô£Ù John
+good man DET(MP) John
+John is a good man.
+
+#208
+Source: a:32
+Vetted: s
+Judgment: g
+Phenomena: {cop, pn}
+swœô£Ùyœô¤´qeœô¤´ cœô£Ùn
+swœô£Ùyœô¤´qeœô¤´ c-œô£Ùn
+man AUX-1SUBJ
+I am a man.
+
+#209
+Source: author # from a:59
+Vetted: f
+Judgment: g
+Phenomena: {cop, aux, pn, adj}
+œô¤´i cœô£Ùn œô¤´œô£Ùyœô¤´ 
+œô¤´i c-œô£Ùn œô¤´œô£Ùy 
+be.here AUX-1SUBJ good
+I'm fine.
+
+
+######################
+## Embedded Clauses ##
+######################
+
+#210
+Source: author # adapted from a:96
+Vetted: f
+Judgment: g
+Phenomena: {emb-d}
+ni cœô£Ùn wœô£Ùmelqt wœô£Ùniœô¤´œô£Ùs œô§¸œô£Ù tintœô£Ùn 
+niœô¤´ c-œô£Ùn wœô£Ù-melq-œô£Ùt wœô£Ù niœô¤´-œô£Ùs œô§¸œô£Ù tintœô£Ùn
+be.there AUX-1SUBJ EMPH-forget-TR COMP be.there-3SUBSUBJ DET(FP) bell
+I had forgotten the bell was there.
+
+#211
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-d}
+ni cœô£Ùn wœô£Ùmelqt wœô£Ùniœô¤´ œô§¸œô£Ù tintœô£Ùn 
+niœô¤´ c-œô£Ùn wœô£Ù-melq-œô£Ùt wœô£Ù niœô¤´ œô§¸œô£Ù tintœô£Ùn
+be.there AUX-1SUBJ EMPH-forget-TR COMP be.there DET(FP) bell
+I had forgotten the bell was there.
+
+#212
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d}
+ni cœô£Ùn wœô£Ùmelqt wœô£Ù niœô¤´xœôëÂ 
+niœô¤´ c-œô£Ùn wœô£Ù-melq-œô£Ùt wœô£Ù niœô¤´-œô£ÙxœôëÂ 
+be.there AUX-1SUBJ EMPH-forget-TR COMP be.there-2SUBSUBJ
+I had forgotten you were there.
+
+#213
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-d}
+ni cœô£Ùn wœô£Ùmelqt wœô£Ùniœô¤´ tœô¤£xœôëÂ
+niœô¤´ c-œô£Ùn wœô£Ù-melq-œô£Ùt wœô£Ù niœô¤´ c-xœôëÂ
+be.there AUX-1SUBJ EMPH-forget-TR COMP be.there AUX-2SUBJ
+I had forgotten you were there.
+
+#214
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d}
+q!alt wœô£ÙkœôëÂ!amœô¤´kœôëÂ!œô£Ùmœô¤´œô£Ùs
+q!al-œô£Ùt wœô£Ù kœôëÂ!amœô¤´kœôëÂ!œô£Ùmœô¤´-œô£Ùs
+believe-TR COMP strong-3SUBSUBJ
+He believes he is strong.
+
+#215
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-d}
+q!alt kœôëÂ!amœô¤´kœôëÂ!œô£Ùmœô¤´œô£Ùs
+q!al-œô£Ùt kœôëÂ!amœô¤´kœôëÂ!œô£Ùmœô¤´-œô£Ùs
+believe-TR strong-3SUBSUBJ
+He believes he is strong.
+
+#no examples of embedded yes/no questions from book
+
+#216
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-q}
+telexœôëÂt œô¤´œô£Ù tœô¤£xœôëÂ wœô£Ùniœô¤´œô£Ùs œô¤´œô£Ù hayeœô¤´ kœôëÂœô§¸œô£Ù spœô£Ùpeœô¤´eœô§¸
+telexœôëÂ-œô£Ùt œô¤´œô£Ù c-xœôëÂ wœô£Ù niœô¤´-œô£Ùs œô¤´œô£Ù hayeœô¤´ kœôëÂœô§¸œô£Ù PLUR-speœô¤´eœô§¸
+know-TR QUE AUX-2SUBJ COMP be.there-3SUBSUBJ QUE leave DET(MN) PLUR-bear
+Do you know whether the bears left?
+
+#217
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-q}
+telexœôëÂt œô¤´œô£Ù tœô¤£xœôëÂ niœô¤´œô£Ùs hayeœô¤´ kœôëÂœô§¸œô£Ù spœô£Ùpeœô¤´eœô§¸
+telexœôëÂ-œô£Ùt œô¤´œô£Ù c-xœôëÂ niœô¤´-œô£Ùs hayeœô¤´ kœôëÂœô§¸œô£Ù PLUR-speœô¤´eœô§¸
+know-TR QUE AUX-2SUBJ be.there-3SUBSUBJ leave DET(MN) PLUR-bear
+Do you know whether the bears left?
+
+#218
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-q}
+telexœôëÂt œô¤´œô£Ù tœô¤£xœôëÂ wœô£Ùniœô¤´ hayeœô¤´ kœôëÂœô§¸œô£Ù spœô£Ùpeœô¤´eœô§¸
+telexœôëÂ-œô£Ùt œô¤´œô£Ù c-xœôëÂ wœô£Ù niœô¤´ hayeœô¤´ kœôëÂœô§¸œô£Ù PLUR-speœô¤´eœô§¸
+know-TR QUE AUX-2SUBJ COMP be.there leave DET(MN) PLUR-bear
+Do you know whether the bears left?
+
+#219
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-q}
+telexœôëÂt œô¤´œô£Ù tœô¤£xœôëÂ wœô£Ùniœô¤´t hayeœô¤´ kœôëÂœô§¸œô£Ù spœô£Ùpeœô¤´eœô§¸
+telexœôëÂ-œô£Ùt œô¤´œô£Ù c-xœôëÂ wœô£Ù niœô¤´-t hayeœô¤´ kœôëÂœô§¸œô£Ù PLUR-speœô¤´eœô§¸
+know-TR QUE AUX-2SUBJ COMP be.there-1PSUBSUBJ leave DET(MN) PLUR-bear
+Do you know if the bears left?
+
+
+###########################
+## Information Structure ##
+###########################
+
+#220
+Source: a:84
+Vetted: s
+Judgment: g
+Phenomena: {info}
+nœô£Ùwœô£Ù ni kœô¤×!œô£Ùcnœô£Ùxœô¤×en
+nœô£Ùwœô£Ù niœô¤´ kœô¤×!ec-nœô£Ùxœô¤×-œô£Ùn
+be.you be.there look-TR-1SUBJ
+You are the one I saw.
+
+#221
+Source: a:88
+Vetted: s
+Judgment: g
+Phenomena: {info}
+œô¤´enœô§¸œô£Ù ni nemœô¤´
+œô¤´enœô§¸œô£Ù niœô¤´ nemœô¤´
+be.I be.there go
+I am the one who went
+
+#222
+Source: a:88
+Vetted: s
+Judgement: g
+Phenomena: {info}
+œô¡Û!a niœô£ì nemœô¤´
+œô¡Û!a niœô¤´-œô£Ùœô£ì nemœô¤´
+BE3P be.there-PAST go
+He's the one who went.
+
+#223
+Source: a:85
+Vetted: s
+Judgment: g
+Phenomena: {info}
+swœô£Ùyœô¤´qeœô¤´ tœô£Ù niœô¤´ œô£Ù tœô£Ùniœô¤´
+swœô£Ùyœô¤´qeœô¤´ tœô£Ù niœô¤´ œô¤´œô£Ù tœô£Ùniœô¤´
+man DET(MP) be.there OBL be.there
+be.there is a man over be.there.
+
+#224
+Source: author #adapted from a:90
+Vetted : f
+Judgment: g
+Phenomena: {info}
+œô¡Û!a tœô£Ù tam nin c!ewœô£Ùt
+œô¡Û!a tœô£Ù tam niœô¤´-œô£Ùn c!ew-œô£Ùt
+BE3P DET(MP) Tom be.there-1SUBJ help-TR
+It's Tom that I help.
+
+#225
+Source: a:90
+Vetted : s
+Judgment: g
+Phenomena: {info, adv}
+œô¡Û!a tœô§¸eœô¤´ nemœô¤´ ceœô¤´
+œô¡Û!a tœô§¸eœô¤´ nemœô¤´ ceœô¤´
+BE3P DET(MP) go FUT
+He is the one who will go.
+
+
+#####################
+## I can eat glass ##
+#####################
+
+#226
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+scœô£Ùwœô¤´et cœô£Ùn nesœô£ìœô£Ùyœô§Çt tœô£Ù c!awi œô¤´œô£Ùyœô¤´ œô¤´œô£Ùwœô£Ù kœôëÂœô£Ù sœô§Çœô£Ùœô£ìnœô£ÙxœôëÂamxœô£Ùs
+scœô£Ùwœô¤´et c-œô£Ùn nœô£Ù-s-œô£ìœô£Ùyœô§Ç-œô£Ùt tœô£Ù c!awi œô¤´œô£Ùyœô¤´ œô¤´œô£Ùwœô£Ù kœôëÂœô£Ù s-œô§Çœô£Ùœô£ì-nœô£ÙxœôëÂ-amx-s
+can AUX-1SUBJ 1NOMSUBJ-NOM-eat-yesTR DET(MP) glass œô¤´œô£Ùyœô¤´ NEG DET(MN) NOM-hurt-TR-1OBJ-3NOMSUBJ
+I can eat glass and it doesn't hurt me.
+
+#227
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+scœô£Ùwœô¤´et cœô£Ùn kœôëÂœô£Ù nesœô£ìœô£Ùyœô§Çt tœô£Ù c!awi œô¤´œô£Ùyœô¤´ œô¤´œô£Ùwœô£Ù kœôëÂœô£Ù sœô§Çœô£Ùœô£ìnœô£ÙxœôëÂamxœô£Ùs
+scœô£Ùwœô¤´et c-œô£Ùn kœôëÂœô£Ù nœô£Ù-s-œô£ìœô£Ùyœô§Ç-œô£Ùt tœô£Ù c!awi œô¤´œô£Ùyœô¤´ œô¤´œô£Ùwœô£Ù kœôëÂœô£Ù s-œô§Çœô£Ùœô£ì-nœô£ÙxœôëÂ-amx-s
+can AUX-1SUBJ DET(MN) 1NOMSUBJ-NOM-eat-TR DET(MP) glass œô¤´œô£Ùyœô¤´ NEG DET(MN) NOM-hurt-TR-1OBJ-3NOMSUBJ
+I can eat glass and it doesn't hurt me.
+
+#228
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+scœô£Ùwœô¤´et cœô£Ùn kœôëÂœô£Ù nesœô£ìœô£Ùyœô§Çt tœô£Ù c!awi œô¤´œô£Ùyœô¤´ œô¤´œô£Ùwœô£Ù sœô§Çœô£Ùœô£ìnœô£ÙxœôëÂamxœô£Ùs
+scœô£Ùwœô¤´et c-œô£Ùn kœôëÂœô£Ù nœô£Ù-s-œô£ìœô£Ùyœô§Ç-œô£Ùt tœô£Ù c!awi œô¤´œô£Ùyœô¤´ œô¤´œô£Ùwœô£Ù œô§Çœô£Ùœô£ì-nœô£ÙxœôëÂ-amx-œô£Ùs
+can AUX-1SUBJ DET(MN) 1NOMSUBJ-NOM-eat-TR DET(MP) glass œô¤´œô£Ùyœô¤´ NEG hurt-TR-1OBJ-3SUBSUBJ
+I can eat glass and it doesn't hurt me.
+
+
+
+#######################
+## Impossible v. Can ##
+#######################
+
+#229
+Source: a:458
+Vetted: s
+Judgment: g
+Phenomena: {nom}
+skœôëÂ!ey kœôëÂ!œô£Ù nœô£Ùsnemœô¤´
+skœôëÂ!ey kœôëÂ!œô£Ù nœô£Ù-s-nemœô¤´
+impossible DET(MN) 1NOMSUBJ-NOM-go
+I can't go.
+
+#230
+Source: a:459
+Vetted: s
+Judgment: g
+Phenomena: {nom}
+scœô£Ùwœô¤´et kœôëÂs cnœô£ÙxœôëÂœô£Ùœô£ìs
+scœô£Ùwœô¤´et kœôëÂœô£Ù s-cnœô£ÙxœôëÂœô£Ùœô£ì-s
+can DET(MN) NOM-get.canoe-3NOMSUBJ
+He's a good canoe-maker./He can make a canoe.
+
+#231
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {nom}
+scœô£Ùwœô¤´et cœô£Ùn kœôëÂs cnœô£ÙxœôëÂœô£Ùœô£ìs
+scœô£Ùwœô¤´et c-œô£Ùn kœôëÂœô£Ù s-cnœô£ÙxœôëÂœô£Ùœô£ì-s
+can AUX-1SUBJ DET(MN) NOM-get.canoe-3NOMSUBJ
+I'm a good canoe-maker.
+
+#232
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {nom}
+scœô£Ùwœô¤´et cœô£Ùn kœôëÂs cnœô£ÙxœôëÂœô£Ùœô£ì
+scœô£Ùwœô¤´et c-œô£Ùn kœôëÂœô£Ù s-cnœô£ÙxœôëÂœô£Ùœô£ì
+can AUX-1SUBJ DET(MN) NOM-get.canoe
+I'm a good canoe-maker.
+
+#233
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {nom}
+scœô£Ùwœô¤´et cœô£Ùn kœôëÂœô£Ù nœô£Ùcnœô£ÙxœôëÂœô£Ùœô£ì
+scœô£Ùwœô¤´et c-œô£Ùn kœôëÂœô£Ù nœô£Ù-cnœô£ÙxœôëÂœô£Ùœô£ì
+can AUX-1SUBJ DET(MN) 1NOMSUBJ-get.canoe
+I'm a good canoe-maker.
+
+
+#234
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {nom}
+scœô£Ùwœô¤´et kœôëÂœô£Ù nœô£Ùscnœô£ÙxœôëÂœô£Ùœô£ì
+scœô£Ùwœô¤´et kœôëÂœô£Ù nœô£Ù-s-cnœô£ÙxœôëÂœô£Ùœô£ì
+can DET(MN) 1NOMSUBJ-NOM-get.canoe
+I'm a good canoe-maker.
+
+####################
+## Nominalization ##
+####################
+
+#235
+Source: author # from a:101
+Vetted: f
+Judgment: g
+Phenomena: {nom, cop}
+œô¤´œô£Ùyœô¤´ kœôëÂ!s q!anct
+œô¤´œô£Ùy kœôëÂ!œô£Ù s-q!an-ct
+good DET(MN) NOM-return-1PNOMSUBJ
+We'd better return.
+
+#236
+Source: a:106
+Vetted: s
+Judgment: g
+Phenomena: {nom, cop}
+sœô£Ùct wœô£Ùhœô£Ùyeœô¤´ 
+s-niœô¤´-ct wœô£Ù-hayeœô¤´
+NOM-be.there-1PLNOMSUBJ EMPH-leave
+Then we left.
+
+########
+## MT ##
+########
+
+#237
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+q!œô£Ùq!an œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ 
+DUR-q!an œô§¸œô£Ù sœô£ìenœô£Ùyœô¤´ 
+DUR-return DET(FP) woman
+The woman continues to return.
+
+#238
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cogst}
+œô¤´itet tœô£Ù sqœôëÂœô£ÙmqœôëÂœô£Ùmeyœô¤´
+œô¤´itet tœô£Ù PLUR-sqœôëÂœô£Ùmeyœô¤´
+sleep DET(MP) PLUR-dog
+These dogs sleep.
+#dogs sleep
+
+#239
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+Dogs chase cars.
+
+#240
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+I chase you.
+
+#241
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+These dogs sleep.
+
+#242
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+œô¤´œô£Ùœô£ìtœô£Ùn tœô£Ù sqœôëÂœô£ÙmqœôëÂœô£Ùmeyœô¤´
+œô¤´œô£Ùœô£ìtœô£Ùn tœô£Ù PLUR-sqœôëÂœô£Ùmeyœô¤´
+eat DET(MP) PLUR-dog
+Dogs eat.
+
+#243
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+scœô£Ùwœô¤´et cœô£Ùn kœôëÂœô£Ù nesœô£ìœô£Ùyœô§Çt tœô£Ù c!awi 
+scœô£Ùwœô¤´et c-œô£Ùn kœôëÂœô£Ù nœô£Ù-s-œô£ìœô£Ùyœô§Ç-œô£Ùt tœô£Ù c!awi 
+can AUX-1SUBJ DET(MN) 1NOMSUBJ-NOM-eat-TR DET(MP) glass 
+I can eat glass.
+
+#244
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+œô¤´œô£Ùwœô£Ù kœôëÂœô£Ù sœô§Çœô£Ùœô£ìnœô£ÙxœôëÂamxœô£Ùs
+œô¤´œô£Ùwœô£Ù kœôëÂœô£Ù s-œô§Çœô£Ùœô£ì-nœô£ÙxœôëÂ-amx-s
+neg DET(MN) NOM-hurt-TR-1OBJ-3NOMSUBJ
+It doesn't hurt me.
+
+#245
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+The dogs chase cars.
+
+#246
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+I think that you know that dogs chase cars.
+
+#247
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+I ask whether you know that dogs chase cars.
+
+#248
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+Cats and dogs chase cars.
+
+#249
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+Dogs chase cars and cats chase dogs.
+
+#250
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+Cats chase dogs and sleep.
+
+#251
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+Do cats chase dogs?
+
+#252
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+Hungry dogs eat.
+
+#253
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+Dogs eat quickly.
+
+#254
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+The dogs are hungry.
+
+#255
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+The dogs are in the park.
+
+#256
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+
+
+The dogs are the cats.
+

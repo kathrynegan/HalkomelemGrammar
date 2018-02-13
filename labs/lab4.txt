@@ -1,0 +1,680 @@
+Kathryn Nichols
+Matthew Benak
+LING 567
+Lab 4
+
+~*~*~*~*~* 1. *~*~*~*~*~
+
+We have made a few small changes to the grammar and several rather substantial ones in addition to the changes called for by the Lab 4 specifications. We will first go over the new/different choices in the sections already covered in previous labs, then discuss the additions of coordination, yes/no questions, and information structure, followed by the testsuite examples in for adjectives, adverbs and embedded clauses. Changes the lexicon are discusssed throughout. At the end, we discuss the changes made directly to the TDL files.
+
+
+
+ASPECT
+
+We've added another prevalent aspectual prefix, wə-, to the grammar. wə- is in the first position class among prefixes and indicates that the speaker is establishing the truth of his/her statement. It can apply to verbs, adverbs and adjectives. It is only allowed on verbs in our grammar so far, but we intend to extend its distribution to adverbs and adjectives in the labs corresponding to those parts of the grammar. Part of our reason for including it is its frequency with adverbs and adjectives, as in testsuite examples like the one below:
+
+Source: a:417
+Vetted: s
+Judgment: g
+Phenomena: {adv, tam}
+wəyaθəɬ cən wəq!aq!əyʔ 
+wə-yaθ-əɬ-cən wə-q!aq!əyʔ 
+EST-always-PAST-1SUBJ EST-sick
+I was always sick.
+
+wə- precedes xᵂən-, the aspectual prefix added last week. Our grammar appropriately disallows the following testsuite instance:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+xᵂənwəqᵂiqᵂelʔ cən
+xᵂən-wə-PROG-DUR-qᵂəl-cən
+still-EST-PROG-DUR-speak-1SUBJ
+I am indeed still giving a speech.
+
+Some clarification from last week: the progressive and durative are being analyzed as prefixes PROG and DUR, although they are realized as vowel raising, vowel lengthening, vowel reduction, stress shift, glottal stop insertion or reduplication, or a combination thereof. The progressive alone exhibits some 15 different patterns. PROG and DUR are meant to stand for the application of these patterns to the stem.
+
+In general, the progressive is characterized by reduplication of the initial CV, with a shift of stress to the final syllable and reduction of the reduplicated V to schwa. Durative is most often realized as reduplication and stress of the first CV. This is also sometimes accompanied by a change in the V. Either of these aspects, however, may be indicated through a variety of changes to the stem.
+
+The progessive and durative may apply in tandem to a stem. Although it is unclear which applies first (if one can be said to 'apply first' at all), Suttles talks of the durative aspect taking the progressive aspect, so we have constrained DUR to apply to the stem first, followed by PROG.
+
+Some of the patterns may be clearer through the table below:
+
+                progressive:
+                -                       +
+durative:
+  -             qᵂel    'speak'         qᵂaqᵂəlʔ 'be speaking'
+  +             qᵂəqᵂel 'give a speech' qᵂiqᵂel  'be giving a speech'
+
+The top and bottom rows show the absence and presence of the durative, respectively, while the left and right columns show the absence and presence of the progressive, respectively. DUR or PROG applied alone results in distinct reduplication patterns. Both together in the bottom right shows what appears to be the durative with vowel raising on the initial V, a characteristic of the progressive aspect. Since the Grammar Matrix will not be able to identify these patterns for individual words, we will assume that our morphological analyzer outputs the following:
+
+                progressive:
+                -                   +
+durative:
+  -             qᵂel                PROG-qᵂel
+  +             DUR-qᵂel            PROG-DUR-qᵂel
+
+Furthermore, the word DUR-PROG-qᵂel with PROG and DUR reversed will be considered ungrammatical.
+
+
+
+PLURAL NOUNS
+
+Not discussed last week, but also appearing in the lexicon are plural nouns. Pluralization in Halkomelem is quite complex, including but not limited to reduplication of the initial CV/CVC of the stem, reduplication stem-internally, vowel raising, stress shift and insertion. There are also irregulars that do not seem to follow any pattern. Our approach to this is the same as for the progressive and durative, where we assume that our morphological analyzer pulls out a pluralizing prefix, PLUR-.
+
+We are not including pluralization patterns directly in the testsuite files, but our analysis allows us to retain plural forms in the testsuite sentences pulled from our grammar source. Pluralization does not seem to be very frequent in Halkomelem. Indeed, the language neither requires pluralization when referring to multiple items, nor does it exhibit agreement with verbs. English generally requires the plural form of the noun in order to express plurality ('the cat danced' will always be singular, mass nouns and such being an exception), and furthermore strictly enforces agreement in number between verbs and their subjects in the present tense (*'the cat dance'). Halkomelem nouns, in contrast, seem to be underspecified for plurality, so a 'singular' noun can be used to refer to either groups or individuals, in this example:
+
+Source: author # (from a:70)
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+ʔəɬtən tə ʔeʃxᵂ, tə kᵂ!an, əy tə xes
+ʔəɬtən tə ʔeʃxᵂ , tə kᵂ!an , ʔəyʔ tə xes
+eat DET(MP) seal , DET(MP) porpoise , and DET(MP) sea.lion
+The seals, porpoises, and sea lions eat.
+
+Furthermore, verbs can occasionally undergo pluralization through a similar morphological process, but agreement in number is never enforced between verb and subject. Rather, verb plurality seems to be some sort of an aspectual phenomenon. Thus our updated noun hierarchy has a basic noun lexeme that is underspecified for number, but is 3rd person and case core (discussed in number 5) and requires a determiner. Inheriting from this and the feminine or masculine types we have fem-noun and masc-noun, as described in Lab 2.
+
+
+VERB TYPES
+
+Our previous hierarchy suffered from quite a bit of repetition in lexical entries, so we've refined the types to eliminate redundancy.
+
+We have identified 3 different verb types so far, although the boundaries between some of them are not particularly clear just yet due to lack of data, and the hierarchy could conceivably become just 2. The three types are intransitive, transitive, and oblique-transitive, and they differ somewhat from the types outlined in Suttles (2004). Suttles differentiates transitivity and intransitivity grammatically---that is, intransitive verbs grammatically should not take a non-oblique object, while transitive verbs (with the transitive suffix) can. However, there is evidence that a clearer distinction can be made between verbs that are transitive or intransitive in meaning, rather than grammaticality.
+
+Some verbs are inherently intransitive and never take an object---oblique or not. Within this type we have verbs like 'walk', 'be late', 'sit' and 'arrive', verbs that cannot conceptually have an object (at least, not without some linguistic massaging, as in 'walk the dog'). We have put these verbs into the type 'intrans'. One wrinkle in this analysis is that these verbs can still take oblique adjuncts, but since they indicate direction, goal, location, instrument, etc., we will be treating these as modifiers in future labs.
+
+Another type defines those that are inherently transitive. Verbs like these, in Halkomelem, can either take the transitive suffix -ət and then an object in the core case, or no suffix and an object in the oblique. Unlike Suttles, we are putting all these verbs under the type 'trans', with case unspecified.
+
+Selection for case is defined in obligatory trans-suffix, which has several subtypes. The two immediate subtypes are trans-core and trans-obl. Trans-obl has no affix, but specifies the case on the subject and object NPs as core and oblique, respectively. Trans-core, in contrast, specifies the case of both the subject and object NPs to be core. It has two subtypes: trans-basic and trans-control. Trans-basic is the suffix -ət discussed above, and trans-limit is a suffix that imparts the same transitivity quality of -ət, but with the additional meaning of having limited control over the action. Suttles says that it 'indicates that the subject is acting unintentionally, with difficulty, or with the possibility of failure' (p. 227). Trans-core additionally requires an object suffix (obj-suffix) and an agreement suffix (trans-agree). Trans-obl does not require these suffixes.
+
+The last type only has two verbs so far, and we are considering eliminating this category altogether, if not for the suggestion of yet another property of Halkomelem verbs by Suttles. In addition to intransitive verbs which never take objects and transitive verbs which have the option of taking trans-core or trans-obl, there is a third type which seems to be able to take oblique objects, but may not take transitivizing suffixes. Suttles mentions this property, but does not give much guidance beyond that. We will continue research into this property.
+
+The beneficial result of these selections (aside from a leaner lexicon) is most evident in the Case section of the testsuite. Our present hierarchy combined with the case choices above give us the correct parse of transitive verbs that take core objects like
+
+Source: a:43
+Vetted: s
+Judgment: g
+Phenomena: {c}
+ni qᵂ!ələtəs θə sɬenəyʔ tə scəɬtən
+niʔ qᵂ!əl-ət-əs θə sɬenəyʔ tə scəɬtən
+there bake-TR-3TR DET(FP) woman DET(MP) salmon
+The woman baked the salmon.
+
+and those that take oblique objects, like
+
+Source: author
+Vetted: s
+Judgment: g
+Phenomena: {c}
+ni qᵂ!əl θə sɬenəyʔ ʔə tə scəɬtən
+niʔ qᵂ!əl θə sɬenəyʔ ʔə tə scəɬtən
+there bake DET(FP) woman OBL DET(MP) salmon
+The woman baked the salmon.
+
+while preventing core-object-taking verbs from oblique, and vice versa:
+
+Source: author
+Vetted: s
+Judgment: u
+Phenomena: {c}
+ni qᵂ!ələtəs θə sɬenəyʔ ʔə tə scəɬtən
+niʔ qᵂ!əl-ət-əs θə sɬenəyʔ ʔə tə scəɬtən
+there bake-TR-3TR DET(FP) woman OBL DET(MP) salmon
+The woman baked the salmon.
+
+Source: author
+Vetted: s
+Judgment: u
+Phenomena: {c}
+ni qᵂ!əl θə sɬenəyʔ tə scəɬtən
+niʔ qᵂ!əl θə sɬenəyʔ tə scəɬtən
+there bake DET(FP) woman DET(MP) salmon
+The woman baked the salmon.
+
+
+AUXILIARIES
+
+For this lab we changed the complements of auxiliaries from fully saturated Ss to nonfinite Vs with argument composition. This allows auxiliaries to share the argument structure of their complements. This will not take care of the negative auxiliary as it is currently treated, since they are finite clauses. What we'd like to work on in the future is an auxiliary hierarchy that defines the types of complements that auxiliaries select for, to be developed in later labs. 
+
+
+
+~*~*~*~*~* 2. *~*~*~*~*~
+
+The following sections will first go into the new choices in the grammar with some examples from the testsuite. The final sections will discuss the phenomena in the testsuite that we have not added to the grammar yet.
+
+
+COORDINATION
+
+Halkomelem has a monosyndeton coordination strategy using the word ʔəyʔ (often reduced to i). We see no evidence of noun coordination, but NP coordination is permitted so we've turned this on in the choices file, generating parses for sentences like
+
+Source: a:70
+Vetted: s
+Judgment: g
+Phenomena: {crd}
+kᵂənətəs tə sp!əlʔxᵂəm i tə tᶱ!elʔə i tə məsən
+kᵂən-ət-əs tə sp!əlʔxᵂəm ʔəyʔ tə tᶱ!elʔə ʔəyʔ tə məsən
+take-TR-3TR DET(MP) lungs and DET(MP) heart and DET(MP) gall
+He took the lungs and the heart and the gall.
+
+which coordinates all NPs with an intervening ʔəyʔ, and
+
+Source: author # (from a:70)
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+ʔəɬtən tə ʔeʃxᵂ, tə kᵂ!an, əy tə xes
+ʔəɬtən tə ʔeʃxᵂ , tə kᵂ!an , ʔəyʔ tə xes
+eat DET(MP) seal , DET(MP) porpoise , and DET(MP) sea.lion
+The seals, porpoises, and sea lions eat.
+
+which coordinates NPs with just one ʔəyʔ.
+
+Sentential and VP/V coordination are also allowed, but here argument optionality gives rise to some interesting ambiguity. Since both objects and subjects are optional in Halkomelem, we see a proliferation of parses for S/VP/V coordination with 3rd-person objects and subjects. For a sentence like
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+kᵂənətəs i cəmətəs tə swəyʔqeʔ 
+kᵂən-ət-əs ʔəyʔ cəm-ət-əs tə swəyʔqeʔ 
+take-TR-3TR and pack-TR-3TR DET(MP) man 
+The man took it and put it on his back.
+
+we see 84 parses. Before fixing the argument optionality problem, we saw only 5.
+
+As far as we can tell from the evidence, pronominal enclitics and object suffixes may not be coordinated with each other. That is, a sentence like 
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+xᵂʔamʔət ceʔ i xqət cən
+xᵂʔamʔət-ceʔ ʔəyʔ  xəq-ət-cən
+be.sitting-FUT and be.finsihed-TR-SUBJ
+When he gets home, I will finish it.
+
+would not be interpreted as 'When I get home, I will finish it' (side note: coordinating Ss with ʔəyʔ can often relate the two clauses in time). For that interpretation, we need the sentence
+
+Source: a:114
+Vetted: s
+Judgment: g
+Phenomena: {crd}
+xᵂʔamʔət cən ceʔ i xqət cən
+xᵂʔamʔət-cən-ceʔ ʔəyʔ  xəq-ət-cən
+be.sitting-1SUBJ-FUT and be.finished-TR-1SUBJ
+When I get home, I will finish it.
+
+Both are valid sentences, however, so we do not seek to enforce any coordination between object suffixes.
+
+It is possible, however, to coordinate object and personal suffixes with NPs, as in the sentences
+
+Source: author
+Vetted: s
+Judgment: g
+Phenomena: {crd}
+niʔ ct ʔəɬtən ʔi θə sɬenəyʔ 
+niʔ-ct ʔəɬtən ʔəyʔ θə sɬenəyʔ 
+there-2SUBJ eat and DET(FP) woman
+The woman and I ate.
+
+Source: author  # from a:71
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+niʔ kᵂ!əcnamxəs θə sɬenəyʔ ʔi kᵂθə kᵂ!an 
+niʔ kᵂ!əc-ət-amx-əs θə sɬenəyʔ ʔəyʔ kᵂθə kᵂ!an 
+there see-TR-1OBJ-3TR DET(FP) woman and DET(MN) porpoise
+The woman saw me and the porpoise.
+
+However, our grammar currently does not parse the first, and does not give the intended parses of the second (only coordination between woman and porpoise). This type of coordination is beyond our grammar, but we could get almost semantically equivalent (though structurally dissimilar) parses by treating ʔəyʔ as a P in a modifier phrase. We might translate this to 'with' in English. We do not have enough data to decide whether this treatment of ʔəyʔ would be valid, but considering that the alternative is coordinating bound entities like object suffixes with free-standing entities like NPs, the analysis of ʔəyʔ as the head of a PP phrase seems less hacky. We will incorporate this into our grammar when we come to modifier phrases.
+
+
+
+
+YES/NO QUESTIONS
+
+Yes/no questions in Halkomelem are the very simple matter of adding the enclitic ʔə. This particle comes in between the past-tense suffix and the pronominal enclitic. We have incorporated it into our morphology section as interrog-enclitic. At this time it imparts no semantics to the sentence, but we intend work on this in the tdl files in future labs.
+
+In the testsuite, we have examples such as
+
+Source: a:372
+Vetted: s
+Judgment: g
+Phenomena: {g}
+c!ewətəɬ ʔə tʃxᵂ 
+c!ew-ət-əɬ-ʔə-tʃxᵂ 
+help-TR-PAST-ROG-2SUBJ
+Were you going to help him?
+
+which exactly shows the position class of this particle. This also extends to auxiliaries:
+
+Source: a:373
+Vetted: s
+Judgment: g
+Phenomena: {q}
+ʔəwe cən nemʔen 
+ʔəwə-ʔə-cən nemʔ-en 
+NEG-ROG-1SUBJ go-1SUBSUBJ
+Can't I go?
+
+Source: a:372
+Vetted: s
+Judgment: g
+Phenomena: {q}
+ni ʔə tʃxᵂ kᵂ!əcnəxᵂ 
+niʔ-ʔə-tʃxᵂ kᵂ!əc-nəxᵂ 
+there-ROG-2SUBJ see-TR
+Did you see him?
+
+It is likely that the interrogative is not allowed in the complement of an auxiliary, however there is no evidence in our grammar book confirming this either way. For now we are calling sentences like the one below ungrammatical because we have seen no examples of the interrogative particle occurring in the complement.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+ni tʃxᵂ kᵂ!əcnəxᵂ ʔə  
+niʔ-tʃxᵂ kᵂ!əc-nəxᵂ-ʔə 
+there-2SUBJ see-TR-ROG
+Did you see him?
+
+
+
+INFORMATION STRUCTURE
+
+Our grammar resource touches on focus but does not discuss topicalization or contrastive focus, so we are not able to show these in our grammar and testsuite sentences. Suttles identifies two ways that Halkomelem expresses the focus of a sentence: cleft sentences and pseudo-cleft sentences.
+
+Pseudo-cleft sentence involve the extraction and predicatization of the focus noun. As discussed in Non-Verbal Predicates below, Halkomelem allows for almost any type of word to stand as predicate in a sentence. The predicate counterpart to the focus word heads the sentence, and the utterance from which it was extracted is a predicate complement. In general when the subject of the predicate complement is not the extracted entity, the subject is expressed as a subordinate personal suffix in the predicate complement, as in the sentence below:
+
+Source: a:84
+Vetted: s
+Judgment: g
+Phenomena: {info}
+nəwə ni kʷ!əcnəxʷen
+nəwə niʔ kʷ!ec-nəxʷ-en
+be.you there see-TR-1SUBSUBJ
+You are the one I saw.
+
+We are unsure why the subordinate subject suffix is on the second verb instead of the auxiliary, since this is in contrast to what we have previously seen in the language. However, Suttles warns that there is not consensus among all speakers as to the proper treatment of cleft and pseudo-cleft sentences. This sentence stands in contrast to the unfocused version,
+
+niʔ-cən kʷ!ec-nəxʷ-amə
+there-1SUBJ see-TR-2OBJ
+I saw you.
+
+When the extracted entity is the subject, there is no subordinate subject suffix in the predicate complement:
+
+Source: a:88
+Vetted: s
+Judgment: g
+Phenomena: {info}
+ʔenθə ni nemʔ
+ʔenθə niʔ nemʔ
+be.I there go
+I am the one who went.
+
+Source: a:88
+Vetted: s
+Judgement: g
+Phenomena: {info}
+ƛ!a niɬ nemʔ
+ƛ!a niʔ-əɬ nemʔ
+BE3P there-PAST go
+He's the one who went.
+
+Cleft sentences use the predicate ƛ!a, which is 'be' in the 3rd person. Thus we can extract either a third person subject or a third person object. Again, subjects in the subordinate clause are marked by the alternate set of personal suffixes.
+
+Source: author #adapted from a:90
+Vetted : f
+Judgment: g
+Phenomena: {info}
+ƛ!a tə tam nin c!ewət
+ƛ!a tə tam niʔ-en c!ew-ət
+BE3P DET(MP) Tom there-1SUBJ help-TR
+It's Tom that I help.
+
+Source: a:90
+Vetted : s
+Judgment: g
+Phenomena: {info}
+ƛ!a tθeʔ nemʔ ceʔ
+ƛ!a tθeʔ nemʔ ceʔ
+BE3P DET(MP) go FUT
+He is the one who will go.
+
+Our selection in the Information Structure customization page is clause-initial focused constituents. Unfortunately, the predicatization of focused constituents means that our grammar currently cannot handle these forms. Once we start dealing more  directly with the tdl files, we should be able to come up with an analysis that accounts for predicative focused elements taking subordinate clauses.
+
+
+
+
+NON-VERBAL PREDICATES
+
+Halkomelem allows adjectives, nouns and some adverbs to appear as predicate heads, although they cannot undergo the same morphology as verbs and are limited in the auxiliaries they can take. However, they can both take nominal adjuncts and may be expanded with other elements as well. 
+
+Since this language also permits subject dropping, we get viable sentences as small as
+
+Source: a:31
+Vetted : s
+Judgment: g
+Phenomena: {cop}
+θi
+θi
+big
+It's big.
+
+and
+
+Source: a:31
+Vetted : s
+Judgment: g
+Phenomena: {cop}
+ʔenθə
+ʔenθə
+be.I
+It's me.
+
+Source: a:31
+Vetted: s
+Judgment: g
+Phenomena: {cop}
+speʔeθ ʔə
+speʔeθ ʔə
+black.bear ROG
+Is it a bear?
+
+An example of a nominal predicate taking a nominal adjunct is below:
+
+Source: author #adapted from a:62
+Vetted: s
+Judgment: g
+Phenomena: {cop}
+swəyʔqeʔ tə John
+swəyʔqeʔ tə John
+man DET(MP) John
+John is a man
+
+
+
+EMBEDDED CLAUSES
+
+Suttles unfortunately provides very few examples of the types of embedded clauses asked for in this lab. We find many examples of relative clauses, but rather few that involved indirect questions or quotations. The two examples we were able to find are quite complex and will probably be beyond even the final version of our grammar. The one below is slightly simplified from the original.
+
+Source: author # adapted from a:96
+Vetted: f
+Judgment: g
+Phenomena: {emb-q}
+ni cən melqt wəniʔəs ʔənəcə θə tintən 
+niʔ-cən melq-ət wə-niʔ-əs ʔənəcə θə tintən
+there-1SUBJ forget-TR that-there-3SUBSUBJ where DET(FP) bell
+I had forgotten where the bell was.
+
+This sentence seems to follow the general pattern that we've seen with subordinate clauses in negation and cleft sentences: a main clause whose subject is a pronominal enclitic, an overt NP or a dropped NP, with the subordinate clause showing the subordinate personal suffixes. In this construction, we also see the prefix wə- marking the embedded clause, which distinguishes this utterance from other embedded phrases we've seen. However, there is too little data to determine whether this prefix is obligatory for these types of sentences. As with cleft sentences and negation, we intend to adjust the grammar in the tdl files to account for these phenomena.
+
+
+
+ADJECTIVES
+
+Adjectives in Halkomelem, as in English, precede the noun in the noun phrase. Although our grammar is incapable of parsing adjectives just yet, it should eventually be tailored such that this grammatical testsuite instance parses:
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adj}
+niʔ cən kᵂ!əcət kᵂ!ə ƛ!eqt xəs
+niʔ-cən kᵂ!əc-ət kᵂ!ə ƛ!eqt xəs
+there-1SUBJ see-TR DET(MR) long sealion
+I saw a long sea lion.
+
+While the two ungrammatical instance below do not:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+niʔ cən kᵂ!əcət kᵂ!ə xəs ƛ!eqt
+niʔ-cən kᵂ!əc-ət kᵂ!ə xəs ƛ!eqt
+there-1SUBJ see-TR DET(MR) sealion long
+I saw a long sea lion.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+niʔ cən kᵂ!əcət ƛ!eqt kᵂ!ə xəs
+niʔ-cən kᵂ!əc-ət ƛ!eqt kᵂ!ə xəs
+there-1SUBJ see-TR long DET(MR) sealion
+I saw a long sea lion.
+
+
+
+
+ADVERBS
+
+Adverbs in Halkomelem are generally restricted to preceding the predicate head, as in
+
+Source: a:443
+Vetted: s
+Judgment: g
+Phenomena: {adv, tam}
+niw θəʔit c!əwnəxᵂ 
+niʔ wə-θəʔit c!əw-nəxᵂ 
+there EST-truly help-TR
+It really helped him.
+
+However, some adverbs have varying degrees of freedom. For example, the adverb for 'really' may either precede or follow the predicate, although sometimes the meaning changes slightly:
+
+Source: a:417
+Vetted: s
+Judgment: g
+Phenomena: {adv, tam}
+wəyaθəɬ cən wəq!aq!əyʔ 
+wə-yaθ-əɬ-cən wə-q!aq!əyʔ 
+EST-always-PAST-1SUBJ EST-sick
+I was always sick.
+
+Source: a:424
+Vetted: s
+Judgment: g
+Phenomena: {adv, tam}
+wəq!aq!əyʔəɬ cən wəyaθ
+wə-q!aq!əyʔ-əɬ-cən wə-yaθ
+EST-sick-PAST-1SUBJ EST-always
+I was frequently sick.
+
+There are also a few that can occur before or after the predicate, and also before the auxiliary. The adverb for 'too' falls under this category:
+
+Source: author
+Vetted: s
+Judgment: g
+Phenomena: {adv}
+ƛ!ə ni nemʔ 
+ƛ!ə niʔ nemʔ
+too there go
+He went too.
+
+Source: a:435
+Vetted: s
+Judgment: g
+Phenomena: {adv, tam}
+ni ʔə ƛ!əw nemʔ 
+niʔ-ʔə ƛ!ə wə-nemʔ 
+there-ROG also EST-go
+Did he go too?
+
+Source: author
+Vetted: s
+Judgment: g
+Phenomena: {adv}
+ni nemʔ ƛ!ə 
+niʔ nemʔ ƛ!ə 
+there go too
+He went too
+
+A few are also allowed to modify adjectives. Then the adverb precedes the adjective it is modifying, as in the example below:
+
+Source: author # from a:65
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+kᵂəcnəxᵂ cən kᵂ!ə sc!ec!ənʔ θi qᵂtayθən
+kᵂəc-nəxᵂ-cən kᵂ!ə sc!ec!ənʔ θi qᵂtayθən
+see-TR-1SUBJ DET(MR) really big sturgeon
+I saw a really big sturgeon.
+
+When our grammar has been adapted to incorporate adverbs and adjectives, it should also be able to prevent constructions like
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adv}
+kᵂəcnəxᵂ cən kᵂ!ə θi sc!ec!ənʔ qᵂtayθən
+kᵂəc-nəxᵂ-cən kᵂ!ə θi sc!ec!ənʔ qᵂtayθən
+see-TR-1SUBJ DET(MR) big really sturgeon
+I saw a really big sturgeon.
+
+and 
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adv}
+kᵂəcnəxᵂ cən sc!ec!ən kᵂ!ə θi qᵂtayθən 
+kᵂəc-nəxᵂ-cən sc!ec!ən kᵂ!ə θi qᵂtayθən
+see-TR-1SUBJ really DET(MR) big sturgeon
+I saw a really big sturgeon.
+
+
+
+
+~*~*~*~*~* 3. *~*~*~*~*~
+
+As discussed in 2, our grammar is currently unable to provide the parse and/or the proper analysis for any subordinate clause. This means that negated sentences like 
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+ʔəwə tʃxᵂ nemʔəxᵂ 
+ʔəwə-tʃxᵂ nemʔ
+NEG-2SUBJ go
+You do/will not go.
+
+which is missing its subordinate personal suffix, will incorrectly parse. We furthermore have no analysis in our grammar of embedded clauses and non-verbal predicates, both of which are required for information structure. This means that none of the examples in Information Structure, Non-Verbal Predicates or Embedded Clauses will parse for Lab 4. However, we intend to address these problems directly in the TDL in upcoming labs.
+
+We also cannot handle adjectives and adverbs, so any sentence containing these types will fail to parse. Coordination between pronominal suffixes and NPs is also currently out of the scope of our grammar.
+
+
+
+
+~*~*~*~*~* 4. *~*~*~*~*~
+
+With the addition of so many unparseable sentences, our coverage has dropped precipitously from our Lab 3 scores to just 51.9%. However, most of these are due to items like adverbs and adjectives that are not even represented in the lexicon currently. In addition, we are seeing overgeneration in with subordinate suffixes in negation and auxiliaries among other types, since we have not yet managed to restricted these suffixes to subordinate clauses only but retain these examples in our testsuite. However we have managed to get the increased number of parses for transitive verbs that we were looking for in altering the optional subject rule. 
+
+
+
+
+~*~*~*~*~* 5. *~*~*~*~*~
+
+Here we will show some of the changes we made directly to the TDL file to improve our grammar. 
+
+
+ARGUMENT OPTIONALITY
+
+Another issue we were having was the constraint in the opt-subj-phrase rule to have an empty comps list:
+
+
+basic-head-opt-subj-phrase := head-valence-phrase & head-only &
+  [ INFLECTED #infl,
+    SYNSEM canonical-synsem &
+	      [ LOCAL.CAT [ VAL [ SUBJ < >,
+				  COMPS #comps,
+				  SPR #spr,
+				  SPEC #spec ],
+			    POSTHEAD #ph ],
+		MODIFIED #mod ],
+    C-CONT [ RELS <! !>,
+	     HCONS <! !> ],
+    HEAD-DTR [ INFLECTED #infl & infl-satisfied,
+		SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < unexpressed-reg &
+						    [ OPT +,
+						      LOCAL.CONT.HOOK.INDEX.COG-ST in-foc ] >,
+					     COMPS #comps & < >,
+					     SPR #spr,
+					     SPEC #spec ],
+				       POSTHEAD #ph ],
+				 CONT.HOOK.INDEX event ],
+			 MODIFIED #mod ] ] ].
+
+Since Halkomelem can drop objects or subjects, this prevented all viable parses where a subject, but not a complement, was dropped. The fix was simply to delete the empty-list constraint from this rule:
+
+basic-head-opt-subj-phrase := head-valence-phrase & head-only &
+  [ INFLECTED #infl,
+    SYNSEM canonical-synsem &
+	      [ LOCAL.CAT [ VAL [ SUBJ < >,
+				  COMPS #comps,
+				  SPR #spr,
+				  SPEC #spec ],
+			    POSTHEAD #ph ],
+		MODIFIED #mod ],
+    C-CONT [ RELS <! !>,
+			 HCONS <! !>,
+			 ICONS <! !> ],
+    HEAD-DTR [ INFLECTED #infl & infl-satisfied,
+		SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < unexpressed-reg &
+						    [ OPT +,
+						      LOCAL.CONT.HOOK.INDEX.COG-ST in-foc ] >,
+					     COMPS #comps,
+					     SPR #spr,
+					     SPEC #spec ],
+				       POSTHEAD #ph ],
+				 CONT.HOOK.INDEX event ],
+			 MODIFIED #mod ] ] ].
+
+This change increased the number of parses for most transitive sentences (as desired), some tremendously so. Coordination, in particular, saw an explosion of parses.
+
+
+
+CASE
+
+We had an initial analysis of case last week, but no testsuite examples. This week we have added several key sentences showing case distinction in Halkomelem and refined our grammar. This has in turn prompted us to reassess the verb hierarchy, discussed in Verbs in 1 above.
+
+Nouns in Halkomelem have no overt case marking on the stem and may generally act as subjects or objects without any alteration. We we are calling this basic case 'core', and it loosely corresponds to the nominative. All active verbs have take subjects in the core case. When a transitive verb is marked with the transitive suffix -ət, it may take a core subject and/or core object. Without this suffix, however, only the subject may be core. The object then is an oblique PP whose head is the adposition ʔə. This adposition is given the feature [CASE obl] in the grammar, which loosely corresponds to the accusative.
+
+Since NPs by themselves are core case, we have made this a feature on the type basic-noun. Our initial approach was to leave case unspecified (certainly not oblique, as this would allow verbs without -ət to take bare NPs as objects), but this allowed unsuffixed verbs to apply case to their objects under our analysis of verbs. Specifying all as core, however, overly restricted the grammar, as the rule for the adposition states that the complement must have the same case as the head:
+
+case-marking-adp-lex := basic-one-arg & raise-sem-lex-item &
+  [ SYNSEM.LOCAL.CAT [ HEAD adp &
+                            [ CASE #case,
+                              MOD < > ],
+                       VAL [ SPR < >,
+                             SUBJ < >,
+                             COMPS < #comps >,
+                             SPEC < > ] ],
+    ARG-ST < #comps &
+             [ LOCAL.CAT [ VAL.SPR < >,
+                           HEAD noun &
+                                [ CASE #case,
+                                  CASE-MARKED - ] ] ] > ].
+
+So specifying that all nouns are core causes all such PPs to fail. Since ʔə is the only case-marking adposition and seems to have a clearly-defined role as converting core NPs to the oblique, we made the following change to the tdl file:
+
+case-marking-adp-lex := basic-one-arg & raise-sem-lex-item &
+  [ SYNSEM.LOCAL.CAT [ HEAD adp &
+                            [ CASE obl,
+                              MOD < > ],
+                       VAL [ SPR < >,
+                             SUBJ < >,
+                             COMPS < #comps >,
+                             SPEC < > ] ],
+    ARG-ST < #comps &
+             [ LOCAL.CAT [ VAL.SPR < >,
+                           HEAD noun &
+                                [ CASE cor,
+                                  CASE-MARKED - ] ] ] > ].
+
+This removed the problem of overgeneration and unification failures that we were experiencing. However, there are still some problems associated with pronominal enclitics that we will be debugging. The final result in our grammar is that nouns are specified as core in the lexicon, ʔə selects for a core complement and returns an oblique PP that can be taken as an object by verbs lacking the -ət transitivizer.
+
+
+
+
+

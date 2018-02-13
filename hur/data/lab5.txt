@@ -1,0 +1,477 @@
+Kathryn Nichols & Matthew Benak
+
+
+ADJECTIVES
+
+Halkomelem allows adjectives to modify heads to their right. We added
+
+head-adj-int := head-adj-int-phrase.
+adj-head-int := adj-head-int-phrase.
+
+and
+
+adjective-lex := basic-adjective-lex & intersective-mod-lex &
+	      norm-ltop-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
+                                                    VAL.SPR cons ]]>,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ],
+			   POSTHEAD - ]]]].
+
+to model this behavior. There was no need to constrain the head-adj phrase, since it didn't fire unnecessarily. Parsing
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adj}
+niʔ cən kᵂ!əcət kᵂ!ə ƛ!eqt xəs
+niʔ c-ən kᵂ!əc-nəxᵂ kᵂ!ə ƛ!eqt xəs
+be.there AUX-1SUBJ see-TR DET(MR) long sealion
+I saw a long sea lion.
+
+we get trees with MRSs that identify ARG0 of _sea_lion_n_rel with ARG1 of _long_adj_rel, ARG0 of _the_q_rel and ARG2 of _see_v_rel. Thus we get the object of 'see' being appropriately equated with a particular long sea lion. Our grammar also successfully prevents the instances
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+niʔ cən kᵂ!əcət kᵂ!ə xəs ƛ!eqt
+niʔ c-ən kᵂ!əc-nəxᵂ kᵂ!ə xəs ƛ!eqt
+be.there AUX-1SUBJ see-TR DET(MR) sealion long
+I saw a long sea lion.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+niʔ cən kᵂ!əcət ƛ!eqt kᵂ!ə xəs
+niʔ c-ən kᵂ!əc-nəxᵂ ƛ!eqt kᵂ!ə xəs
+be.there AUX-1SUBJ see-TR long DET(MR) sealion
+I saw a long sea lion.
+
+which have adjectives in the wrong place.
+
+
+
+ADVERBS
+
+Adverbs as Modifiers
+
+As discussed in Lab 4, Halkomelem allows almost any word to stand in a predicate relation, including adverbs. But for this lab, we are only considering the cases where adverbs are clearly acting as modifiers to nouns. There are not enough examples in the book to guarantee validity, but we believe based on the evidence that the following pattern holds:
+
+1) Source: author
+   Vetted: f
+   Judgment: g
+   Phenomena: {adv}
+   sc!ec!ən cən kᵂ!əcnəxᵂ kᵂ!ə qᵂtayθən
+   sc!ec!ən c-ən kᵂ!əc-nəxᵂ kᵂ!ə qᵂtayθən
+   really AUX-1SUBJ see-TR DET(MR) sturgeon
+   I really saw a sturgeon. 
+
+2) Source: author
+   Vetted: f
+   Judgment: u
+   Phenomena: {adv}
+   kᵂ!əcnəxᵂ sc!ec!ən cən kᵂ!ə qᵂtayθən
+   kᵂ!əc-nəxᵂ sc!ec!ən c-ən kᵂ!ə qᵂtayθən
+   see-TR really AUX-1SUBJ DET(MR) sturgeon
+   I really saw a sturgeon. 
+
+3) Source: author
+   Vetted: f
+   Judgment: g
+   Phenomena: {adv}
+   kᵂ!əcnəxᵂ cən sc!ec!ən kᵂ!ə qᵂtayθən 
+   kᵂ!əc-nəxᵂ c-ən sc!ec!ən kᵂ!ə qᵂtayθən
+   see-TR AUX-1SUBJ really DET(MR) sturgeon
+   I really saw a sturgeon.
+
+4) Source: author
+   Vetted: f
+   Judgment: g
+   Phenomena: {adv}
+   kᵂ!əcnəxᵂ cən kᵂ!ə qᵂtayθən sc!ec!ən
+   kᵂ!əc-nəxᵂ c-ən kᵂ!ə qᵂtayθən sc!ec!ən
+   see-TR AUX-1SUBJ DET(MR) sturgeon really
+   I really saw a sturgeon.
+
+5) Source: author
+   Vetted: f
+   Judgment: g
+   Phenomena: {adv}
+   niʔ cən sc!ec!ən kᵂ!əcnəxᵂ kᵂ!ə qᵂtayθən
+   niʔ c-ən sc!ec!ən kᵂ!əc-nəxᵂ kᵂ!ə qᵂtayθən 
+   be.there AUX-1SUBJ really see-TR DET(MR) sturgeon
+   I really saw a sturgeon.
+
+6) Source: author
+   Vetted: f
+   Judgment: g
+   Phenomena: {adv}
+   niʔ cən kᵂ!əcnəxᵂ kᵂ!ə qᵂtayθən sc!ec!ən
+   niʔ c-ən kᵂ!əc-nəxᵂ kᵂ!ə qᵂtayθən sc!ec!ən
+   be.there AUX-1SUBJ see-TR DET(MR) sturgeon really
+   I really saw a sturgeon.
+
+7) Source: author
+   Vetted: f
+   Judgment: u
+   Phenomena: {adv}
+   sc!ec!ən niʔ cən kᵂ!əcnəxᵂ kᵂ!ə qᵂtayθən
+   sc!ec!ən niʔ c-ən kᵂ!əc-nəxᵂ kᵂ!ə qᵂtayθən 
+   really be.there AUX-1SUBJ see-TR DET(MR) sturgeon
+   I really saw a sturgeon.
+
+8) Source: author
+   Vetted: f
+   Judgment: u
+   Phenomena: {adv}
+   niʔ sc!ec!ən cən kᵂ!əcnəxᵂ kᵂ!ə qᵂtayθən
+   niʔ sc!ec!ən c-ən kᵂ!əc-nəxᵂ kᵂ!ə qᵂtayθən 
+   be.there really AUX-1SUBJ see-TR DET(MR) sturgeon
+   I really saw a sturgeon.
+
+9) Source: author
+   Vetted: f
+   Judgment: u
+   Phenomena: {adv}
+   sc!ec!ən cən niʔ kᵂ!əcnəxᵂ kᵂ!ə qᵂtayθən
+   sc!ec!ən c-ən niʔ kᵂ!əc-nəxᵂ kᵂ!ə qᵂtayθən 
+   really AUX-1SUBJ be.there see-TR DET(MR) sturgeon
+   I really saw a sturgeon.
+
+In (1) and (3) we see the verb and the adverb switch, however the auxiliary cən stays in place. This tells us that cən is selecting for the item to the left, rather than the adverb selecting for something to its right. If the adverb were doing the selecting, a construction like (2), (7) or (8) would be permissible, however we have seen no evidence anywhere that suggests that the pronominal auxiliary can follow both a verb and an adverb (with the exception of the interrogative particle, discussed below). This pattern also directly correlates with auxiliaries, so we have created an adverbial-auxiliary type that can handle these adverbs correctly.
+
+
+The adverbs in non-initial positions are posthead modifiers in the traditional sense, so we added
+
+adverb-lex := basic-adverb-lex & intersective-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD verb ] >,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ],
+                           POSTHEAD + ]]]].
+
+to the grammar. However, this did not prevent the ungrammatical sentence in (8). We determined that adverbial modifiers (with a couple exceptions) attache to finite verbs only. We made the following change:
+
+adverb-lex := basic-adverb-lex & intersective-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD verb & [ FORM finite ]]] >,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ],
+                           POSTHEAD + ]]]].
+
+But this still did not prevent (7) since adj-head phrase was allowing the adverb to modify an item to its left. Thus we made a change to the matrix TDl file:
+
+adj-head-phrase := basic-head-mod-phrase-simple & head-final &
+  [ SYNSEM [ LOCAL.CAT.POSTHEAD #ph,
+	     MODIFIED lmod & [ PERIPH #periph ],
+             LIGHT #light ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT.POSTHEAD #ph,
+                      LIGHT #light ],
+    NON-HEAD-DTR.SYNSEM [ LOCAL.CAT [ POSTHEAD -,
+				      VAL.COMPS < > ],
+			  NON-LOCAL [ SLASH 0-dlist,
+				      REL 0-dlist ],
+                          MODIFIED.PERIPH #periph ] ].
+
+Here, we constrain the non-head-daughter of the adj-head phrase to be POSTHEAD -. This removed the overgeneration on (7).
+
+Future and Interrogative
+
+One result of changing pronomial enclitics to pronomial adverbs is that the analysis of the future and interrogative no longer works. Instead, they serve nicely as modifiers. In past labs we ignored the ability of the future particle to occasionally occur at the end of an utterance, since this did not jive with its identity as a suffix to the main verb. However, as an adverb, this behavior is perfectly accounted for. It, like other adverbs such as θəʔit, 'truly', does not have an auxiliary counterpart.
+
+The interrogative plays a similar role so we're analyzing it as an adverb, however it seems to be able to attach to the right of a nonfinite verb, thus coming in between an auxiliary and a pronimial auxiliary, however it cannot attach to a nonfinite verb following the auxiliary. That is, 
+
+Source: a:372 # wrong analysis on see-TR
+Vetted: s
+Judgment: g
+Phenomena: {q}
+ni ʔə tʃxᵂ kᵂ!əcnəxᵂ 
+niʔ ʔə c-xᵂ kᵂ!əc-nəxᵂ 
+be.there QUE AUX-2SUBJ see-TR
+Did you see him?
+
+is grammatical while
+
+Source: author
+Vetted: s
+Judgment: u
+Phenomena: {q}
+ni ləc! ʔə
+niʔ ləc! ʔə
+be.there full QUE
+Is it full?
+
+is not. But it can also attach to finite verbs, as in 
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+nemʔ ʔə 
+nemʔ ʔə
+go QUE
+Is he going?
+
+Yet it cannot attach to a finite pronomial auxiliary:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+ni tʃxᵂ ʔə kᵂ!əcnəxᵂ 
+niʔ c-xᵂ ʔə kᵂ!əc-nəxᵂ
+be.there AUX-2SUBJ QUE see-TR 
+Did you see him?
+
+We will seek to refine this analysis in future labs.
+
+
+DEMONSTRATIVES
+
+Like determiners in Halkomelem, demonstratives express the same categories of gender and
+ proximity: feminine and non-feminine for the former, and "present and visible," "nearby and invisible,"
+and "remote or hypothetical" for the latter.  The demonstratives also have plural forms.
+Like the determiners, the demonstratives can stand before before nouns as determiners.
+Unlike the determiners, the demonstratives are marked for definiteness.
+
+Source: a
+Vetted: s
+Judgment: g
+Phenomena: {det}
+nemʔ cən kᵂ!i spəɬχən
+nemʔ c-ən kᵂ!i spəɬχən
+go AUX-1SUBJ DET(MR) pasture
+I'm going to the pasture.
+
+In this example, we see the demonstrative in the exact same place as we would expect to see
+a regular determiner. Like the determiners, the following are both ungrammatical:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+nemʔ cən spəɬχən
+nemʔ c-ən spəɬχən
+go AUX-1SUBJ pasture
+I'm going to the pasture.
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+nemʔ cən spəɬχən kᵂ!i
+nemʔ c-ən spəɬχən kᵂ!i
+go AUX-1SUBJ pasture DET(MR)
+I'm going to the pasture.
+
+If the comprable determiner was used, such as:
+
+Source: author
+Vetted: s
+Judgment: g
+Phenomena: {det}
+nemʔ cən kᵂ!ə spəɬχən
+nemʔ c-ən kᵂ!ə spəɬχən
+go AUX-1SUBJ DET(MR) pasture
+I'm going to the/a pasture.
+
+We could translate the sentence as either "I'm going to the pasture (that's far away),"
+or "I'm going to a pasture (far away and unknown)." For the demonstratives, this is not the case.
+They are only definite. Their proximity system lines up closely with the English 'this' and 'that,'
+but only for a few derived forms is it entirely consistent.  The author claims that demonstratives are
+used far more often in Halkomelem than in English, and he posits that the reason is that
+they can mark definiteness, whereas the articles cannot.
+
+The article determiners, then, are difficult to deal with in the grammar system, but the demonstratives seem
+to fit in nicely with the given framework in the lab. We added this determiner super type:
+
+determiner-lex-supertype := norm-hook-lex-item & basic-zero-arg &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD det,
+			   VAL[ SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX #ind,
+				  			     LTOP #larg ],
+                                SPR < >,
+                                SUBJ < >,
+                                COMPS < >]],
+		     CONT.HCONS < ! qeq &
+				 [ HARG #harg,
+				   LARG #larg ] ! > ], 
+	     LKEYS.KEYREL quant-relation &
+		   [ ARG0 #ind,
+		     RSTR #harg ] ] ].
+		     
+and this demonstrative subtype:
+
+demonstrative-det-lex:= determiner-lex-supertype &
+	[ SYNSEM [ LOCAL [ CONT.RELS <! [ PRED "exist_q_rel" ],
+					#altkey & arg1-ev-relation &
+					[ LBL #lbl,
+					ARG1 #arg ] !> ,
+		          CAT.VAL.SPEC < [ LOCAL.CONT.HOOK [ INDEX #arg &
+								[ COG-ST activ+fam ],
+					   		   LTOP #lbl ] ] > ] ,
+		 LKEYS.ALTKEYREL #altkey ] ].
+		 
+This allowed the demonstratives to mark a cog-st of activ+fam for definiteness, 
+to contribute an exist relation, and to contribute another relation based on proximity.
+Adding the following values to predsort allowed the demonstratives to express their proximity
+relations when used for the second relation:
+
+;;; Predsort
+
+demonstrative_a_rel := predsort.
+proximal+dem_a_rel := demonstrative_a_rel.
+distal+dem_a_rel := demonstrative_a_rel.
+remote+dem_a_rel := distal+dem_a_rel.
+
+These proximity relations are not exactly what our language marks, but they are close
+and so for MT purposes, we used them.
+
+We still don't know what to do with the article determiners. Since they also distinguish
+proximity, they act in a lot of ways like demonstrative determiners, but they are necessarily
+definite or indefinite.  Right now, they inherit from the determiner-lex-supertype and contribute
+only an exist relation.  They are currently underspecified for COG-ST.  It seems like it is finally
+time to retire the proximity feature - at least for demonstratives - since it is incorporated into
+the semantics.  But, the semantics aren't exact right now, and the determiners don't express
+proximity in their semantics, so we left it for now. A sample entry for a demonstrative looks
+like this:
+
+m_p-dem-lex := demonstrative-det-lex & 
+[ SYNSEM [ LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PROXIMITY visible,
+LKEYS.ALTKEYREL.PRED "proximal+dem_a_rel" ] ].
+
+
+
+
+ARGUMENT OPTIONALITY
+
+Halkomelem doesn't have pronouns, so all 1st and 2nd person subjects and objects are dropped.
+We did not come across any restrictions on when 3rd person subjects and objects could be dropped
+and we saw numerous examples of them being dropped in all contexts, like:
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pro-d}
+kᵂən
+kᵂən
+take
+He/she/it gets taken.
+
+so we did not do any constraining for the semantics of dropped arguments other than the defaults.
+
+We did, however, have to address the syntax of dropped arguments. The matrix customization system
+has a bug apparently, and the head-opt-subj rule for our language (an SVO) was not able to take a daughter
+with a non-empty comps list.  This was a problem for our language because we have sentences
+like:
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr}
+ni cən c!ewət
+niʔ c-ən c!ew-ət θə sɬenəyʔ
+be.there AUX-1SUBJ help-TR DET(FP) woman
+I helped the woman.
+
+
+Where the head-opt-subj rule has to apply before the complements are satisfied, since there's
+one at the farthest right in the sentence. Also, the head-opt-comp rule allowed a daughter
+with a non-empty SUBJ list, which we don't want either in a SVO language. And lastly, even
+after changing the head-opt-subj rule so that it could apply to phrases with non-empty comps
+list, we still had a problem.  I brought it up this week on goPost, but you didn't answer 
+that part of the question.  The problem is that the head-opt-subj rule could apply before
+all the verbal complements of aux verbs were satisfied.  Thus, in a sentence like the previous
+one, the head-opt rule could apply to c-ən, niʔ c-ən, or niʔ c-ən c!ew-ət. This was giving
+parses that had the same MRS, but it was creating a lot of unnecessary parses.  I don't know
+if this is the best solution, but the one we came up with was to specify that the first complement
+of the head-dtr in the head-opt-subj rule had to be HEAD noun.  This is working so far, but
+we had to amend matrix.tdl and I'm unsure of what kind of ramifications that could have for
+unseen elements of analysis.  Here the two new rules are now though:
+
+basic-head-opt-comp-phrase := head-valence-phrase & head-only &
+                              head-compositional &
+  [ INFLECTED #infl,
+    SYNSEM canonical-synsem &
+	   [ LOCAL.CAT [ VAL [ SUBJ #subj,
+			       COMPS #comps,
+                               SPR #spr,
+                               SPEC #spec ],
+                         MC #mc,
+                         POSTHEAD #ph ],
+             MODIFIED #mod ],
+    HEAD-DTR [ INFLECTED #infl & infl-satisfied,
+             SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ #subj & < >,
+					  COMPS < unexpressed &
+						  [ OPT +,
+						    OPT-CS #def,
+						    LOCAL.CONT.HOOK.INDEX.COG-ST #def ] . #comps >,
+					  SPR #spr,
+                                        SPEC #spec ],
+				    MC #mc,
+				    POSTHEAD #ph ],
+			      CONT.HOOK.INDEX event ],
+                      MODIFIED #mod ] ],
+    C-CONT [ RELS <! !>,
+			 HCONS <! !>,
+			 ICONS <! !> ] ].
+			 
+	
+	
+	basic-head-opt-subj-phrase := head-valence-phrase & head-only &
+  [ INFLECTED #infl,
+    SYNSEM canonical-synsem &
+	      [ LOCAL.CAT [ VAL [ SUBJ < >,
+				  COMPS < #fcomp. #comps >,
+				  SPR #spr,
+				  SPEC #spec ],
+			    POSTHEAD #ph ],
+		MODIFIED #mod ],
+    C-CONT [ RELS <! !>,
+			 HCONS <! !>,
+			 ICONS <! !> ],
+    HEAD-DTR [ INFLECTED #infl & infl-satisfied,
+		SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < unexpressed-reg &
+						    [ OPT +,
+						      LOCAL.CONT.HOOK.INDEX.COG-ST in-foc ] >,
+					     COMPS < #fcomp & [LOCAL.CAT.HEAD noun]. #comps > ,
+					     SPR #spr,
+					     SPEC #spec ],
+				       POSTHEAD #ph ],
+				 CONT.HOOK.INDEX event ],
+			 MODIFIED #mod ] ] ].
+
+
+OTHER CHANGES
+
+As of Wednesday, we had to rethink the entire core of our grammar.  It wasn't easy and 
+really we don't truly know how it will all work.  The essential idea was that we
+have an aux verb (instead of suffix) that can express 1st or 2nd person subject agreemnt and which takes
+a complement to the left.  Then, if that complement is also an auxiliary, it can take a
+main predicate complement to the right.  This caused all sorts of problems and they haven't been fully
+solved. But the rest of grammar was fine, so we plowed through.  There just was not enough
+time between Wednesday and today to fully deal with the problems introduced by rethinking the 
+core of our grammar. To be candid, I haven't actually slept since Wednesday night because
+I've been trying to figure how to make everything work in light of the new framework and I
+could potentially write pages about all the various paths I tried and failed on, but I feel like
+that isn't necessarily the point of this lab and I think it's something best addressed this upcoming week.
+
+
+
+We had 51% coverage (due to the change to our core grammar mostly) and 19% overgeneration.
+
+
+Our test corpus was culled from a narrative in
+ Barry F. Carleson (ed). 1977. Northwest Coast Texts. 
+ Native American Texts Series, v. 2, no. 3. University of Chicago Press.
+ 
+ There are 352 sentences, though we have only the first 15 for now. Our sentences have 
+ a trans-lit seg line, an IGT, and a translation following the original.
+
+
+

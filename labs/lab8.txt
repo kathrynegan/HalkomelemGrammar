@@ -1,0 +1,424 @@
+Kathryn Nichols
+Matthew Benak
+
+
+
+TEST CORPUS UPDATES
+
+This week we got an additional three unsimplified sentences parsing. Looking at the results in [incr tsdb()], you can see in testcorpus7 that three sentences parsed. The first,
+
+  #4
+  sq!əlim ct ceʔ 
+  sq!əlim c-t ceʔ 
+  camped.out AUX-1PSUBJ FUT
+  We'll be camped out.
+
+is an original sentence from the test corpus, and #14 and #15 are slightly simplified---#14 does not have the wə- prefix on the adjective, and #15 is missing a second auxiliary, a wə- prefix on nemʔ, and a demonstrative---but both required some additions to the lexicon. For Lab 8, we have expanded the distribution of the emphatic prefix wə- and fixed some adverb attachment issues which we will discuss below. These changes have allowed #9, 11 and 13 below to parse without simplification, so we have removed #14 and #15 from the corpus.
+
+  #9 
+  stqᵂ!iqən tə sment i ƛ!ew stətiqᵂ! tə stalʔəw
+  stqᵂ!iqən tə sment ʔəyʔ ƛ!ə wə-stətiqᵂ! tə stalʔəw
+  steep DET(MP) mountain and too EMPH-sheer DET(MP) river.
+  The mountainside is steep and also the river bank is sheer.
+
+  #11
+  wənʔan wəƛ!əp wənʔan wəcicəɬ   
+  wə-nʔan wə-ƛ!əp wə-nʔan wə-cicəɬ   
+  EMPH-too EMPH-deep EMPH-too EMPH-high
+  It is too far down and too far up.
+
+  #13 
+  nəw nemʔ ʔalʔ χᵂənxenəm təwƛ!a sməyəθ 
+  niʔ wə-nemʔ ʔalʔ χᵂənxenəm təwƛ!a sməyəθ 
+  be.there EMPH-go just run that deer
+  The deer can only run.
+
+
+
+
+EMPHATIC PREFIX
+
+Originally, our grammar allowed the emphatic prefix wə- to attach only to main verbs, but it can actually attach to adverbs, adjectives and some auxiliaries. To model this, we modified adverb-lex and adjective-lex to be the input to emph-prefix-rule-super. To get this prefix on full-aux-lex, we changed the constraint on DTR.INFLECTED in the entry for emph-prefix from
+
+  [ ADV-AUX-OR-FULL-AUX-OR-MC-AUX-FLAG na ]
+
+to
+
+  [ MC-AUX-FLAG na ]
+
+
+
+
+ADVERBS
+
+Adverbs in Halkomelem can modify adjectives head-initially or verbs head-finally. Our old grammar only modeled the verb-modifying adverbs with this entry:
+
+
+  adverb-lex := basic-adverb-lex & intersective-mod-lex &
+    [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD verb & 
+                                                         [ FORM finite ] ] ] >,
+                             VAL [ SPR < >,
+                                   SUBJ < >,
+                                   COMPS < >,
+                                   SPEC < > ],
+                             POSTHEAD + ] ] ] ].
+
+This meant #11 from the test corpus and #185 from the testsuite, below, could not parse.
+
+  #185
+  Source: author # from a:65
+  Vetted: f
+  Judgment: g
+  Phenomena: {adv, adj}
+  kᵂ!əcnəxᵂ cən kᵂ!ə sc!ec!ənʔ θi qᵂtayθən
+  kᵂ!əc-nəxᵂ c-ən kᵂ!ə sc!ec!ən θi qᵂtayθən
+  see-TR AUX-1SUBJ DET(MR) really big sturgeon
+  I saw a really big sturgeon.
+
+To get the dual behavior of these adverbs, we changed the entry for adverb-lex to this:
+
+  adverb-lex := basic-adverb-lex & intersective-mod-lex & adv-rule-dtr &
+    [ SYNSEM [ LOCAL.CAT [ VAL [ SPR < >,
+                                 SUBJ < >,
+                                 COMPS < >,
+                                 SPEC < > ] ] ],
+      INFLECTED [ ADVERB-FLAG - ] ].
+
+This entry has no MOD information at all so will not select for adjectives or verbs. To get this information, it must go through adv-lex-rule-super where it becomes [ ADVERB-FLAG + ].
+
+
+  adv-lex-rule-super := add-only-rule & const-lex-rule & emph-prefix-rule-dtr &  
+    [ INFLECTED [ ADVERB-FLAG + ],
+      DTR adv-rule-dtr ].
+
+  adv-head-lex-rule := adv-lex-rule-super & 
+    [ SYNSEM.LOCAL.CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD adj ] >,
+                         POSTHEAD - ] ].
+
+  head-adv-lex-rule := adv-lex-rule-super & 
+    [ SYNSEM.LOCAL.CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD verb & 
+                                                     [ FORM finite ] ] >,
+                         POSTHEAD + ] ].
+
+This allows #185 and #11 to parse.
+
+
+
+
+
+NOMINALIZATION
+
+Something we skipped in the last lab, but have now provided an analysis for are nominalized verbs, specifically for use with the verb for 'can', but the analysis extends to nominalized verbs in general. Nominalization is the process of attaching the prefix s- and expressing the subject through affixes that resemble possessive affixes. As with all nouns, determiners are obligatory. The new set of rules is below:
+
+  nom-change-lex-rule := same-modified-lex-rule & same-light-lex-rule & same-non-local-lex-rule & same-ctxt-lex-rule & same-agr-lex-rule.
+
+  nom-prefix-lex-rule-super := nom-change-lex-rule & durative-prefix-rule-dtr & emph-prefix-rule-dtr & infl-lex-rule & past-suffix-rule-dtr & progressive-prefix-rule-dtr & still-prefix-rule-dtr & subj-suffix-rule-dtr &
+    [ SYNSEM.LOCAL.CAT [ HEAD noun &
+                              [ FORM nom,
+                                MOD < > ],
+                         VAL [ SPR < [ LOCAL.CAT.HEAD det,
+	                                              OPT - ] >,
+                               SPEC #spec,
+                               SUBJ #subj,
+                               COMPS #comps ] ],
+      C-CONT [ HOOK [ XARG #xarg,
+                      LTOP #ltop,
+                      INDEX ref-ind & #index ],
+               RELS <! arg1-relation &
+                       [ PRED "nominalization_rel",
+                         LBL #ltop,
+                         ARG0 #index,
+                         ARG1 #arg ] !>,
+               HCONS <! !>,
+               ICONS <! !> ],
+      INFLECTED #infl,
+      DTR nom-prefix-rule-dtr &
+          [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
+                                     SUBJ #subj,
+                                     SPEC #spec,
+                                     COMPS #comps ],
+                           CONT.HOOK [ XARG #xarg,
+                                       LTOP #arg ] ],
+            INFLECTED #infl ] ].
+
+  nominalize-lex-rule := nom-prefix-lex-rule-super.
+
+This rule places the obligatory determiner on the SPR list, and identifies SUBJ, SPEC and COMPS between mother and daughter. It identifies the XARG of the mother with the XARG of the daughter, and matches the LBL of the nominalization_rel with C-CONT.HOOK.LTOP. The LTOP of the daughter is identified with ARG1 in the nominalization predication of the mother. Lastly, the index of C-CONT.HOOK.INDEX and ARG0 of the predication are constrained to match, with the additional specification that the INDEX be ref_ind. The result is a noun that is specifically FORM nom. It also goes through subj-suffix-rule in order to get its subject affix, which constrains its PER and NUM values and empties its SUBJ list.
+
+'Can' is then a special form of verb that takes this type of nominalized complement. We analyze 'can' as a separate type because it requires a main clause auxiliary in addition to a complement and enforces agreement between the subject of the main clause and the subject of the nominalized component, as in the examples below:
+
+  #230
+  Source: a:459
+  Vetted: s
+  Judgment: g
+  Phenomena: {nom}
+  scəwʔet kᵂs cnəxᵂəɬs
+  scəwʔet kᵂə s-cnəxᵂəɬ-s
+  can DET(MN) NOM-get.canoe-3NOMSUBJ
+  He's a good canoe-maker./He can make a canoe.
+
+  #231
+  Source: author
+  Vetted: f
+  Judgment: u
+  Phenomena: {nom}
+  scəwʔet cən kᵂs cnəxᵂəɬs
+  scəwʔet c-ən kᵂə s-cnəxᵂəɬ-s
+  can AUX-1SUBJ DET(MN) NOM-get.canoe-3NOMSUBJ
+  I'm a good canoe-maker.
+
+  #232
+  Source: author
+  Vetted: f
+  Judgment: u
+  Phenomena: {nom}
+  scəwʔet cən kᵂs cnəxᵂəɬ
+  scəwʔet c-ən kᵂə s-cnəxᵂəɬ
+  can AUX-1SUBJ DET(MN) NOM-get.canoe
+  I'm a good canoe-maker.
+
+  #233
+  Source: author
+  Vetted: f
+  Judgment: u
+  Phenomena: {nom}
+  scəwʔet cən kᵂə nəcnəxᵂəɬ
+  scəwʔet c-ən kᵂə nə-cnəxᵂəɬ
+  can AUX-1SUBJ DET(MN) 1NOMSUBJ-get.canoe
+  I'm a good canoe-maker.
+
+  #234
+  Source: author
+  Vetted: f
+  Judgment: u
+  Phenomena: {nom}
+  scəwʔet kᵂə nəscnəxᵂəɬ
+  scəwʔet kᵂə nə-s-cnəxᵂəɬ
+  can DET(MN) 1NOMSUBJ-NOM-get.canoe
+  I'm a good canoe-maker.
+
+#230 is the grammatical version, having a main clause auxiliary, the nominalizer and a matching subject affix. The remaining types are ungrammatical: #231 does not agree in person, #232 is missing a subject affix, #233 has no nominalizer and #234 does not have a main clause auxiliary. Only #230 parses in our grammar.
+
+'Can'-type verbs has the following entry:
+
+  nominal-comp-lex := main-verb-lex & transitive-lex-item & subj-suffix-rule-dtr &
+    [ SYNSEM [ LOCAL [ CAT [ VAL [ SPR < >,
+                                   SPEC < >,
+                                   COMPS < #comps . #vcomps >,
+                                   SUBJ < #subj > ],
+                             INIT + ],
+                       CONT.HOOK.XARG #xarg ] ],
+      ARG-ST < #subj &
+               [ LOCAL [ CAT [ HEAD noun &
+                                    [ CASE cor ],
+                               VAL [ SUBJ < >,
+                                     SPR < >,
+                                     SPEC < >,
+                                     COMPS < > ] ],
+                         CONT.HOOK.INDEX #xarg &
+                                         [ PNG #png ] ] ],
+              #comps &
+              [ LIGHT -,
+                LOCAL [ CAT [ HEAD.FORM nom,
+                                VAL [ SPR < >,
+                                      COMPS #vcomps ] ],
+                        CONT.HOOK [ XARG #xarg,
+                                     INDEX.PNG #png ] ] ] >,
+      INFLECTED [ NOM-SUBJ-OR-REG-SUBJ-OR-SUB-SUBJ-FLAG -,
+                  FULL-AUX-OR-MC-AUX-FLAG +,
+                  ADV-AUX-OR-FULL-AUX-OR-MC-AUX-FLAG + ] ].
+
+This constrains agreement and XARG identification between the arguments and the mother.
+
+In contrast, the word for 'impossible' does not require agreement or XARG identification:
+
+  #229
+  Source: a:458
+  Vetted: s
+  Judgment: g
+  Phenomena: {nom}
+  skᵂ!ey kᵂ!ə nəsnemʔ
+  skᵂ!ey kᵂ!ə nə-s-nemʔ
+  impossible DET(MN) 1NOMSUBJ-NOM-go
+  I can't go.
+
+#229 shows that although the nominalize complement is 1st person singular, the main clause can be 3rd person (no cən). This type behaves much more like an adjective that has undergone adj-predicate-rule and takes the nominalized verb as its subject. 'Impossible' can also be used as an adjective to mean 'very sick', suggesting that this is the right analysis. This is also in keeping with the general behavior of nominalized verbs in Halkomelem, illustrated by the examples from the testsuite below:
+
+  #235
+  Source: author # from a:101
+  Vetted: f
+  Judgment: g
+  Phenomena: {nom, cop}
+  ʔəyʔ kᵂ!s q!anct
+  ʔəy kᵂ!ə s-q!an-ct
+  good DET(MN) NOM-return-1PNOMSUBJ
+  We'd better return.
+
+  #236
+  Source: a:106
+  Vetted: s
+  Judgment: g
+  Phenomena: {nom, cop}
+  səct wəhəyeʔ 
+  s-niʔ-ct wə-hayeʔ
+  NOM-be.there-1PLNOMSUBJ EMPH-leave
+  Then we left.
+
+In #235, we see a nominalized verb as the subject of the sentence. This literally translates to 'Our returning is good'. #236 shows a nominalized auxiliary taking a VP complement and going through the nbar-predicate-rule to become the predicate of the sentence, similarly to 'impossible'. This is a structure often seen in storytelling. Because nominalized verbs under our analysis can act as nouns or special [ FORM nom ] complements to certain types of verbs, it takes care of a large portion of the distribution of nominalized verbs. We distinguish basic noun types from nominalized verbs with the FORM value nform.
+
+
+
+
+NEGATIVE
+
+Another area that our analysis of nominalization has allowed us to improve is negation. To recap, negated sentences in Halkomelem are the auxiliary ʔəwə plus a subordinate clause, with the exception of 3rd-person transitive verbs which become nominalized. In our testsuite, we have the contrastive examples
+
+  #108
+  Source: a:119
+  Vetted: s
+  Judgment: g
+  Phenomena: {neg}
+  ʔəwə nemʔəs
+  ʔəwə nemʔ-əs
+  NEG go-3SUBJ
+  He/she/it does/will not go.
+
+  #114
+  Source: a:120
+  Vetted: s
+  Judgment: g
+  Phenomena: {neg, pn}
+  ʔəwə kᵂs kᵂ!əcnəxᵂs
+  ʔəwə kᵂə s-kᵂ!əc-nəxᵂ-s
+  NEG DET(MN) NOM-see-TR-3NOMSUBJ
+  He doesn't see him.
+
+'See' in #114 has the transitive suffix -nəxᵂ, so it is nominalized. Nominalization is also allowed for all person values and valence types, so we do not need to restrict this pattern to just 3rd transitive verbs. We started with an entry for neg-verb-lex, which sets the NEG-FLAG to negative:
+
+  neg-verb-lex := verb-lex & basic-verb-lex &
+    [ INFLECTED.NEG-FLAG - ].
+
+This type is the input to neg-lex-rule-super,
+
+  neg-lex-rule-super := add-only-rule & const-lex-rule &
+    [ INFLECTED [ NEG-FLAG +,
+  		  TRANS-SUFFIX-FLAG #trans-suffix,
+		  NOM-SUBJ-OR-SUB-SUBJ-OR-TRANS-SUBJ-SUFFIX-FLAG #nom-subj-or-sub-subj-or-trans-subj-suffix,
+		  SUBJ-SUFFIX-FLAG #subj-suffix,
+		  MC-SUBJ-SUFFIX-FLAG #mc-subj-suffix,
+		  OBJ-SUFFIX-FLAG #obj-suffix ],
+      DTR neg-verb-lex &
+ 	  [ INFLECTED [ TRANS-SUFFIX-FLAG #trans-suffix,
+	 	        NOM-SUBJ-OR-SUB-SUBJ-OR-TRANS-SUBJ-SUFFIX-FLAG #nom-subj-or-sub-subj-or-trans-subj-suffix,
+		        SUBJ-SUFFIX-FLAG #subj-suffix,
+		        MC-SUBJ-SUFFIX-FLAG #mc-subj-suffix,
+		        OBJ-SUFFIX-FLAG #obj-suffix ] ] ].
+
+which flips its NEG-FLAG. In addition, we have neg-aux-lex, which carries the constraints for the negative auxiliary's FORM and the FORM of its complement:
+
+  neg-aux-lex := arg-comp-aux-with-pred &
+    [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
+  		         VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM subord,
+		         INIT + ] ].
+
+Neg-sub-lex-rule below inherits from neg-lex-rule-super and neg-aux-leg to yield the auxiliary type seen in #108:
+
+  neg-sub-lex-rule := neg-lex-rule-super & neg-aux-lex.
+
+Another type, neg-nom-lex-rule, inherits from neg-lex-rule-super and intrans-verb-lex to create the non-auxiliary type in #114:
+
+  neg-nom-lex-rule := neg-lex-rule-super & intrans-verb-lex &
+    [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.PER 3rd,
+					      CAT.HEAD.FORM nom ] ].
+
+This set up causes the nominalized verb to be the subject of the sentence.
+
+Unfortunately, this does not prevent 3rd transitive verbs from being the complements of the negative auxiliary. But preventing that would involve some major reworking of our morphology or the addition of a special feature that we are not prepared to introduce into the grammar just now.
+
+
+
+
+
+SEMI.VPM
+
+Our semi.vpm file is largely the same as that produced by the customization matrix, with the exception of aspectual type combinations and the two specifications below:
+
+  PNG.NUM : PNG.NUM
+    sg <> sg
+    pl <> pl
+    * >> sg
+
+  PNG.GEND : PNG.GEND
+    fem <> fem
+    masc <> masc
+    * <> !
+    masc << *
+
+For PNG.NUM, we constrain underspecified number to be singular going forwards. IN PNG.GEND, we constrain underspecified gender to masculine going backwards.
+
+The aspect changes alone have greatly reduced the number of generated sentences for unmarked verbs. For the testsuite instance
+
+  #1
+  Source: author
+  Vetted: f
+  Judgment: g
+  Phenomena: {wo}
+  ʔiməx ɬə sɬenəyʔ 
+  ʔiməx ɬə sɬenəyʔ 
+  walk DET(FN) woman
+  The woman walks.
+
+with the semi.vpm file from Lab 7 we had over three hundred sentences in the output. For Lab 8, we just have just four. We are still having some problems, however, constraining output for verbs that have progressive affixes. Items such as 
+
+  #238
+  Source: author
+  Vetted: f
+  Judgment: g
+  Phenomena: {tam}
+  q!əq!an θə sɬenəyʔ 
+  DUR-q!an θə sɬenəyʔ 
+  DUR-return DET(FP) woman
+  The woman continues to return.
+
+Have every possible combination of aspects that includes DUR, not just DUR alone. In addition, sentences with main clause auxiliaries like
+
+  #121
+  Source: a:327
+  Vetted: s
+  Judgment: g
+  Phenomena: {pn, pro-d}
+  nemʔ cən
+  nemʔ c-ən
+  go AUX-1SUBJ
+  I go.
+
+which were working previously in the week, are causing stack overflows now, although the gen charts are not very large.
+
+
+
+
+
+MACHINE TRANSLATION
+
+We have cognitive status specifications for all determiners due to their present/visible, nearby/invisible and remote distinctions, so the basic phrase 'Dogs sleep' is not compatible with any MRSs in Halkomelem (a problem we will probably have to fix in the next lab by setting aside some determiners that seem the most general). Instead, we translate 'These dogs sleep' for this exercise:
+
+  #237
+  Source: author
+  Vetted: f
+  Judgment: g
+  Phenomena: {cogst}
+  ʔitet tə sqᵂəmqᵂəmeyʔ
+  ʔitet tə PLUR-sqᵂəmeyʔ
+  sleep DET(MP) PLUR-dog
+  These dogs sleep.
+
+The MRS for the English and Halkomelem sentences are equivalent so we did not need to change any identification constraints, but we did have to update the predications of the determiners to not be in quotes in order to get translations from one sentence to the other.
+
+
+
+
+COMPARISON WITH BASELINE
+
+The Lab 7 grammar with the Lab 8 testsuite is in lab8.baseline, and the final Lab 8 grammar is in lab8.3. Our coverage has gone up increased from 77% to over 88%. A lot of this stems from certain lexical entries or morphological combinations not being present in the Lab 7 grammar, however some of increase is from our improved analysis of negation. Unfortunately we also saw our overgeneration numbers go up from 3.1% to 5.3%.
+
+

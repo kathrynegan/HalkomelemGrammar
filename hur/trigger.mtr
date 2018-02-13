@@ -1,0 +1,55 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Semantically Empty Lexical Entries
+
+acc-marker_gr_1 := arg0e_gtr &
+  [ CONTEXT.RELS <! [ ARG1 individual & #i ] !>,
+    FLAGS [ SUBSUME < #i >,
+            TRIGGER "acc-marker" ] ].
+
+acc-marker_gr_2 := arg0e_gtr &
+  [ CONTEXT.RELS <! [ ARG2 individual & #i ] !>,
+    FLAGS [ SUBSUME < #i >,
+            TRIGGER "acc-marker" ] ].
+
+acc-marker_gr_3 := arg0e_gtr &
+  [ CONTEXT.RELS <! [ ARG3 individual & #i ] !>,
+    FLAGS [ SUBSUME < #i >,
+            TRIGGER "acc-marker" ] ].
+
+ʔə_gr := generator_rule &
+[ CONTEXT.RELS <! [ ARG0.SF ques ] !>,
+  FLAGS.TRIGGER "ʔə" ].
+
+c_gr := generator_rule &
+[ CONTEXT.RELS <! [ ARG0 event,
+                    ARG1.PNG.PER 1st ] !>,
+  FLAGS.TRIGGER "c" ].
+
+c_gr := generator_rule &
+[ CONTEXT.RELS <! [ ARG0 event,
+                    ARG1.PNG.PER 2nd ] ! >,
+  FLAGS.TRIGGER "c" ].
+
+acc-marker_gr := generator_rule &
+[ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+  FLAGS.TRIGGER "acc-marker" ].
+
+ceʔ_gr := generator_rule &
+[ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+  FLAGS.TRIGGER "ceʔ" ].
+
+ʔə_gr := generator_rule &
+[ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+  FLAGS.TRIGGER "ʔə" ].
+
+c%21e_gr := generator_rule &
+[ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+  FLAGS.TRIGGER "c%21e" ].
+
+c_gr := generator_rule &
+[ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+  FLAGS.TRIGGER "c" ].
+
+wə_gr := generator_rule &
+[ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+  FLAGS.TRIGGER "wə" ].

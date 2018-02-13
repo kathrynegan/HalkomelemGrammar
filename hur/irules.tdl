@@ -1,0 +1,116 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+plural-prefix :=
+%prefix (* PLUR-)
+plural-lex-rule.
+
+limit-core-trans-suffix :=
+%suffix (* -nəxᵂ)
+limit-core-trans-lex-rule.
+
+basic-core-trans-suffix :=
+%suffix (* -ət)
+basic-core-trans-lex-rule.
+
+1sg-obj-suffix :=
+%suffix (* -amx)
+1sg-obj-lex-rule.
+
+2sg-obj-suffix :=
+%suffix (* -amə)
+2sg-obj-lex-rule.
+
+1pl-obj-suffix :=
+%suffix (* -alʔxᵂ)
+1pl-obj-lex-rule.
+
+2pl-obj-suffix :=
+%suffix (* -alə)
+2pl-obj-lex-rule.
+
+intrans-suffix :=
+%suffix (* -əm)
+intrans-lex-rule.
+
+nominalize-prefix :=
+%prefix (* s-)
+nominalize-lex-rule.
+
+1sg-sub-subj-suffix :=
+%suffix (* -ən)
+1sg-sub-subj-lex-rule.
+
+1pl-sub-subj-suffix :=
+%suffix (* -ət)
+1pl-sub-subj-lex-rule.
+
+2sg-sub-subj-suffix :=
+%suffix (* -əxᵂ)
+2sg-sub-subj-lex-rule.
+
+2pl-sub-subj-suffix :=
+%suffix (* -əp)
+2pl-sub-subj-lex-rule.
+
+3sub-subj-suffix :=
+%suffix (* -əs)
+3sub-subj-lex-rule.
+
+1sg-nom-subj-suffix :=
+%prefix (* nə-)
+1sg-nom-subj-lex-rule.
+
+1pl-nom-subj-suffix :=
+%suffix (* -ct)
+1pl-nom-subj-lex-rule.
+
+2sg-nom-subj-suffix :=
+%prefix (* ʔən-)
+2sg-nom-subj-lex-rule.
+
+2pl-nom-subj-suffix :=
+%suffix (* -ələp)
+2pl-nom-subj-lex-rule.
+
+3-nom-subj-suffix :=
+%suffix (* -s)
+3-nom-subj-lex-rule.
+
+3-trans-subj-suffix :=
+%suffix (* -əs)
+3-trans-subj-lex-rule.
+
+1sg-mc-subj-suffix :=
+%suffix (* -ən)
+1sg-mc-subj-lex-rule.
+
+1pl-mc-subj-suffix :=
+%suffix (* -t)
+1pl-mc-subj-lex-rule.
+
+2sg-mc-subj-suffix :=
+%suffix (* -xᵂ)
+2sg-mc-subj-lex-rule.
+
+2pl-mc-subj-suffix :=
+%suffix (* -ep)
+2pl-mc-subj-lex-rule.
+
+past-tense-suffix :=
+%suffix (* -əɬ)
+past-tense-lex-rule.
+
+durative-aspect-prefix :=
+%prefix (* DUR-)
+durative-aspect-lex-rule.
+
+progressive-aspect-prefix :=
+%prefix (* PROG-)
+progressive-aspect-lex-rule.
+
+still-aspect-prefix :=
+%prefix (* xᵂən-)
+still-aspect-lex-rule.
+
+emph-aspect-prefix :=
+%prefix (* wə-)
+emph-aspect-lex-rule.
